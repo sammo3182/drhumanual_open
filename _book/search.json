@@ -1,0 +1,205 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual for Dr. Hu’s Amazing Team",
+    "section": "",
+    "text": "亲爱的朋友：\n如果你正打算阅读这本Manual for Dr. Hu’s Amazing Team，那说明你正逢一个和一个非常棒的团队合作的机会。 我们现在队伍中的成员来自五湖四海，但都对基于政治认知解密政治态度、政治身份、政治传播和社会经济不平等的议题抱有兴趣。 大家秉承“立场坚定、个性自由”的共识和严守科学规范的操守，为有趣的题目、为自身的发展（当然，也为情怀）而进行政治科学研究。 既能百花齐放，也有同心协力。\n为了组内成员能够有效交流，高效合作，我编纂了这本小册子。 在这里你将学到如何使用Zotero、Rstudio、Github、markdown等研究利器，也是我们团队日常研究的必备工具。 希望新加入的你能通过阅读和学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成你和团队的共同成长。\n\n\n\n\n\n\n胡悦\n2022-07-03于清华园"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "markdown.html",
+    "href": "markdown.html",
+    "title": "1  Rmarkdown 论文写作",
+    "section": "",
+    "text": "Rmarkdown是markdown的一种延伸版本。 Markdown是一种流行且轻量级的标记语言。 标记语言旨在将文本内容和结构（比如各级标题、链接、表格、图片、脚注等）结合展现的文本书写方式。 在Pandoc的帮助下，markdown语言能够轻松地实现html、pdf或docx文本输出。 这方面你可能听说过一个很强大的排版软件，LaTex。 在很多人看来（包括我），markdown语言很大程度上能够替代LaTex。 他们都能生成pdf（事实上markdown是通过Pandoc撰写成tex文件，所以本质上是一回事），而markdown的学习门槛和书写结果都比LaTex友好得多。 本节的核心目的是教会你如何使用rmarkdown进行学术论文写作。"
+  },
+  {
+    "objectID": "markdown.html#撰写英文论文",
+    "href": "markdown.html#撰写英文论文",
+    "title": "1  Rmarkdown 论文写作",
+    "section": "1.3 撰写英文论文",
+    "text": "1.3 撰写英文论文\n在bookdown输出部分中确定输出格式即可（不需要使用template_cn.docx,bookdown内部自带英文模板），例如：\n\noutput:\n  bookdown::pdf_document2:\n    fig_caption: yes\n    keep_tex: yes\n    toc: FALSE\n    latex_engine: xelatex\n\n可参见R Markdown: The Definitive Guide相关内容。"
+  },
+  {
+    "objectID": "bookdown.html",
+    "href": "bookdown.html",
+    "title": "3  Bookdown",
+    "section": "",
+    "text": "同样的，我们参考R Markdown: The Definitive GuideChapter 12学习Bookdown。"
+  },
+  {
+    "objectID": "bookdown.html#bookdown包下载",
+    "href": "bookdown.html#bookdown包下载",
+    "title": "3  Bookdown",
+    "section": "3.1 Bookdown包下载",
+    "text": "3.1 Bookdown包下载\n\ninstall.packages('bookdown')\n\n# or Github\n\ndevtools::install_github('rstudio/bookdown')"
+  },
+  {
+    "objectID": "bookdown.html#bookdown-project结构",
+    "href": "bookdown.html#bookdown-project结构",
+    "title": "3  Bookdown",
+    "section": "3.2 Bookdown project结构",
+    "text": "3.2 Bookdown project结构\n请在进行Bookdown书写时，首先创建一个新的project。Working directory中一般有以下部分：\nindex.Rmd: Rmd的第一章节，包括整本书的格式设置和第一章内容\nnum-name.Rmd:num决定Bookdown输出时的章节顺序，保序；name自己起名\n_bookdown.yml:输出格式逻辑调整，一般不用\n_output.yml:输出格式内容调整（例如书名），一般只需要更改全书书名\npreamble.tex和style.css:Latex和Css调整输出样式\n其他可能还有.bib（引用，见Zotero部分）。\n\ndirectory/\n├──  index.Rmd\n├── 01-intro.Rmd\n├── 02-literature.Rmd\n├── 03-method.Rmd\n├── 04-application.Rmd\n├── 05-summary.Rmd\n├── 06-references.Rmd\n├── _bookdown.yml\n├── _output.yml\n├──  book.bib\n├──  preamble.tex\n├──  README.md\n└──  style.css"
+  },
+  {
+    "objectID": "bookdown.html#index.rmd",
+    "href": "bookdown.html#index.rmd",
+    "title": "3  Bookdown",
+    "section": "3.3 Index.Rmd",
+    "text": "3.3 Index.Rmd\nIndex.Rmd是Bookdown中最重要的部分，其包括一个YAML和第一章内容，其中，YAML决定全书格式\n\n---\ntitle: \"Summer RA Conclusion\"\nauthor: \"Yuyang Shi, Yokia Xu\"\ndate: \"`r Sys.Date()`\"\nsite: bookdown::bookdown_site\noutput: bookdown::gitbook\ndescription: \"Summer RA Conclusion\"\ndocumentclass: book\nbibliography: law-and-politics.bib,\nbiblio-style: apalike\n---\n\n其中，site和output决定全书输出格式，可参见详见R Markdown: The Definitive Guide Chapter 12.4。一般而言，只需要更改title,author,description,bibliography和biblio-style。"
+  },
+  {
+    "objectID": "bookdown.html#num-name.rmd",
+    "href": "bookdown.html#num-name.rmd",
+    "title": "3  Bookdown",
+    "section": "3.4 Num-name.Rmd",
+    "text": "3.4 Num-name.Rmd\n在随后的所有Rmd文件中，我们只需要使用markdown语法格式进行书写即可。(安利一下Typora！)\n所有的Num-name.Rmd都必须包含一个一级标题，如# Bookdown。\n为组织文章结构，我们可以在每个Num-name.Rmd中使用任意的二级、三级标题。但请不要使用四级及以下的标题"
+  },
+  {
+    "objectID": "bookdown.html#bookdown.yml",
+    "href": "bookdown.html#bookdown.yml",
+    "title": "3  Bookdown",
+    "section": "3.5 _bookdown.yml",
+    "text": "3.5 _bookdown.yml\n一般不使用，可以用_bookdown.yml限定输出.Rmd的范围和顺序，如\n\nrmd_files: [\"index.Rmd\", \"02-git.Rmd\", \"01-Rmd.Rmd\"]\n\n将使Bookdown先输出02-git.Rmd，再生成01-Rmd.Rmd，且不输出其他内容。"
+  },
+  {
+    "objectID": "bookdown.html#output.yml",
+    "href": "bookdown.html#output.yml",
+    "title": "3  Bookdown",
+    "section": "3.6 _output.yml",
+    "text": "3.6 _output.yml\n一般不使用，可以调整输出格式。详见R Markdown: The Definitive Guide Chapter 12.4\n\nbookdown::gitbook:\n  lib_dir: assets\n  split_by: section\n  config:\n    toolbar:\n      position: static\nbookdown::pdf_book:\n  keep_tex: yes\nbookdown::html_book:\n  css: toc.css"
+  },
+  {
+    "objectID": "bookdown.html#补充说明",
+    "href": "bookdown.html#补充说明",
+    "title": "3  Bookdown",
+    "section": "3.7 补充说明",
+    "text": "3.7 补充说明\n\nBookdown中，各章节需要依照“num-name.Rmd”的方式命名。其中num决定章节先后顺序，保序即可。\nBookdown中的Zotero引用与第三部分完全一致。\n即使没有”_bookdown.yml”和”_output.yml”文件，Bookdown依然能按照default格式输出。但在与Github连接不稳定时，将上述文件储存在本地是有用的。\n在完成Bookdown各章节书写后，需要分别knit才能得到完整文档（仅knitindex.Rmd会有各章节目录，但不会有具体内容）。"
+  },
+  {
+    "objectID": "zotero.html",
+    "href": "zotero.html",
+    "title": "3  Zotero 文献管理",
+    "section": "",
+    "text": "英文教程"
+  },
+  {
+    "objectID": "zotero.html#zotero-5.0及插件的安装和注册",
+    "href": "zotero.html#zotero-5.0及插件的安装和注册",
+    "title": "3  Zotero 文献管理",
+    "section": "3.1 ZOtero 5.0（及插件）的安装和注册",
+    "text": "3.1 ZOtero 5.0（及插件）的安装和注册\n1.于官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n2.回到官网进行注册,记住注册信息。\n3.回到软件端。打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。\n\n\n\n登录信息\n\n\n4.下载插件 ZotFile （用来管理PDF文件）和 Better BibTeX(将library导出为bib.格式与RMarkdown联动。)\n下载完成后进入软件-工具-插件-设置（齿轮标识）-[Install Add-on From File]-安装已经下载的两个插件。\n\n\n\n插件安装"
+  },
+  {
+    "objectID": "zotero.html#修改首选项",
+    "href": "zotero.html#修改首选项",
+    "title": "3  Zotero 文献管理",
+    "section": "3.2 修改首选项",
+    "text": "3.2 修改首选项\n\n3.2.1 常规 general\n\n\n\ngeneral\n\n\n\n\n3.2.2 同步 sync\n\n\n\n同步\n\n\n选择自动同步，取消选择[同步全文]，（zotero只有300MB文件储存空间，可配置云端同步进行解决，见后文。）\n\n\n3.2.3 搜索与导出\n保持默认即可。\n\n\n3.2.4 引用\n针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。\n在[文字处理软件]中安装word/L-office加载项。\n\n\n\n引用\n\n\n\n\n3.2.5 高级\n文件储存位置：编辑-首选项-高级-文件和文件夹\n设置根目录和数据存储位置。\n根目录中存储文章信息及其附件（pdf），可酌情放在较空的硬盘中。\n数据储存位置仅包含zotero中的引录信息。\n后期如须多设备同步可将根目录文件夹进行云同步处理。\n\n\n\nfile position\n\n\n\n\n3.2.6 Better BibTeX\n在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或其某些部分）导出为纯.bib文本文件。 在使用rmarkdown撰写学术论文时，需要此步骤才能在RStudio中使用Zotero。\n变更Citation key 格式：（样例）[authEtAl:capitalize][year]\ncite key 设置查阅手册\n\n\n\ncite key"
+  },
+  {
+    "objectID": "zotero.html#zotfile-设置",
+    "href": "zotero.html#zotfile-设置",
+    "title": "3  Zotero 文献管理",
+    "section": "3.3 ZotFile 设置",
+    "text": "3.3 ZotFile 设置\n【工具】-【ZotFile preference】\n\n3.3.1 General\n\n\n\ngeneral\n\n\n在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。\n第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。\n下面的use subfolder defined by xxx的表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。\n\n\n3.3.2 Tablet Settings\n与平板电脑链接进行PDF交换，略。\n\n\n3.3.3 Renaming Rules\n设置附件的重命名格式。如：{%a_}{%y_}{%t}即表示作者_时间_文章名。\n\n\n\n附件重命名\n\n\n\n\n3.3.4 高级\n略。\n\n\n3.3.5 手动重命名附件\n在具体的条目中点击【附件】-【重命名附件】\n\n\n\nrename"
+  },
+  {
+    "objectID": "zotero.html#zotero-与rmarkdown联动",
+    "href": "zotero.html#zotero-与rmarkdown联动",
+    "title": "3  Zotero 文献管理",
+    "section": "3.4 Zotero 与RMarkdown联动",
+    "text": "3.4 Zotero 与RMarkdown联动\n用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。\nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n\n\nbib.导出\n\n\n选择持续更新。\n\n\n\nupdate\n\n\n输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。\n\n\n\n示例\n\n\n关于R部分的更多信息请参考：\nRStudio 手册\n相关章节\n或 xieyihui的相关教程"
+  },
+  {
+    "objectID": "zotero.html#祝贺你已经完成了设置请奖励自己一只鸡腿",
+    "href": "zotero.html#祝贺你已经完成了设置请奖励自己一只鸡腿",
+    "title": "3  Zotero 文献管理",
+    "section": "3.5 祝贺！你已经完成了设置，请奖励自己一只鸡腿！",
+    "text": "3.5 祝贺！你已经完成了设置，请奖励自己一只鸡腿！"
+  },
+  {
+    "objectID": "lit.html",
+    "href": "lit.html",
+    "title": "5  如何快速阅读文献",
+    "section": "",
+    "text": "Object：文章主要研究对象，一般能在Abstract中找到。\nMethod：采用的研究方法。包括视角（例如定性or定量，i.e. Econometrics），方法模型（i.e. ANOVA, Gravity Model)\nData: 文章使用数据。\nFindings：文章的主要argument\nHighlights：文章的亮点（例如工具变量的选择）"
+  },
+  {
+    "objectID": "git.html",
+    "href": "git.html",
+    "title": "6  Git",
+    "section": "",
+    "text": "本部分主要介绍Git。英文Git教程参见Get started with GitHub | Happy Git and GitHub for the useR"
+  },
+  {
+    "objectID": "git.html#介绍project",
+    "href": "git.html#介绍project",
+    "title": "6  Git",
+    "section": "6.1 介绍：Project",
+    "text": "6.1 介绍：Project\n创建Project是在使用R时基本功（想不通为啥各大教材和课都不先教create new project,以至于常年找不到文件在哪儿）。\n\n\n\nNewProjectCreating\n\n\n在Rtudio的右上角,点击后选择New Project可以创建新的Project。一般来说，在创建本地新项目时选择new directory就行（相当于创建一个新文件夹）你应该将同一个项目的数据、图片、代码等一系列文件都置于一个Project下。这样能减少数据和代码丢失的可能性，同时在导入数据和图片时，路径也能变短（Project下，默认路径为working directory）。"
+  },
+  {
+    "objectID": "git.html#如何clone他人公开的github读",
+    "href": "git.html#如何clone他人公开的github读",
+    "title": "6  Git",
+    "section": "6.2 如何Clone他人公开的Github（读）",
+    "text": "6.2 如何Clone他人公开的Github（读）\n我们能在有读取权限的repo中找到对应的https链接。\n\n\n\nGithttps\n\n\n在创建New Project时选择Version Control，Git并复制Https以克隆其他人的repo。"
+  },
+  {
+    "objectID": "git.html#如何创建一个自己的repo并保持本地与github的联动单人版写",
+    "href": "git.html#如何创建一个自己的repo并保持本地与github的联动单人版写",
+    "title": "6  Git",
+    "section": "6.3 如何创建一个自己的repo，并保持本地与Github的联动（单人版：写）",
+    "text": "6.3 如何创建一个自己的repo，并保持本地与Github的联动（单人版：写）\n(假设你已经有了自己的Github账号，R和Rstudio)\n我们需要完成自己的Rstudio与Github账号的联动工作，才能写入Github上的repo。这只需要设置一次，别担心。（英文教程\n\n6.3.1 设置部分\n\n6.3.1.1 得到Token\n首先，在github中创建一个token以表明身份，按照步骤操作即可。Token类似于密码，需要小心保管。\n\n\n6.3.1.2 在Rtudio中储存账号信息\n现在，利用credentials包在R中储存Github账号信息。你需要将得到的Token输入到set_github_pat()中\n\ninstall.packages(\"credentials\")\n\nlibrary(credentials)\n\nset_github_pat(Your Token Here)\n\n\n\n6.3.1.3 在Rstudio中查看账号信息\n你可以利用gitcreds包查看储存的Github账号信息。\n\nlibrary(gitcreds)\n\ngitcreds_set()\n\n\n\n\n6.3.2 实现联动：Pull, Commit和Push\n建议读者首先在Github中创建一个新repo，并利用3.2的方法将其克隆到本地文件中，然后再进行操作。（这相当于Git中的New Project, Github First。其他两种方式（将电脑中存在的project上传到Github中，将Github中已经存在的Project下载到电脑中）在happygitwithr有介绍。\n本章节讲Pull（同步云端数据），Commit（确认本地更改），Push（更改云端数据）三个部分。\n\n6.3.2.1 Pull：将Github中的repo读取并储存到本地\n利用3.2中的方法，将自己的repo下载到本地。\n\n\n6.3.2.2 Commit\n\n\n\ngit\n\n\n在Rstudio的Git部分有Commit栏，点进去，它会显示本地数据与云端数据（Github上）的区别（图片左栏）。左上显示有变化的文件，下方逐栏说明区别。\n你可以使用stage确认变化（打勾），或使用unstage撤销更改。\n\n\n\ncommit\n\n\n在确认完更改后，你需要输入commit信息（一般而言是对更新的简要说明），并点击commit按钮确认更改\n\n\n6.3.2.3 Push\n点击绿色向上箭头按钮，将本地更改上传到Github"
+  },
+  {
+    "objectID": "git.html#git-family如何实现与他人联动",
+    "href": "git.html#git-family如何实现与他人联动",
+    "title": "6  Git",
+    "section": "6.4 Git Family：如何实现与他人联动",
+    "text": "6.4 Git Family：如何实现与他人联动\n上部分的单人Github使用相当于一个大型网盘，主要用来备份数据，部分时候可以给其他人文件读取权限以方便分享。本部分在单人Github基础上，说明如何多人在同一个repo上工作。\n\n6.4.1 权限赋予：Github中的工作\n在Github的settings–Manage access部分，邀请你的朋友作为collaborator，和你一起工作（注意，Collaborator才有写权限）。\n\n\n6.4.2 Pull：养成习惯\n在每次开始工作时，你需要先知道其他人对repo做了什么。一定要在每次工作前先将Github上的最新版本文件pull到本地中。\n\n\n\npull\n\n\n\n\n6.4.3 Branch：避免Override\n你可以和朋友们各自创建自己的Branch（详细原理可见happygitwithr）。这相当于各自在不同的工作线上工作（因此不会将文件更改上传到master上）。我们仅需要将自己Branch中完全确定并需要同他人共享的部分上传到master上。\n\n\n\nbranch\n\n\n\n\n6.4.4 Commit and Push\n这与之前没有什么两样。"
+  },
+  {
+    "objectID": "markdown.html#yaml-设置",
+    "href": "markdown.html#yaml-设置",
+    "title": "1  Rmarkdown 论文写作",
+    "section": "1.1 YAML 设置",
+    "text": "1.1 YAML 设置\nRmarkdown写作的第一步应该是设置YAML。 所谓YAML，是“Yet Another Markup Language”的缩写，通常用作全篇样式的设置，写在每篇文章的最开始的位置。 以下是我和我的合作者在Chinese Journal of International Politics上发表的“The Resistance and Resilience of National Image Building: An Empirical Analysis of Confucius Institute Closures in the U.S.”一文的YAML设置。1 我们将逐步介绍其中的设置：\n---\noutput: \n  bookdown::pdf_document2:\n    fig_caption: true\n    number_sections: true\n\nfontsize: 12pt\nindent: true\ngeometry: margin=1in\nbibliography: Zotero.bib\ncsl: chinese-journal-of-international-politics.csl\nlink-citations: true\ncolorlinks: true\ntoc: false\n\ntitle: 'Resistance and Resilience: A Study of National Image Building Based on Confucius Institute Closures in the U.S.'\n\nauthor:\n- Yue Hu^[Tsinghua University]\n- Yufei Sun^[Tsinghua University, Corresponding Author]\n- Donald Lien^[University of Texas at San Antonio]\n\nabstract: |\n  National image building (NIB) has become a critical strategy in public diplomacy.\n  Extending the existing sender-focused literature on NIB, this study takes the receiver side into account.\n  Focusing on the closures of a critical NIB effort of China, Confucius Institutes (CIs) in the U.S., we examine how a powerful receiver's resistance affect the image of the sender domestically.\n  Based on an extensive dataset of American CIs, we also dig in who exactly in the receiver country promote the resistance.\n  The analytic results shows that the CI closures turn down both media tone of and attention to China in the U.S. but locally at most.\n  Meanwhile, the empirical evidence also support the resilience of NIB: the remaining CIs still improve local image of China; even in places no CIs left openning, the media attention to China is still higher.\n  There are also evidence for the resilience of the NIB efforts: the remaining CIs still improve the media image of China.\n  Regarding the promoters of NIB resistance, American colleges show a certain level of autonomy on the CIs' fate; the government has an influence on the issue yet largely through affecting public schools' decisions.\n  \n  **Keywords:** National image, public diplomacy, Confucius Institutes, U.S-China relations, soft power, GDELT.\n---\n\noutput：用于设置文章的输出类型。 如前所述，rmarkdown可以输出html、pdf或docx三种类型，这里是确定输出格式的地方。\n\nbookdown::pdf_document2：在上面的例子里，我们设置输出格式为pdf，这也是国际期刊投稿的常见格式。\nfig_caption: true：这里表示我们希望文章中显示图片的标题。\nnumber_sections: true：这里表示我们希望文中标题显示编号。有的期刊可能会有不允许章节编号的要求，此时将true变成false即可。\n\n\n\n\n\n\n\n\nBookdown输出格式\n\n\n\nbookdown中提供了pdf_document和pdf_document2两种格式，都可以输出pdf，但后者支持相互参照（cross reference），这个我们之后会讲到。\n\n\n\n段落格式\n\nfontsize: 12pt：字体大小，12pt是英文发表的标准字体大小\nindent: true：采用每段空两格格式，如果false则采用每段顶格，段间空行模式\ngeometry: margin=1in：每页边距1 inch\nbibliography: Zotero.bib：为参考文献文件，最方便的是使用Zotero生成，将在 Chapter 3 详细讲解。\ncsl: chinese-journal-of-international-politics.csl：Citation Style Language (CSL)用于自动设置参考文献格式。换言之，只要你使用rmarkdown就再也不需要手动更改参考文献，只需要找到的对应期刊的.csl文件即可。\nlink-citations: true：将文中所有引用加入超链接，直接对应最后的参考文献列表的对应位置。\ncolorlinks: true：文中超链接采用不同颜色\ntoc: false：“table of content”（toc），即目录。通常文章不需要目录，因此我们选择否。\n\n首页\n\ntitle：文章标题，如果需要副标题，可加subtitle选项。\nauthor：作者\nabstract：摘要和关键字。"
+  },
+  {
+    "objectID": "markdown.html#rmd正文部分设置",
+    "href": "markdown.html#rmd正文部分设置",
+    "title": "1  Rmarkdown 论文写作",
+    "section": "1.2 Rmd正文部分设置",
+    "text": "1.2 Rmd正文部分设置\n\n# 引言\n\n牦牛肉干是全国人民喜爱的风味食品[@Yang2020; @Jia2020]\n\n# 牦牛肉干制作方法介绍\n\n## 风干法\n\n### 夏季风干法\n\n一般正文最多使用三级标题。\n[@xxx]为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在Zotero与Rmd部分详细讲解。\n此外，除文字外，Rmd正文内部可以插入代码块、图表等其他内容，可参见R Markdown: The Definitive Guide相关内容。\n\n1.2.1 Rmd setup建议设置\n\n{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, dpi = 300)\noptions(digits = 3)\n\n\nif (!require(pacman)) install.packages(\"pacman\")\nlibrary(pacman)\n\np_load(\n  flextable, # Visualization\n  # Applied\n  # dependency\n  haven,stringr, broom, tidyverse\n) # data wrangling # data wrangling\n\n# Functions preload\nset.seed(313)\n\n其中，knitr::opts_chunk$set对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见R Markdown: The Definitive Guide相关内容。\npacman包中的p_load先对包作if (!require(tidyverse)) install.packages(\"tidyverse\"),再使用library(tidyverse)，能使代码更简洁。"
+  },
+  {
+    "objectID": "markdown.html#bookdown输出格式",
+    "href": "markdown.html#bookdown输出格式",
+    "title": "1  Rmarkdown 论文写作",
+    "section": "1.2 Bookdown输出格式",
+    "text": "1.2 Bookdown输出格式\nbookdown中提供了pdf_document和pdf_document2两种格式，都可以输出pdf，但后者支持相互参照（cross reference），这个我们之后会讲到。"
+  }
+]

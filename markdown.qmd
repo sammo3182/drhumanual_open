@@ -1,0 +1,155 @@
+# Rmarkdown 论文写作
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  dpi = 300
+)
+
+# Functions preload
+set.seed(313)
+```
+
+Rmarkdown是markdown的一种延伸版本。
+Markdown是一种流行且轻量级的标记语言。
+标记语言旨在将文本内容和结构（比如各级标题、链接、表格、图片、脚注等）结合展现的文本书写方式。
+在`Pandoc`的帮助下，markdown语言能够轻松地实现html、pdf或docx文本输出。
+这方面你可能听说过一个很强大的排版软件，LaTex。
+在很多人看来（包括我），markdown语言很大程度上能够替代LaTex。
+他们都能生成pdf（事实上markdown是通过`Pandoc`撰写成tex文件，所以本质上是一回事），而markdown的学习门槛和书写结果都比LaTex友好得多。
+本节的核心目的是教会你如何使用rmarkdown进行学术论文写作。
+
+## YAML 设置
+
+Rmarkdown写作的第一步应该是设置YAML。
+所谓YAML，是“Yet Another Markup Language”的缩写，通常用作全篇样式的设置，写在每篇文章的最开始的位置。
+以下是我和我的合作者在*Chinese Journal of International Politics*上发表的“The Resistance and Resilience of National Image Building: An Empirical Analysis of Confucius Institute Closures in the U.S.”一文的YAML设置。^[
+Hu, Yue, Yufei Sun, and Donald Lien. 2022. “[The Resistance and Resilience of National Image Building: An Empirical Analysis of Confucius Institute Closures in the U.S.](https://10.1093/cjip/poac010)” *Chinese Journal of International Politics* 15(3): 1–18.
+]
+我们将逐步介绍其中的设置：
+
+````
+---
+output: 
+  bookdown::pdf_document2:
+    fig_caption: true
+    number_sections: true
+
+fontsize: 12pt
+indent: true
+geometry: margin=1in
+bibliography: Zotero.bib
+csl: chinese-journal-of-international-politics.csl
+link-citations: true
+colorlinks: true
+toc: false
+
+title: 'Resistance and Resilience: A Study of National Image Building Based on Confucius Institute Closures in the U.S.'
+
+author:
+- Yue Hu^[Tsinghua University]
+- Yufei Sun^[Tsinghua University, Corresponding Author]
+- Donald Lien^[University of Texas at San Antonio]
+
+abstract: |
+  National image building (NIB) has become a critical strategy in public diplomacy.
+  Extending the existing sender-focused literature on NIB, this study takes the receiver side into account.
+  Focusing on the closures of a critical NIB effort of China, Confucius Institutes (CIs) in the U.S., we examine how a powerful receiver's resistance affect the image of the sender domestically.
+  Based on an extensive dataset of American CIs, we also dig in who exactly in the receiver country promote the resistance.
+  The analytic results shows that the CI closures turn down both media tone of and attention to China in the U.S. but locally at most.
+  Meanwhile, the empirical evidence also support the resilience of NIB: the remaining CIs still improve local image of China; even in places no CIs left openning, the media attention to China is still higher.
+  There are also evidence for the resilience of the NIB efforts: the remaining CIs still improve the media image of China.
+  Regarding the promoters of NIB resistance, American colleges show a certain level of autonomy on the CIs' fate; the government has an influence on the issue yet largely through affecting public schools' decisions.
+  
+  **Keywords:** National image, public diplomacy, Confucius Institutes, U.S-China relations, soft power, GDELT.
+---
+````
+
+- `output`：用于设置文章的输出类型。
+如前所述，`rmarkdown`可以输出html、pdf或docx三种类型，这里是确定输出格式的地方。
+    - `bookdown::pdf_document2`：在上面的例子里，我们设置输出格式为pdf，这也是国际期刊投稿的常见格式。
+    - `fig_caption: true`：这里表示我们希望文章中显示图片的标题。
+    - `number_sections: true`：这里表示我们希望文中标题显示编号。有的期刊可能会有不允许章节编号的要求，此时将`true`变成`false`即可。
+
+:::{.callout-tip}
+## Bookdown输出格式
+
+`bookdown`中提供了`pdf_document`和`pdf_document2`两种格式，都可以输出pdf，但后者支持相互参照（cross reference），这个我们之后会讲到。
+:::
+
+- 段落格式
+    - `fontsize: 12pt`：字体大小，`12pt`是英文发表的标准字体大小
+    - `indent: true`：采用每段空两格格式，如果`false`则采用每段顶格，段间空行模式
+    - `geometry: margin=1in`：每页边距1 inch
+    - `bibliography: Zotero.bib`：为参考文献文件，最方便的是使用Zotero生成，将在 @sec-zotero 详细讲解。
+    - `csl: chinese-journal-of-international-politics.csl`：[Citation Style Language (CSL)](https://citationstyles.org/)用于自动设置参考文献格式。换言之，只要你使用rmarkdown就再也不需要手动更改参考文献，只需要找到的对应期刊的`.csl`文件即可。
+    - `link-citations: true`：将文中所有引用加入超链接，直接对应最后的参考文献列表的对应位置。
+    - `colorlinks: true`：文中超链接采用不同颜色
+    - `toc: false`：“table of content"（toc），即目录。通常文章不需要目录，因此我们选择否。
+
+- 首页
+    - `title`：文章标题，如果需要副标题，可加`subtitle`选项。
+    - `author`：作者
+    - `abstract`：摘要和关键字。
+  
+
+## Rmd正文部分设置
+```{r,eval=FALSE}
+# 引言
+
+牦牛肉干是全国人民喜爱的风味食品[@Yang2020; @Jia2020]
+
+# 牦牛肉干制作方法介绍
+
+## 风干法
+
+### 夏季风干法
+```
+
+一般正文最多使用三级标题。
+
+`[@xxx]`为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在**Zotero与Rmd**部分详细讲解。
+
+此外，除文字外，Rmd正文内部可以插入代码块、图表等其他内容，可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
+
+### Rmd setup建议设置
+
+```{r,eval=FALSE}
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, dpi = 300)
+options(digits = 3)
+
+
+if (!require(pacman)) install.packages("pacman")
+library(pacman)
+
+p_load(
+  flextable, # Visualization
+  # Applied
+  # dependency
+  haven,stringr, broom, tidyverse
+) # data wrangling # data wrangling
+
+# Functions preload
+set.seed(313)
+```
+
+其中，`knitr::opts_chunk$set`对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
+
+`pacman`包中的`p_load`先对包作`if (!require(tidyverse)) install.packages("tidyverse")`,再使用`library(tidyverse)`，能使代码更简洁。
+
+##  撰写英文论文
+
+在bookdown输出部分中确定输出格式即可（不需要使用`template_cn.docx`,bookdown内部自带英文模板），例如：
+```{r,eval=F}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    keep_tex: yes
+    toc: FALSE
+    latex_engine: xelatex
+```
+
+可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/bookdown/output-formats.html)相关内容。

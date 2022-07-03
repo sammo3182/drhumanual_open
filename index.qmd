@@ -1,9 +1,19 @@
-# Preface {.unnumbered}
+# 前言 {.unnumbered}
 
-This is a Quarto book.
+亲爱的朋友：
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+如果你正打算阅读这本*Manual for Dr. Hu's Amazing Team*，那说明你正逢一个和一个非常棒的团队合作的机会。
+我们现在队伍中的成员来自五湖四海，但都对基于政治认知解密政治态度、政治身份、政治传播和社会经济不平等的议题抱有兴趣。
+大家秉承“**立场坚定、个性自由**”的共识和严守科学规范的操守，为有趣的题目、为自身的发展（当然，也为情怀）而进行政治科学研究。
+既能百花齐放，也有同心协力。
 
-```{r}
-1 + 1
-```
+为了组内成员能够有效交流，高效合作，我编纂了这本小册子。
+在这里你将学到如何使用Zotero、Rstudio、Github、markdown等研究利器，也是我们团队日常研究的必备工具。
+希望新加入的你能通过阅读和学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成你和团队的共同成长。
+
+![](images/goodluck.gif){fig-align="center"}
+
+:::{.column-body-right}
+胡悦    
+2022-07-03于清华园
+:::

@@ -2,22 +2,39 @@ project:
   type: book
 
 book:
-  title: "open"
-  author: "Jane Doe"
-  date: "7/3/2022"
+  title: "Manual for Dr. Hu's Amazing Team"
+  author: "胡悦"
+  date: today
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - markdown.qmd
+    - bookdown.qmd
+    - zotero.qmd
+    - lit.qmd
+    - git.qmd
 
 bibliography: references.bib
+highlight-style: github
+number-sections: true
+toc: true
+
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>" 
+    echo: true
+    message: true
+    warning: true
+    dpi: 300
 
 format:
   html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreprt
+    theme:
+        light: simplex
+        dark: slate
+  docx: default
+    
+    
 
 
 
