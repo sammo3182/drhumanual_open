@@ -1,17 +1,5 @@
 # Rmarkdown 论文写作
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  message = FALSE,
-  warning = FALSE,
-  dpi = 300
-)
-
-# Functions preload
-set.seed(313)
-```
-
 Rmarkdown是markdown的一种延伸版本。
 Markdown是一种流行且轻量级的标记语言。
 标记语言旨在将文本内容和结构（比如各级标题、链接、表格、图片、脚注等）结合展现的文本书写方式。
@@ -95,61 +83,90 @@ abstract: |
     - `abstract`：摘要和关键字。
   
 
-## Rmd正文部分设置
-```{r,eval=FALSE}
-# 引言
+## 正文设置
 
-牦牛肉干是全国人民喜爱的风味食品[@Yang2020; @Jia2020]
+````
+National image building (NIB) is the efforts of a country to improve the public impressions of and attitudes towards it in a receiver country.
+Sender countries commonly expect the NIB efforts to bring better acceptance of their people, products, and investments in the receiver country. 
+While NIB has become widely practiced around the world regardless of the country's size or power, there has not been a consensus about its effect. [@Barr2012;@OwenIV2010;@LienEtAl2012;@XiePage2013;@LiEtAl2014;@BrazysDukalskis2019b;@Meng2020]......
 
-# 牦牛肉干制作方法介绍
+# Building National Image: Source, Function, and Effects
 
-## 风干法
+......
 
-### 夏季风干法
-```
+# Examining NIB Resistance-Resilience Based on CI Closures in the U.S. 
 
-一般正文最多使用三级标题。
+## Data Generation Process
 
-`[@xxx]`为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在**Zotero与Rmd**部分详细讲解。
+````
 
-此外，除文字外，Rmd正文内部可以插入代码块、图表等其他内容，可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
-
-### Rmd setup建议设置
-
-```{r,eval=FALSE}
-{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, dpi = 300)
-options(digits = 3)
+一般学术论文正文最多使用三级标题，可如上例使用1~3个#标识。
+个数越多，标题层级越低。
+`[@xxx]`为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在 @sec-zotero 部分详细讲解。
+此外，除文字外，Rmarkdown还插入代码块、图表等其他内容，可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
 
 
-if (!require(pacman)) install.packages("pacman")
-library(pacman)
+## 中文论文写作
 
-p_load(
-  flextable, # Visualization
-  # Applied
-  # dependency
-  haven,stringr, broom, tidyverse
-) # data wrangling # data wrangling
+不论是在学校上学还是在国内做研究，Microsoft Word是必用工具。
+Rmarkdown可以非常方便地生成docx文档，使你几乎不用再打开Word——以及忍受闪退、格式不统一等Word弊病——实证研究和实证写作的真正融合。
 
-# Functions preload
-set.seed(313)
-```
+使用Rmakrdown进行Word写作基本步骤和上面完全一样，唯一需要调整的是YAML部分。
+以下以我和朱萌在《治理研究》发表的“以语塑心与国民治理：外语习得对政治认知能力的塑造机制研究”的YAML为例进行研究。^[胡悦 and 朱萌. 2022. “以语塑心与国民治理：外语习得对政治认知能力的塑造机制研究.” 《治理研究》38(4): Online.
+]
+比起之前的例子，最主要的改变是在`output`部分从`bookdown::pdf_document2:`变为`bookdown::word_document2`。
+另一个改变重点是`reference_docx: template_cn.docx`。由于中文期刊往往有一些特殊的设置要求包括章节号、段落缩进、字体等等，这些都可以通过`template_cn.docx`以MS Word template方式进行调试。
+详细的设置方式可以参考以下两个资源：[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html)和[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/internationalization.html)。
 
-其中，`knitr::opts_chunk$set`对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
 
-`pacman`包中的`p_load`先对包作`if (!require(tidyverse)) install.packages("tidyverse")`,再使用`library(tidyverse)`，能使代码更简洁。
-
-##  撰写英文论文
-
-在bookdown输出部分中确定输出格式即可（不需要使用`template_cn.docx`,bookdown内部自带英文模板），例如：
-```{r,eval=F}
+````
+--
 output:
-  bookdown::pdf_document2:
-    fig_caption: yes
-    keep_tex: yes
-    toc: FALSE
-    latex_engine: xelatex
-```
+  bookdown::word_document2:
+    number_section: false
+    reference_docx: template_cn.docx
+fontsize: 12 pt
+geometry: margin=1in
+bibliography:  "language_English.bib"
+csl: "american-political-science-review.csl"
+link-citations: true
+colorlinks: false
 
-可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/bookdown/output-formats.html)相关内容。
+title: |
+  以语塑心与国民治理：外语习得对政治认知能力的塑造机制研究
+author: 
+- 胡悦
+- 朱萌^[胡悦，清华大学政治学系副教授；朱萌，通讯作者，清华大学政治学系硕士研究生。**基金项目**：国家自然科学基金委青年项目“新型城镇化进程中新老市民身份认同建构的社会心理机制与政策引导路径研究”（72004109），清华大学自主科研项目“新时代国民身份认同建构机制研究”（2019THZWJC47）。]
+
+abstract: |
+
+ **摘要**：
+ 掌握外语人口增加是现代化发展在个体层面的重要特征，也是一国站稳国际舞台、引领世界潮流的重要前提。
+ 然而，现有研究多聚焦外语的对外功能和教育手段，对其对内功用，尤其是社会政治功用和治理价值却不甚明了。
+ “语言政策场域”理论结合语言治理和语言政治学逻辑填补此方面空白，指出外语习得对国民政治能力（特别是以政治效能感为代表的政治感知能力）的提升效果以及四种作用机制。
+ 基于全国代表性样本的实证分析支持了该理论的效果和机制假设。
+ 实证研究表明，中国国民外语（英语）水平对其政治认知能力具有显著促进作用。
+ 在机制上，外语习得通过信息获取进路上提升内部政治效能感作用最明显，而语言竞争优势则是影响外部效能感的主导路径。
+ 与此同时，价值西化路径并未对国民政治认知造成明显改变。
+ 据此，外语习得对于国民政治能力塑造功能更偏向素质性，而非价值性。
+ 对于语言政策场域理论的系统探讨和实证检验推进了对宏观语言政策微观治理逻辑的理解，为“语言--思维”关系这一经典议题提供新思路和新证据，同时对于像中国这样外语人口日益庞大的现代国家治理也具有重要现实意义，为我国改革语言政策和治理体系、提升国家能力、推动国家治理现代化提供理论借鉴和实证参考。
+ 
+ **关键词**：国家治理能力；政治能力；语言治理；外语习得；政策场域；政治效能感。
+ 
+ Foreign Language and Governance: How Second Language Acquisition Constructs Mass Cognitive Capability for Politics
+ 
+ **Abstract**：The growth of the population comprehending a second language is a characteristic of modernization and the prerequisite of a state's international influence. 
+ However, the mainstay of the existing research on second language acquisition (SLA) focuses on international communications and education ignoring SLA's sociopolitical functions and values for domestic governance.
+ The novel "language policy field" theory fills this academic vacuum by specifying four paths SLA can affect individuals' political capabilities, especially the cognitive capability. 
+ The study based on a nationally representative survey in China supports the hypotheses of this theory. 
+ The empirical analyses show that Chinese citizens' English proficiency significantly modifies people's cognitive capability of politics as measured by political efficacy. 
+ In terms of the mechanisms, SLA increases the internal efficacy mainly through the information-collection mechanism while raising the external efficacy through the relative-proficiency mechanism. 
+ Meanwhile, there is no evidence that SLA affects political capacities through value changes. 
+ In this sense, the influence of SLA is more on literacy than on beliefs. 
+ The new theory and findings have far-reaching implications on language governance, national capacity, and the modernization of governance in general.
+ 
+ **Keywords**：National capacity of governance; political capacity; language governance; second-language acquisition (SLA); policy field; political efficacy.
+
+---
+
+````
