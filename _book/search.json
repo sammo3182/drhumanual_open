@@ -102,7 +102,7 @@
     "href": "zotero.html",
     "title": "3  Zotero 文献管理",
     "section": "",
-    "text": "英文教程"
+    "text": "Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大且免费。 以下结合Zotero与本组研究相关比较密切的一些功能和设置进行说明。1"
   },
   {
     "objectID": "zotero.html#zotero-5.0及插件的安装和注册",
@@ -129,15 +129,15 @@
     "objectID": "zotero.html#zotero-与rmarkdown联动",
     "href": "zotero.html#zotero-与rmarkdown联动",
     "title": "3  Zotero 文献管理",
-    "section": "3.4 Zotero 与RMarkdown联动",
-    "text": "3.4 Zotero 与RMarkdown联动\n用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。\nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n\n\nbib.导出\n\n\n选择持续更新。\n\n\n\nupdate\n\n\n输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。\n\n\n\n示例\n\n\n关于R部分的更多信息请参考：\nRStudio 手册\n相关章节\n或 xieyihui的相关教程"
+    "section": "3.5 Zotero 与RMarkdown联动",
+    "text": "3.5 Zotero 与RMarkdown联动\n用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。\nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n\n\nbib.导出\n\n\n选择持续更新。\n\n\n\nupdate\n\n\n输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。\n\n\n\n示例\n\n\n关于R部分的更多信息请参考：\nRStudio 手册\n相关章节\n或 xieyihui的相关教程\n\n祝贺！你已经完成了设置，请奖励自己一只鸡腿！"
   },
   {
     "objectID": "zotero.html#祝贺你已经完成了设置请奖励自己一只鸡腿",
     "href": "zotero.html#祝贺你已经完成了设置请奖励自己一只鸡腿",
     "title": "3  Zotero 文献管理",
-    "section": "3.5 祝贺！你已经完成了设置，请奖励自己一只鸡腿！",
-    "text": "3.5 祝贺！你已经完成了设置，请奖励自己一只鸡腿！"
+    "section": "3.6 祝贺！你已经完成了设置，请奖励自己一只鸡腿！",
+    "text": "3.6 祝贺！你已经完成了设置，请奖励自己一只鸡腿！"
   },
   {
     "objectID": "lit.html",
@@ -222,5 +222,33 @@
     "title": "1  Rmarkdown 论文写作",
     "section": "1.3 中文论文写作",
     "text": "1.3 中文论文写作\n不论是在学校上学还是在国内做研究，Microsoft Word是必用工具。 Rmarkdown可以非常方便地生成docx文档，使你几乎不用再打开Word——以及忍受闪退、格式不统一等Word弊病——实证研究和实证写作的真正融合。\n使用Rmakrdown进行Word写作基本步骤和上面完全一样，唯一需要调整的是YAML部分。 以下以我和朱萌在《治理研究》发表的“以语塑心与国民治理：外语习得对政治认知能力的塑造机制研究”的YAML为例进行研究。2 比起之前的例子，最主要的改变是在output部分从bookdown::pdf_document2:变为bookdown::word_document2。 另一个改变重点是reference_docx: template_cn.docx。由于中文期刊往往有一些特殊的设置要求包括章节号、段落缩进、字体等等，这些都可以通过template_cn.docx以MS Word template方式进行调试。 详细的设置方式可以参考以下两个资源：R Markdown Cookbook和Authoring Books with R Markdown。\n--\noutput:\n  bookdown::word_document2:\n    number_section: false\n    reference_docx: template_cn.docx\nfontsize: 12 pt\ngeometry: margin=1in\nbibliography:  \"language_English.bib\"\ncsl: \"american-political-science-review.csl\"\nlink-citations: true\ncolorlinks: false\n\ntitle: |\n  以语塑心与国民治理：外语习得对政治认知能力的塑造机制研究\nauthor: \n- 胡悦\n- 朱萌^[胡悦，清华大学政治学系副教授；朱萌，通讯作者，清华大学政治学系硕士研究生。**基金项目**：国家自然科学基金委青年项目“新型城镇化进程中新老市民身份认同建构的社会心理机制与政策引导路径研究”（72004109），清华大学自主科研项目“新时代国民身份认同建构机制研究”（2019THZWJC47）。]\n\nabstract: |\n\n **摘要**：\n 掌握外语人口增加是现代化发展在个体层面的重要特征，也是一国站稳国际舞台、引领世界潮流的重要前提。\n 然而，现有研究多聚焦外语的对外功能和教育手段，对其对内功用，尤其是社会政治功用和治理价值却不甚明了。\n “语言政策场域”理论结合语言治理和语言政治学逻辑填补此方面空白，指出外语习得对国民政治能力（特别是以政治效能感为代表的政治感知能力）的提升效果以及四种作用机制。\n 基于全国代表性样本的实证分析支持了该理论的效果和机制假设。\n 实证研究表明，中国国民外语（英语）水平对其政治认知能力具有显著促进作用。\n 在机制上，外语习得通过信息获取进路上提升内部政治效能感作用最明显，而语言竞争优势则是影响外部效能感的主导路径。\n 与此同时，价值西化路径并未对国民政治认知造成明显改变。\n 据此，外语习得对于国民政治能力塑造功能更偏向素质性，而非价值性。\n 对于语言政策场域理论的系统探讨和实证检验推进了对宏观语言政策微观治理逻辑的理解，为“语言--思维”关系这一经典议题提供新思路和新证据，同时对于像中国这样外语人口日益庞大的现代国家治理也具有重要现实意义，为我国改革语言政策和治理体系、提升国家能力、推动国家治理现代化提供理论借鉴和实证参考。\n \n **关键词**：国家治理能力；政治能力；语言治理；外语习得；政策场域；政治效能感。\n \n Foreign Language and Governance: How Second Language Acquisition Constructs Mass Cognitive Capability for Politics\n \n **Abstract**：The growth of the population comprehending a second language is a characteristic of modernization and the prerequisite of a state's international influence. \n However, the mainstay of the existing research on second language acquisition (SLA) focuses on international communications and education ignoring SLA's sociopolitical functions and values for domestic governance.\n The novel \"language policy field\" theory fills this academic vacuum by specifying four paths SLA can affect individuals' political capabilities, especially the cognitive capability. \n The study based on a nationally representative survey in China supports the hypotheses of this theory. \n The empirical analyses show that Chinese citizens' English proficiency significantly modifies people's cognitive capability of politics as measured by political efficacy. \n In terms of the mechanisms, SLA increases the internal efficacy mainly through the information-collection mechanism while raising the external efficacy through the relative-proficiency mechanism. \n Meanwhile, there is no evidence that SLA affects political capacities through value changes. \n In this sense, the influence of SLA is more on literacy than on beliefs. \n The new theory and findings have far-reaching implications on language governance, national capacity, and the modernization of governance in general.\n \n **Keywords**：National capacity of governance; political capacity; language governance; second-language acquisition (SLA); policy field; political efficacy.\n\n---"
+  },
+  {
+    "objectID": "zotero.html#zotero-6.0及插件的安装和注册",
+    "href": "zotero.html#zotero-6.0及插件的安装和注册",
+    "title": "3  Zotero 文献管理",
+    "section": "3.1 Zotero 6.0（及插件）的安装和注册",
+    "text": "3.1 Zotero 6.0（及插件）的安装和注册\n1.于官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装） 2.回到官网进行注册,记住注册信息。\n\n\n\n\n\n\nImportance\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。\n\n\n3.回到软件端。打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。 \n4.下载插件 - ZotFile, 用来管理PDF文件; - Better BibTeX, 将library导出为bib.格式与RMarkdown联动。 - Jasminum, 让Zotero更好适配知网。\n下载完成后进入软件-工具-插件-设置（齿轮标识）-Install Add-on From File-安装已经下载的两个插件。\n\n\n\n插件安装"
+  },
+  {
+    "objectID": "zotero.html#修改设置",
+    "href": "zotero.html#修改设置",
+    "title": "3  Zotero 文献管理",
+    "section": "3.2 修改设置",
+    "text": "3.2 修改设置\n\n3.2.1 常规 general\n\n\n\n3.2.2 同步 sync\n\n选择自动同步，取消选择[同步全文]，（zotero只有300MB文件储存空间，可配置云端同步进行解决，见后文。）\n\n\n3.2.3 搜索\n保持默认即可。\n\n\n3.2.4 导出\n\n\n\n3.2.5 引用\n针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。\n在”文字处理软件”(Word Processors)中安装MS Word加载项。\n\n\n\n3.2.6 高级\n文件储存位置：编辑-首选项-高级-文件和文件夹(Files and Folders)\n设置根目录(Based directory)和数据存储位置。 根目录中存储文章的pdf文件，可酌情放在较空的硬盘中。\n数据储存位置（Data directory location）仅包含Zotero中的引录信息。\n后期如须多设备同步可将根目录文件夹进行云同步处理。\n\n\n\n3.2.7 Better BibTeX\n在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或其某些部分）导出为纯.bib文本文件。 在使用rmarkdown撰写学术论文时，需要此步骤才能在RStudio中使用Zotero。\n变更Citation key 格式, 推荐格式authEtAl.capitalize+year。2\n\n自动输出（Automatic export）设置："
+  },
+  {
+    "objectID": "zotero.html#jasminum-设置",
+    "href": "zotero.html#jasminum-设置",
+    "title": "3  Zotero 文献管理",
+    "section": "3.3 Jasminum 设置",
+    "text": "3.3 Jasminum 设置\n之前请按照提示，先安装PDFtk Server。\n\n\n3.3.1 ZotFile 设置\n【工具】-【ZotFile preference】\n\n在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。\n第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。\n下面的use subfolder defined by xxx的表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。\n\n\n3.3.2 Renaming Rules\n设置附件的重命名格式, 推荐以下设置{%a}{%y_}{%t}。"
+  },
+  {
+    "objectID": "zotero.html#手动重命名附件",
+    "href": "zotero.html#手动重命名附件",
+    "title": "3  Zotero 文献管理",
+    "section": "3.4 手动重命名附件",
+    "text": "3.4 手动重命名附件\n在具体的条目中点击【附件】-【重命名附件】\n\n\n\nrename"
   }
 ]
