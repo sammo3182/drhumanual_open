@@ -2,15 +2,16 @@ project:
   type: book
 
 book:
-  title: "Manual for Dr. Hu's Amazing Team"
+  title: "Open Manual for Dr. Hu's Amazing Team"
   author: "胡悦"
   date: today
+
   chapters:
     - index.qmd
-    - markdown.qmd
-    - bookdown.qmd
     - zotero.qmd
     - lit.qmd
+    - markdown.qmd
+    - bookdown.qmd
     - git.qmd
 
 bibliography: references.bib

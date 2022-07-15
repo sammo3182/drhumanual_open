@@ -1,11 +1,14 @@
-# Bookdown
+# Bookdown 撰写毕业论文 {#sec-bookdown}
 
-同样的，我们参考[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/books.html)Chapter 12学习Bookdown。
+Bookdown是`rmarkdown`的一个重要延伸，我们在 @sec-rmarkdown 中已经使用到了这一软件。
+然而，如名所示，bookdown的本业是写书。
+因此使用Bookdown撰写学位论文能将`rmarkdown`的所有优势都能充分利用，并最大限度减少文献整理等无效工作。^[本章写作获得了石宇洋同学很大帮助。]
 
+以下对和学术写作相关的Bookdown设置进行介绍。
 
 ## Bookdown包下载
 
-```{r packageDownload, eval=F}
+```{r packageDownload, eval=FALSE}
 install.packages('bookdown')
 
 # or Github
@@ -13,7 +16,7 @@ install.packages('bookdown')
 devtools::install_github('rstudio/bookdown')
 ```
 
-## Bookdown project结构
+## Bookdown Project（即你的学位论文）结构
 
 请在进行Bookdown书写时，首先创建一个新的project。Working directory中一般有以下部分：
 
@@ -64,7 +67,7 @@ biblio-style: apalike
 ---
 ```
 
-其中，site和output决定全书输出格式，可参见详见[R Markdown: The Definitive Guide Chapter 12.4](https://bookdown.org/yihui/rmarkdown/bookdown-output.html)。一般而言，只需要更改`title`,`author`,`description`,`bibliography`和`biblio-style`。
+其中，site和output决定全书输出格式，可参见详见[Bookdown](https://bookdown.org/)文档。一般而言，只需要更改`title`,`author`,`description`,`bibliography`和`biblio-style`。
 
 ## `Num-name.Rmd`
 

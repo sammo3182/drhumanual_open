@@ -56,7 +56,7 @@ Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。
 
 ![](https://ikashnitsky.github.io/images/190314/pref-cite.png)
 
-### 高级 
+### 高级 {#sec-zotero-advanced}
 
 文件储存位置：编辑-首选项-高级-文件和文件夹(Files and Folders)
 
@@ -82,7 +82,7 @@ Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。
 
 ![](images/zotero_bibtex2.png)
 
-## Jasminum 设置
+## Jasminum 设置{#sec-zotero-jasminum}
 
 之前请按照提示，先安装PDFtk Server。
 

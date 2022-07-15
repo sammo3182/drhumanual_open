@@ -1,4 +1,4 @@
-# Rmarkdown 论文写作
+# Rmarkdown 论文写作 {#sec-rmarkdown}
 
 Rmarkdown是markdown的一种延伸版本。
 Markdown是一种流行且轻量级的标记语言。
@@ -7,7 +7,14 @@ Markdown是一种流行且轻量级的标记语言。
 这方面你可能听说过一个很强大的排版软件，LaTex。
 在很多人看来（包括我），markdown语言很大程度上能够替代LaTex。
 他们都能生成pdf（事实上markdown是通过`Pandoc`撰写成tex文件，所以本质上是一回事），而markdown的学习门槛和书写结果都比LaTex友好得多。
+
 本节的核心目的是教会你如何使用rmarkdown进行学术论文写作。
+使用进行学术写作的优点有四：
+
+1. 保证分析和文字都在同一个文档中，避免忘记code对应什么内容的情况；
+1. 自动生成Replication file, 任何人拿到文件后都能够得出和作者一致的结果，最大程度上实现研究透明；
+1. 能轻松导出html，MS word, 或pdf文档，适应中英文写作各种要求。
+1. 很好兼容Git版本控制。
 
 ## YAML 设置
 
