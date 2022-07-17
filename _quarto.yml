@@ -30,8 +30,9 @@ knitr:
 
 format:
   html:
+    cover-image: images/drhutools.png
     theme:
-        light: simplex
+        light: [simplex, goldenBlack.scss]
         dark: slate
   docx: default
     
