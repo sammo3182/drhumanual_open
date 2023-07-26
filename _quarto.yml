@@ -10,9 +10,7 @@ book:
     - index.qmd
     - zotero.qmd
     - lit.qmd
-    - markdown.qmd
-    - bookdown.qmd
-    - git.qmd
+    - naming.qmd
 
 bibliography: references.bib
 highlight-style: github
@@ -26,16 +24,16 @@ knitr:
     echo: true
     message: true
     warning: true
-    dpi: 300
+    # dpi: 300
 
 format:
   html:
     cover-image: images/drhutools.png
     theme:
-        light: [simplex, goldenBlack.scss]
-        dark: slate
+        light: lux
+        dark: cyborg
+    css: style_custom.css
   docx: default
-    
     
 
 

@@ -1,0 +1,95 @@
+# 文件命名 {#sec-naming}
+
+文件命名是建立文件搜索系统的关键。^[对于Windows用户，请下载[Listary](https://www.listary.com/), 增强搜索功能。]
+为了实现与组员间无间合作，加入我们共同课题的同志也要求采用同样的命名系统。
+本组的文件命名系统分一般命名、项目命名、变量命名三个系统：
+
+## 一般命名
+
+本组一般命名规则基本遵循[Jenny Bryan](https://jennybryan.org)创建的[命名系统](https://github.com/jennybc/organization-and-naming).
+
+### 不可取的命名方式（举例）
+
+- `arandomfile.docx`
+- `a random file.docx`
+- `figure 1.png`
+- `tab 2.xls`
+- `also@notthis@^complicated#23*.txt`
+- `用中文命名.csv`
+
+### 推荐命名方式
+
+基本原则：
+
+- 方便（机器）搜索
+    - 单名搜索
+    - 正则表达式
+    - 区分大小写，小写最先
+- 方便（人）认读
+- 自动排序（e.g, `01_a.txt`, `02_aa.txt`, `03_b.txt`）
+    - ISO 8601标准日期 (e.g., `2022-07-12_invoice.pdf`)
+    - 同名前缀（e.g., `manuscript-anonymous.pdf`, `manuscript-named.pdf`）
+- 不要使用空格，建议采用以下三种方式
+    - [Kebab case](https://www.theserverside.com/definition/Kebab-case): `a_random_file.txt`
+    - [Camel case](https://www.techtarget.com/whatis/definition/CamelCase): `aRandomFile.txt`
+    - [Snake case](https://www.theserverside.com/definition/Snake-case): `a-random-file.txt`
+    
+本组对于这三种命名方式的使用方式如下：
+1. 对于日期或类型分类，使用Kebab。
+1. 对于多词名称使用Camel。
+1. 鉴于一些编程语言对于`-`有功能性赋值，在文件名种使用`-`可能会造成认读问题，通常不使用。
+1. 尽量不使用非英文字符命名。
+
+## 项目命名
+
+对于研究项目请以下目录树创建文件夹：
+
+````
+.     
+├── codes/     
+│   └── data_preparation.R      
+├── data/      
+│   ├── df_raw.rds      
+│   └── ......      
+├── output/      
+│   ├── codingCheck100.html     
+│   └── ......      
+├── paper/     
+│   ├── images/
+│   ├── submission/
+│       └── 2022-07-12_APSR
+│   ├── american-political-science-association.csl      
+│   ├── <projectName>.qmd     
+│   ├── multiple-bibliographies.lua     
+│   └── ......
+├── documents/     
+│   ├── codebook.txt      
+│   └── questionnaire.pdf     
+└── <projectName>.Rproj     
+````
+
+你可以在R里面运行以下命令，生成上述结构：
+
+```{r projectDir}
+#| eval: false
+
+ls_dir <- c("codes", "data", "output", "paper", "paper/images", "paper/submission", "document")
+
+purrr::walk(ls_dir, ~if(!dir.exists(.)) dir.create(file.path(.), recursive = TRUE))
+```
+
+## 变量命名
+
+变量命名首要原则是不要使用中文命名任何变量。
+操作规则基本遵循“类型前缀_内容_原题"方式：
+
+- 区分类型采用Kebab法，比如`confidence_central`、`confidence_local`、`tab_aTable`、`plot_aResult`；
+- 词组区分使用Camel法，比如`socialCapital`、`politicalEfficacy`;
+- 如果是survey数据，则要将对应的题号统一作为命名后缀，比如`efficacy_int_q12`、`efficacy_ext_q13`
+- 鉴于`-`在编程语言中为减号，因此不应使用Snake法
+
+
+:::{.callout-note}
+除了像age、income、education、GDP等约定俗成的变量外，尽量采用具有指向性的变量名称。
+比如 ~~gender~~ female, ~~employment~~ employed。
+:::
