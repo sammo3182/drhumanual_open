@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.629">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Manual for Dr.&nbsp;Hu’s Amazing Team - 1&nbsp; Zotero 文献管理</title>
+<title>Open Manual for Dr.&nbsp;Hu’s Amazing Team - 1&nbsp; 文献管理</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -36,8 +41,8 @@ ul.task-list{list-style: none;}
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -59,6 +64,7 @@ ul.task-list{list-style: none;}
 }</script>
 
 
+<link rel="stylesheet" href="style_custom.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -67,7 +73,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zotero 文献管理</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,27 +106,17 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zotero 文献管理</span></a>
+  <a href="./zotero.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lit.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献整理</span></a>
+  <a href="./lit.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献梳理</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./markdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rmarkdown 论文写作</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./bookdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bookdown 撰写毕业论文</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">版本控制</span></a>
+  <a href="./naming.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">文件命名</span></a>
   </div>
 </li>
     </ul>
@@ -128,28 +124,28 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#zotero-6.0及插件的安装和注册" id="toc-zotero-6.0及插件的安装和注册" class="nav-link active" data-scroll-target="#zotero-6.0及插件的安装和注册"> <span class="header-section-number">1.1</span> Zotero 6.0（及插件）的安装和注册</a></li>
-  <li><a href="#修改设置" id="toc-修改设置" class="nav-link" data-scroll-target="#修改设置"> <span class="header-section-number">1.2</span> 修改设置</a>
+  <li><a href="#zotero-6.0及插件的安装和注册" id="toc-zotero-6.0及插件的安装和注册" class="nav-link active" data-scroll-target="#zotero-6.0及插件的安装和注册"><span class="toc-section-number">1.1</span>  Zotero 6.0（及插件）的安装和注册</a></li>
+  <li><a href="#主程序设置" id="toc-主程序设置" class="nav-link" data-scroll-target="#主程序设置"><span class="toc-section-number">1.2</span>  主程序设置</a>
   <ul class="collapse">
-  <li><a href="#常规-general" id="toc-常规-general" class="nav-link" data-scroll-target="#常规-general"> <span class="header-section-number">1.2.1</span> 常规 general</a></li>
-  <li><a href="#同步-sync" id="toc-同步-sync" class="nav-link" data-scroll-target="#同步-sync"> <span class="header-section-number">1.2.2</span> 同步 sync</a></li>
-  <li><a href="#搜索" id="toc-搜索" class="nav-link" data-scroll-target="#搜索"> <span class="header-section-number">1.2.3</span> 搜索</a></li>
-  <li><a href="#导出" id="toc-导出" class="nav-link" data-scroll-target="#导出"> <span class="header-section-number">1.2.4</span> 导出</a></li>
-  <li><a href="#引用" id="toc-引用" class="nav-link" data-scroll-target="#引用"> <span class="header-section-number">1.2.5</span> 引用</a></li>
-  <li><a href="#sec-zotero-advanced" id="toc-sec-zotero-advanced" class="nav-link" data-scroll-target="#sec-zotero-advanced"> <span class="header-section-number">1.2.6</span> 高级</a></li>
-  <li><a href="#better-bibtex" id="toc-better-bibtex" class="nav-link" data-scroll-target="#better-bibtex"> <span class="header-section-number">1.2.7</span> Better BibTeX</a></li>
+  <li><a href="#常规-general" id="toc-常规-general" class="nav-link" data-scroll-target="#常规-general"><span class="toc-section-number">1.2.1</span>  常规 General</a></li>
+  <li><a href="#同步-sync" id="toc-同步-sync" class="nav-link" data-scroll-target="#同步-sync"><span class="toc-section-number">1.2.2</span>  同步 Sync</a></li>
+  <li><a href="#搜索-search" id="toc-搜索-search" class="nav-link" data-scroll-target="#搜索-search"><span class="toc-section-number">1.2.3</span>  搜索 Search</a></li>
+  <li><a href="#导出-export" id="toc-导出-export" class="nav-link" data-scroll-target="#导出-export"><span class="toc-section-number">1.2.4</span>  导出 Export</a></li>
+  <li><a href="#引用-cite" id="toc-引用-cite" class="nav-link" data-scroll-target="#引用-cite"><span class="toc-section-number">1.2.5</span>  引用 Cite</a></li>
+  <li><a href="#sec-zotero-advanced" id="toc-sec-zotero-advanced" class="nav-link" data-scroll-target="#sec-zotero-advanced"><span class="toc-section-number">1.2.6</span>  高级</a></li>
   </ul></li>
-  <li><a href="#sec-zotero-jasminum" id="toc-sec-zotero-jasminum" class="nav-link" data-scroll-target="#sec-zotero-jasminum"> <span class="header-section-number">1.3</span> Jasminum 设置</a>
+  <li><a href="#插件设置" id="toc-插件设置" class="nav-link" data-scroll-target="#插件设置"><span class="toc-section-number">1.3</span>  插件设置</a>
   <ul class="collapse">
-  <li><a href="#zotfile-设置" id="toc-zotfile-设置" class="nav-link" data-scroll-target="#zotfile-设置"> <span class="header-section-number">1.3.1</span> ZotFile 设置</a></li>
-  <li><a href="#renaming-rules" id="toc-renaming-rules" class="nav-link" data-scroll-target="#renaming-rules"> <span class="header-section-number">1.3.2</span> Renaming Rules</a></li>
+  <li><a href="#better-bibtex" id="toc-better-bibtex" class="nav-link" data-scroll-target="#better-bibtex"><span class="toc-section-number">1.3.1</span>  Better BibTeX</a></li>
+  <li><a href="#sec-zotero-jasminum" id="toc-sec-zotero-jasminum" class="nav-link" data-scroll-target="#sec-zotero-jasminum"><span class="toc-section-number">1.3.2</span>  Jasminum 设置</a></li>
+  <li><a href="#zotfile-设置" id="toc-zotfile-设置" class="nav-link" data-scroll-target="#zotfile-设置"><span class="toc-section-number">1.3.3</span>  ZotFile 设置</a></li>
   </ul></li>
-  <li><a href="#手动重命名附件" id="toc-手动重命名附件" class="nav-link" data-scroll-target="#手动重命名附件"> <span class="header-section-number">1.4</span> 手动重命名附件</a></li>
-  <li><a href="#zotero-与rmarkdown联动" id="toc-zotero-与rmarkdown联动" class="nav-link" data-scroll-target="#zotero-与rmarkdown联动"> <span class="header-section-number">1.5</span> Zotero 与RMarkdown联动</a></li>
+  <li><a href="#sec-nutstone" id="toc-sec-nutstone" class="nav-link" data-scroll-target="#sec-nutstone"><span class="toc-section-number">1.4</span>  Zotero + 坚果云</a></li>
+  <li><a href="#zotero-ipad" id="toc-zotero-ipad" class="nav-link" data-scroll-target="#zotero-ipad"><span class="toc-section-number">1.5</span>  Zotero + Ipad</a></li>
   </ul>
 </nav>
     </div>
@@ -158,7 +154,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-zotero" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zotero 文献管理</span></span></h1>
+<h1 class="title"><span id="sec-zotero" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></span></h1>
 </div>
 
 
@@ -166,16 +162,20 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
-<p>Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大且免费。 以下结合Zotero与本组研究相关比较密切的一些功能和设置进行说明。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="zotero-6.0及插件的安装和注册" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="zotero-6.0及插件的安装和注册"><span class="header-section-number">1.1</span> Zotero 6.0（及插件）的安装和注册</h2>
-<p>1.于官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装） 2.回到<a href="https://www.zotero.org/">官网</a>进行注册,记住注册信息。</p>
+<ol type="1">
+<li>官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装）</li>
+<li>回到<a href="https://www.zotero.org/">官网</a>进行注册,记住注册信息。</li>
+</ol>
 <div class="callout-importance callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -189,131 +189,157 @@ Importance
 <p>注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。</p>
 </div>
 </div>
-<p>3.回到软件端。打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。 <img src="https://pic3.zhimg.com/v2-d786c49bc6573727422636d82eec45fe_r.jpg" class="img-fluid" alt="登录信息"></p>
-<p>4.下载插件 - <a href="http://zotfile.com/">ZotFile</a>, 用来管理PDF文件; - <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, 将library导出为bib.格式与RMarkdown联动。 - <a href="https://github.com/l0o0/jasminum">Jasminum</a>, 让Zotero更好适配知网。</p>
+<ol start="3" type="1">
+<li>下载插件
+<ul>
+<li><a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, 将library导出为bib.格式与Markdown联动。</li>
+<li><a href="http://zotfile.com/">ZotFile</a>, 用来管理PDF文件;</li>
+<li><a href="https://github.com/l0o0/jasminum">Jasminum</a>, 让Zotero更好适配知网。</li>
+</ul></li>
+</ol>
 <p>下载完成后进入软件-工具-插件-设置（齿轮标识）-<code>Install Add-on From File</code>-安装已经下载的两个插件。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://ikashnitsky.github.io/images/190314/plugin.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">插件安装</figcaption><p></p>
-</figure>
-</div>
+<p><img src="images/zotero_plugin.png" class="img-fluid"></p>
 </section>
-<section id="修改设置" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="修改设置"><span class="header-section-number">1.2</span> 修改设置</h2>
+<section id="主程序设置" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="主程序设置"><span class="header-section-number">1.2</span> 主程序设置</h2>
 <section id="常规-general" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="常规-general"><span class="header-section-number">1.2.1</span> 常规 general</h3>
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="常规-general"><span class="header-section-number">1.2.1</span> 常规 General</h3>
 <p><img src="images/zotero_general.png" class="img-fluid"></p>
 </section>
 <section id="同步-sync" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="同步-sync"><span class="header-section-number">1.2.2</span> 同步 sync</h3>
-<p><img src="https://ikashnitsky.github.io/images/190314/pref-sync.png" class="img-fluid"></p>
-<p>选择自动同步，取消选择[同步全文]，（zotero只有300MB文件储存空间，可配置云端同步进行解决，见后文。）</p>
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="同步-sync"><span class="header-section-number">1.2.2</span> 同步 Sync</h3>
+<p><img src="images/zotero_sync.png" class="img-fluid"></p>
+<p>选择自动同步，取消选择“同步全文”。 Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。 如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 <a href="#sec-nutstone"><span>Section&nbsp;1.4</span></a>。</p>
 </section>
-<section id="搜索" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="搜索"><span class="header-section-number">1.2.3</span> 搜索</h3>
+<section id="搜索-search" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="搜索-search"><span class="header-section-number">1.2.3</span> 搜索 Search</h3>
 <p>保持默认即可。</p>
 </section>
-<section id="导出" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="导出"><span class="header-section-number">1.2.4</span> 导出</h3>
+<section id="导出-export" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="导出-export"><span class="header-section-number">1.2.4</span> 导出 Export</h3>
 <p><img src="images/zotero_export.png" class="img-fluid"></p>
 </section>
-<section id="引用" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="引用"><span class="header-section-number">1.2.5</span> 引用</h3>
+<section id="引用-cite" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="引用-cite"><span class="header-section-number">1.2.5</span> 引用 Cite</h3>
 <p>针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。</p>
 <p>在”文字处理软件”(Word Processors)中安装MS Word加载项。</p>
-<p><img src="https://ikashnitsky.github.io/images/190314/pref-cite.png" class="img-fluid"></p>
+<p><img src="images/zotero_cite.png" class="img-fluid"></p>
 </section>
 <section id="sec-zotero-advanced" class="level3" data-number="1.2.6">
 <h3 data-number="1.2.6" class="anchored" data-anchor-id="sec-zotero-advanced"><span class="header-section-number">1.2.6</span> 高级</h3>
-<p>文件储存位置：编辑-首选项-高级-文件和文件夹(Files and Folders)</p>
-<p>设置根目录(Based directory)和数据存储位置。 根目录中存储文章的pdf文件，可酌情放在较空的硬盘中。</p>
-<p>数据储存位置（Data directory location）仅包含Zotero中的引录信息。</p>
-<p>后期如须多设备同步可将根目录文件夹进行云同步处理。</p>
+<p>文件储存位置：编辑→ 首选项→ 高级→ 文件和文件夹(Files and Folders)</p>
+<ul>
+<li>设置根目录(Based directory)和数据存储位置。 根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。 如决定用此种方式存储文献，可酌情放在较空的硬盘中。 如果之前选择了在<code>WebDAV</code>方式，这里可以选择不设置。</li>
+<li>数据储存位置（Data directory location）仅包含Zotero中的引录信息。 如果之前选择了在<code>WebDAV</code>方式，这个文件夹可以不用同步，保留在本地即可。</li>
+</ul>
 <p><img src="images/zotero_advanced.png" class="img-fluid"></p>
 </section>
-<section id="better-bibtex" class="level3" data-number="1.2.7">
-<h3 data-number="1.2.7" class="anchored" data-anchor-id="better-bibtex"><span class="header-section-number">1.2.7</span> Better BibTeX</h3>
-<p>在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或其某些部分）导出为纯.bib文本文件。 在使用rmarkdown撰写学术论文时，需要此步骤才能在RStudio中使用Zotero。</p>
-<p>变更Citation key 格式, 推荐格式<code>authEtAl.capitalize+year</code>。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</section>
+<section id="插件设置" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="插件设置"><span class="header-section-number">1.3</span> 插件设置</h2>
+<section id="better-bibtex" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="better-bibtex"><span class="header-section-number">1.3.1</span> Better BibTeX</h3>
+<p>在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或某些部分）导出为纯.bib文本文件。 在使用LaTex 或rmarkdown撰写学术论文时，需要这类文件。</p>
+<p>Citation key 格式统一采用 <code>authEtAl.capitalize+year</code>。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><img src="images/zotero_bibtex1.png" class="img-fluid"></p>
-<p>自动输出（Automatic export）设置：</p>
+<p>Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。</p>
+<p><img src="images/zotero_bbt.png" class="img-fluid"></p>
+<p>对于需要长期更新的bib文档可采用自动输出方法。 自动输出（Automatic export）设置：</p>
 <p><img src="images/zotero_bibtex2.png" class="img-fluid"></p>
+<p>选择持续更新。</p>
+<p><img src="images/zotero_menu.png" class="img-fluid"></p>
+<p>输出的.bib文件应放置在我们要编译的.tex, .rmd, 或者.qmd文件的同一目录中。 .bib的名称在YAML标头中指定。 示例如图：</p>
+<p><img src="images/zotero_yaml.png" class="img-fluid"></p>
+<p>本组通常将Zotero与Rmarkdown或quarto联动。 关于这部分可参考<a href="https://posit.co/blog/rstudio-1-4-preview-citations/">官方链接说明</a>。</p>
 </section>
-</section>
-<section id="sec-zotero-jasminum" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="sec-zotero-jasminum"><span class="header-section-number">1.3</span> Jasminum 设置</h2>
+<section id="sec-zotero-jasminum" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-zotero-jasminum"><span class="header-section-number">1.3.2</span> Jasminum 设置</h3>
 <p>之前请按照提示，先安装PDFtk Server。</p>
 <p><img src="images/zotero_jasminum.png" class="img-fluid"></p>
-<section id="zotfile-设置" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="zotfile-设置"><span class="header-section-number">1.3.1</span> ZotFile 设置</h3>
-<p>【工具】-【ZotFile preference】</p>
-<p><img src="https://ikashnitsky.github.io/images/190314/zf-general.png" class="img-fluid"></p>
-<p>在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。</p>
-<p>第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。</p>
-<p>下面的use subfolder defined by xxx的表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。</p>
 </section>
-<section id="renaming-rules" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="renaming-rules"><span class="header-section-number">1.3.2</span> Renaming Rules</h3>
+<section id="zotfile-设置" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="zotfile-设置"><span class="header-section-number">1.3.3</span> ZotFile 设置</h3>
+<p>工具→ ZotFile preference</p>
+<p><img src="images/zotero_zotfile.png" class="img-fluid"></p>
+<p>在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。</p>
+<p>下面的“use subfolder defined by…” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。 本组通常<strong>不勾选</strong>。</p>
 <p>设置附件的重命名格式, 推荐以下设置<code>{%a}{%y_}{%t}</code>。</p>
-<p><img src="https://ikashnitsky.github.io/images/190314/zf-renaming.png" class="img-fluid"></p>
+<p><img src="images/zotero_rename.png" class="img-fluid"></p>
 </section>
 </section>
-<section id="手动重命名附件" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="手动重命名附件"><span class="header-section-number">1.4</span> 手动重命名附件</h2>
-<p>在具体的条目中点击【附件】-【重命名附件】</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://ikashnitsky.github.io/images/190314/att-pdf.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">rename</figcaption><p></p>
-</figure>
-</div>
+<section id="sec-nutstone" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="sec-nutstone"><span class="header-section-number">1.4</span> Zotero + 坚果云</h2>
+<ol type="1">
+<li>首先注册坚果云账号，开启坚果云的第三方应用管理。具体步骤如下：
+<ul>
+<li>登录网页端坚果云账号，点击右上角的账号名称→ 账户信息→ 安全选项→ 第三方应用管理→ 添加应用密码。 应用名称可写zotero，之后会自己生成一个应用密码。</li>
+<li><img src="images/zotero_nutstore.jpg" class="img-fluid"></li>
+</ul></li>
+<li>打开Zotero：编辑→ 首选项→ 同步→ 设置，输入用户名和密码进行登陆,然后点击<code>Verify Server</code>
+<ul>
+<li>在文件同步部分建议采用<code>WebDAV</code>方式，以获得更大的存储空间，同时又为多设备协同提供便利。 国内支持这种方式的最常见服务商是坚果云，对于坚果云如何联结Zotero可参照下图以及其官方<a href="https://help.jianguoyun.com/?p=4190">帮助文档</a>。</li>
+</ul></li>
+</ol>
+<p><img src="images/zotero_login.jpg" class="img-fluid"></p>
 </section>
-<section id="zotero-与rmarkdown联动" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="zotero-与rmarkdown联动"><span class="header-section-number">1.5</span> Zotero 与RMarkdown联动</h2>
-<p>用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。</p>
-<p>Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://ikashnitsky.github.io/images/190314/bbt-export.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">bib.导出</figcaption><p></p>
-</figure>
+<section id="zotero-ipad" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="zotero-ipad"><span class="header-section-number">1.5</span> Zotero + Ipad</h2>
+<ol type="1">
+<li>电脑端设置参见@sec-nutstone；</li>
+<li>Ipad端登陆同一个Zotero账户
+<ul>
+<li>Settings → File syncing → 输入与@sec-nutstone相同的设置</li>
+</ul></li>
+</ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>选择持续更新。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://ikashnitsky.github.io/images/190314/bbt-menu.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">update</figcaption><p></p>
-</figure>
+<div class="callout-caption-container flex-fill">
+Important
 </div>
-<p>输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://ikashnitsky.github.io/images/190314/yaml.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">示例</figcaption><p></p>
-</figure>
 </div>
-<p>关于R部分的更多信息请参考：</p>
-<p><a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">RStudio 手册</a></p>
-<p><a href="https://bookdown.org/yihui/bookdown/citations.html">相关章节</a></p>
-<p>或 <a href="https://bookdown.org/yihui/bookdown/citations.html">xieyihui的相关教程</a></p>
+<div class="callout-body-container callout-body">
+<p>Zotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。</p>
+<p><img src="images/zotero_zotfileAttach.png" class="img-fluid"></p>
+</div>
+</div>
 <blockquote class="blockquote">
 <p>祝贺！你已经完成了设置，请奖励自己一只鸡腿！</p>
 </blockquote>
 
 
 </section>
-<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>本章编写获得石宇洋同学的帮助。本文参考了这一<a href="https://ikashnitsky.github.io/2019/zotero/">英文教程</a>。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>更多设置详见<a href="https://retorque.re/zotero-better-bibtex/citation-keys/">cite key 设置查阅手册</a>。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p> 本章编写时Zotero主版本为6.0。 参考了这一<a href="https://ikashnitsky.github.io/2019/zotero/">英文教程</a>和三篇中文文章（<a href="https://help.jianguoyun.com/?p=3168">1</a>， <a href="https://zhuanlan.zhihu.com/p/483147745">2</a>， <a href="https://zhuanlan.zhihu.com/p/133421096">3</a>）。 本章编写获得石宇洋同学的帮助，特表示感谢。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>更多设置详见<a href="https://retorque.re/zotero-better-bibtex/citation-keys/">cite key 设置查阅手册</a>。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {
     for (let i=0; i < stylesheets.length; i++) {
       const stylesheet = stylesheets[i];
@@ -343,8 +369,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     manageTransitions('#quarto-margin-sidebar .nav-link', false);
     if (alternate) {
       enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
     } else {
       disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
     }
     manageTransitions('#quarto-margin-sidebar .nav-link', true);
     // Switch the toggles
@@ -358,6 +390,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           toggle.classList.remove("alternate");
         }
       }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
     }
   }
   const isFileUrl = () => { 
@@ -410,7 +452,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -432,7 +476,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -460,31 +521,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -496,7 +576,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./lit.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献整理</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献梳理</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

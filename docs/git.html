@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.629">
+<meta name="generator" content="quarto-99.9.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -98,8 +98,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -121,6 +121,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 }</script>
 
 
+<link rel="stylesheet" href="style_custom.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -162,22 +163,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zotero 文献管理</span></a>
+  <a href="./zotero.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zotero</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lit.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献整理{.sec-lit}</span></a>
+  <a href="./lit.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献整理</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./markdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rmarkdown 论文写作</span></a>
+  <a href="./markdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rmarkdown</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bookdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bookdown 撰写毕业论文</span></a>
+  <a href="./bookdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bookdown</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -269,12 +270,12 @@ Danger
 <h2 data-number="5.3" class="anchored" data-anchor-id="project"><span class="header-section-number">5.3</span> Project</h2>
 <p>创建Project是进行版本控制的基础，同时使用也可以很好管理文件存储。 具体创建方法如下：</p>
 <p>在Rtudio的右上角,点击后选择<code>New Project</code>可以创建新的Project。一般来说，在创建<strong>本地新项目时</strong>选择<code>new directory</code>就行（相当于创建一个新文件夹）你应该将同一个项目的数据、图片、代码等一系列文件都置于一个Project下。这样能减少数据和代码丢失的可能性，同时在导入数据和图片时，路径也能变短（Project下，默认路径为working directory）。</p>
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic03_CreateProject.png?raw=true" class="img-fluid"></p>
+<p><img src="images/git_project.png" class="img-fluid"></p>
 </section>
 <section id="sec-clone" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-clone"><span class="header-section-number">5.4</span> Clone已有repository</h2>
 <p>对于公开或者有读取权限的repo，我们可以直接把它复制到本地，这个动作叫做克隆。 首先你要到对应远程平台上找到对应的<code>https</code>链接。</p>
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic04_CloneProject.png?raw=true" class="img-fluid"></p>
+<p><img src="images/git_clone.png" class="img-fluid"></p>
 <p>然后Rstudio中创建<code>New Project</code>，选择<code>Version Control</code>→<code>Git</code>并复制https到对应窗口，选择文件夹位置，然后确定即可。</p>
 </section>
 <section id="创建repo" class="level2" data-number="5.5">
@@ -298,11 +299,11 @@ Danger
 <section id="add和commit" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="add和commit"><span class="header-section-number">5.6</span> Add和Commit</h2>
 <p>首先在Rstudio里点击·Commit·</p>
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic05-git.png?raw=true" class="img-fluid"></p>
+<p><img src="images/git_panel.png" class="img-fluid"></p>
 <p>在Rstudio的<code>Git</code>部分有Commit栏，点进去，它会显示本地数据与云端数据（Github上）的区别（图片左栏）。左上显示有变化的文件，下方逐栏说明区别。</p>
 <p>你可以使用stage确认变化（打勾）你可以面将想要进行版本控制的文件前面<code>Staged</code>里面进行勾选，或者使用以下命令（命令在Rstudio中的“Terminal”内输入）：</p>
 <pre class="git"><code>git add &lt;文件名&gt;</code></pre>
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic06-commit.png?raw=true" class="img-fluid"></p>
+<p><img src="images/git_commit.png" class="img-fluid"></p>
 <p>在确认完更改后，你需要输入commit信息, 通常是表明新版本特点的词、词组或一句话，并点击<code>commit</code>按钮确认。</p>
 <p>这一步也可以通过以下代码完成：</p>
 <pre class="git"><code>git commit -m "&lt;注释信息&gt;"</code></pre>
@@ -313,22 +314,12 @@ Danger
 <section id="pull养成习惯" class="level3" data-number="5.6.1">
 <h3 data-number="5.6.1" class="anchored" data-anchor-id="pull养成习惯"><span class="header-section-number">5.6.1</span> Pull：养成习惯</h3>
 <p>再多人合作中，每次开始工作时，你需要先知道其他人对repo做了什么。一定要在每次工作前先将Github上的最新版本文件pull到本地中。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic07-pull.png?raw=true" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">pull</figcaption><p></p>
-</figure>
-</div>
+<p><img src="images/git_pull.png" class="img-fluid"></p>
 </section>
 <section id="branch避免override" class="level3" data-number="5.6.2">
 <h3 data-number="5.6.2" class="anchored" data-anchor-id="branch避免override"><span class="header-section-number">5.6.2</span> Branch：避免Override</h3>
 <p>你可以和朋友们各自创建自己的Branch（详细原理可见<a href="https://happygitwithr.com/git-branches.html">happygitwithr</a>）。这相当于各自在不同的工作线上工作（因此不会将文件更改上传到master上）。我们仅需要将自己Branch中<strong>完全确定</strong>并<strong>需要同他人共享</strong>的部分上传到master上。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic08-branch.png?raw=true" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">branch</figcaption><p></p>
-</figure>
-</div>
+<p><img src="images/git_branch.png" class="img-fluid"></p>
 
 
 </section>
@@ -344,6 +335,24 @@ Danger
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {
     for (let i=0; i < stylesheets.length; i++) {
       const stylesheet = stylesheets[i];
@@ -373,8 +382,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     manageTransitions('#quarto-margin-sidebar .nav-link', false);
     if (alternate) {
       enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
     } else {
       disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
     }
     manageTransitions('#quarto-margin-sidebar .nav-link', true);
     // Switch the toggles
@@ -521,7 +536,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bookdown.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bookdown 撰写毕业论文</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bookdown</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
