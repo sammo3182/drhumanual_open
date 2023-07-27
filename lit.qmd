@@ -66,6 +66,10 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
 - 中文文献。
   实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。
   这一问题很大程度上可以通过`jasminum`插件解决，请无比安装且做好设置。^[参见 @sec-zotero-jasminum。]安装成功后，`jasminum`选项也会出现在右键菜单中，请妥善使用。
+  - 由于国内外各高校图书馆网络代理不同，有时即使安装了`jasminum`也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：
+    1. 基于`jasminum`从中文数据库下载文章信息
+    1. 通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下
+    1. 右键点击录入条目，选择“Attach New file” ![](images/lit_attach.png), Zotero会自动识别文件并加载为附件
 
 - 文献分类。
     Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个collection文件夹中，但搜索时又只会出现一条。
