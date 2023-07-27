@@ -19,7 +19,8 @@
 
 ![](images/goodluck.gif){fig-align="center"}
 
-:::{.column-body-right}
+:::{style="text-align:right; margin-top: 1em"}
 胡悦    
-`r Sys.Date()`于清华园
+`r Sys.Date()`  
+清华园
 :::
