@@ -3,89 +3,92 @@
 Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。
 功能过于强大，且免费。
 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。
-如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。^[
-本章编写时Zotero主版本为6.0。
-参考了这一[英文教程](https://ikashnitsky.github.io/2019/zotero/)和三篇中文文章（[1](https://help.jianguoyun.com/?p=3168)， [2](https://zhuanlan.zhihu.com/p/483147745)， [3](https://zhuanlan.zhihu.com/p/133421096)）。
-本章编写获得石宇洋同学的帮助，特表示感谢。
+如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。
+本章编写时，Zotero稳定版本为6.0版，但7.0已经公测，功能基本完备。
+因此本章主要基于7.0进行部署讲解。^[
+本章内容参考了这一[英文教程](https://ikashnitsky.github.io/2019/zotero/)和三篇中文文章（[1](https://help.jianguoyun.com/?p=3168)， [2](https://zhuanlan.zhihu.com/p/483147745)， [3](https://zhuanlan.zhihu.com/p/133421096)）, 并获得石宇洋同学大力帮助，特此感谢！
 ]
 
 
-## Zotero 6.0（及插件）的安装和注册 
+## 安装
 
 1. 官网[Zotero | Home](https://www.zotero.org/)进行下载并完成安装。（Chrome插件后期会自动安装）
+    - 本章写作时，安装7.0版本仍需要通过[beta渠道](https://www.zotero.org/support/beta_builds)下载。
 2. 回到[官网](https://www.zotero.org/)进行注册,记住注册信息。
 
-:::{.callout-importance}
+:::{.callout-important}
 注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。
 :::
 
-
-3. 下载插件
-    - [Better BibTeX](https://retorque.re/zotero-better-bibtex/), 将library导出为bib.格式与Markdown联动。
-    - [ZotFile](http://zotfile.com/), 用来管理PDF文件;
-    - [Jasminum](https://github.com/l0o0/jasminum), 让Zotero更好适配知网。
-
-下载完成后进入软件-工具-插件-设置（齿轮标识）-`Install Add-on From File`-安装已经下载的两个插件。
-
-![](images/zotero_plugin.png)
-
-
 ## 主程序设置
 
-### 常规 General
+主程序的设置窗口在`编辑` &rarr; `设置`中。
 
-![](images/zotero_general.png)
+![](images/zotero_settings.png){fig-align="center"}
 
-### 同步 Sync
+设置中包含不同的选项卡，里面的选项可根据需要和使用习惯自行调整，这里只对重点项目和组内需统一的项目进行说明：
 
-![](images/zotero_sync.png)
+首先，“常规”选项卡下，请勾选“重命名链接的文件”，然后点击“Customize Filename Format...”
 
+![](images/zotero_settings_general.png){fig-align="center"}
 
-选择自动同步，取消选择“同步全文”。
-Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。
-如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 @sec-nutstone。
+在弹出的“Filename Format”选项框中，将以下代码复制到“Filename Template”部分：
 
+```
+{{ if creators == {{creators max="2"}} }} {{ creators join=""}}{{ else }} {{ creators join = "" max = "1" suffix="EtAl" }} {{ endif }}{{ year suffix="_" }}{{ title truncate="100" }}
+```
 
-### 搜索 Search
+以下的“Preview”部分显示对输入的文件名进行统一格式重命名后效果。
 
-保持默认即可。
+![](images/zotero_settings_fileName.png){#fig-set fig-align="center"}
 
-### 导出 Export
+其次，在“同步”选项卡中要进行几部分的设置：
 
-![](images/zotero_export.png)
+1. 登录注册的Zotero账户。
+1. 保持勾选“自动同步”，但去掉“同步全文内容”的勾选。
+1. 如需要使用WebDAV同步文献，在“文件同步”中附件同步方式选择“WebDAV”，并参考 @sec-nutstone 部分进行设置。
 
-### 引用 Cite
-
-针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。
-
-在"文字处理软件"(Word Processors)中安装MS Word加载项。
-
-![](images/zotero_cite.png)
-
-### 高级 {#sec-zotero-advanced}
-
-文件储存位置：编辑&rarr; 首选项&rarr; 高级&rarr; 文件和文件夹(Files and Folders)
-
-- 设置根目录(Based directory)和数据存储位置。
-  根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。
-  如决定用此种方式存储文献，可酌情放在较空的硬盘中。
-  如果之前选择了在`WebDAV`方式，这里可以选择不设置。
-- 数据储存位置（Data directory location）仅包含Zotero中的引录信息。
-  如果之前选择了在`WebDAV`方式，这个文件夹可以不用同步，保留在本地即可。
-
-
-![](images/zotero_advanced.png)
+![](images/zotero_settings_sync.png){#fig-set fig-align="center"}
 
 ## 插件设置
 
-### Better BibTeX 
+### Jasminum 设置{#sec-zotero-jasminum}
 
-在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或某些部分）导出为纯.bib文本文件。
-在使用LaTex 或rmarkdown撰写学术论文时，需要这类文件。
+用于处理知网文章及其他中文文章
 
-Citation key 格式统一采用 `authEtAl.capitalize+year`。^[更多设置详见[cite key 设置查阅手册](https://retorque.re/zotero-better-bibtex/citation-keys/)。]
+1. 务必通过Github repo 安装[最新版插件](https://github.com/l0o0/jasminum/releases)，否则可能与Zotero 7.0不兼容
+1. 按照提示，安装PDFtk Server。
+1. 通过设置进入插件设置界面，进行以下设置：
+    - 去掉拉去指望元数据后调用Zotfile选项
+    - 正确设置PDFtk Server
+    - 如有需要改动设置语言
 
-![](images/zotero_bibtex1.png)
+![](images/zotero_settings_jasimium.png){#fig-set fig-align="center"}
+
+### Attanger {#sec-attanger}
+
+是Zotfile插件在Zotero 7.0上的兼容版本，用于更好地管理文献附件。
+
+1. 通过Github repo 安装[最新版插件](https://github.com/MuiseDestiny/zotero-attanger/releases)
+1. 通过设置进入插件设置界面，进行以下设置：
+    1. 设置源路径根目录为系统浏览器下载的默认目录
+    1. 如使用WebDAV，则将附加类型选为“副本”
+    1. 推荐在其他设置中三个选项都勾选上
+
+![](images/zotero_settings_attanger.png){#fig-set fig-align="center"}
+
+### Better BibTeX
+
+将Zotero与Quarto写作（@sec-quarto) 的重要桥梁，用于生成`.bib`文档。
+
+1. 通过Github repo 安装[最新版插件](https://github.com/retorquere/zotero-better-bibtex/releases)
+1. 通过设置进入插件设置界面，进行以下设置：
+    1. 将应用格式统一为`authEtAl.capitalize+year`
+    1. 将“快速复制”设置为“Pandoc引用”
+
+![](images/zotero_settings_betterBibTex1.png){#fig-set fig-align="center"}
+![](images/zotero_settings_betterBibTex2.png){#fig-set fig-align="center"}
+
 
 Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。
 
@@ -105,32 +108,114 @@ Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导�
 
 ![](images/zotero_yaml.png)
 
-本组通常将Zotero与Rmarkdown或quarto联动。
+本组通常将Zotero与Quarto联动。
 关于这部分可参考[官方链接说明](https://posit.co/blog/rstudio-1-4-preview-citations/)。
 
-### Jasminum 设置{#sec-zotero-jasminum}
+:::{.callout-tip}
+## 定制文献输出内容
 
-之前请按照提示，先安装PDFtk Server。
+在某些特殊情况下，可能会要求输出一些特殊内容。
+比如，某次申请中要求中文发表都需要添加英文标题。
+此时可通过Zotero + Better Bibtex共同实现。
+以上述要求为例，首先在Zotero中文发表词条的`Extra`下添加以下内容：
 
-![](images/zotero_jasminum.png)
+```
+titleaddon={<The English translation of the article title>}
+```
 
-### ZotFile 设置
+之后在Edit &rarr; Settings &rarr; Better Bibtex中找到`postscrpit`项，在其中键入以下JavaScript代码：
 
-工具&rarr; ZotFile preference
+```js
 
-![](images/zotero_zotfile.png)
+if (Translator.BetterBibLaTeX && item.extra) {
+  const extra = item.extra.split('\n');
+  for (const line of extra) {
+    const match = line.match(/^titleaddon={(.*)}$/);
+    if (match) {
+      this.add({ name: 'titleaddon', value: match[1] });
+    }
+  }
+}
 
-在这里，我们定义了两条路径。 
-第一个是浏览器下载的文件的默认位置。 
-第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。
+```
 
-下面的“use subfolder defined by...” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。
-本组通常**不勾选**。
+重启Zotero，这时输出的.bib就会包含英文标题。
+但美中不足，Zotero会同时将`titleaddon=...`内容添加进`annotation`项加入到词条。
+因此在Zotero输出.bib文件后，需要打开文本编辑器，使用正则表达式（`^\s*annotation\s*=\s*.*\n?`）手动删除这部分多余部分。
+
+之后，在Quarto中确保输出的LaTex文件的header部分加入以下内容：
+
+```latex
+\usepackage[style=authoryear, backend=biber]{biblatex}
+
+% Define a macro to print the title and titleaddon
+\DeclareFieldFormat{titleaddon}{\addcolon\space#1}
+\renewbibmacro*{title}{%
+  \printfield{title}%
+  \ifboolexpr{ test {\ifentrytype{article}} }
+    {\setunit{\subtitlepunct}\printfield{titleaddon}}
+    {\setunit{\subtitlepunct}\printfield{titleaddon}}}
+
+```
+
+之后编译pdf即可获得所需结果。
+
+:::
 
 
-设置附件的重命名格式, 推荐以下设置`{%a}{%y_}{%t}`。
+### Better Notes
 
-![](images/zotero_rename.png)
+用于完善Zotero的笔记功能。
+
+1. 通过Github repo 安装[最新版插件](https://github.com/windingwind/zotero-better-notes/releases)，注意选择最新的Beta版本，防止出现插件兼容性差的情况。
+1. 安装笔记模板：
+    1. 复制下面的的模板代码^[这个代码是根据插件作者的[“collect annotations by color(sort by color)”](https://github.com/windingwind/zotero-better-notes/discussions/227)基础上发展而成。以下是调整的一些演示：![](images/zotero_colorRename.gif){#fig-bn fig-align="center"}]
+    1. `编辑` &rarr; `从剪切板导入模板` 导入模板 ![](images/zotero_BNotes.png){fig-align="center"}
+
+```js
+name: "[item] collect annotations by color(sort by color) "
+content: |-
+  // @author windingwind
+  // @link https://github.com/windingwind/zotero-better-notes/discussions/227
+    ${{
+      async function getAnnotationsByColor(item, colorFilter) {
+        const annots = item.getAnnotations().filter(colorFilter);
+        return await Zotero.BetterNotes.api.convert.annotations2html(annots, { noteItem: targetNoteItem });
+      }
+
+      const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =>
+        i.isPDFAttachment() || i.isSnapshotAttachment() || i.isEPUBAttachment()
+      );
+      let res = "";
+      const colors = ["#ffd400", "#ff6666", "#5fb236", "#2ea8e5", "#a28ae5", "#e56eee", "#f19837", "#aaaaaa"];
+      const colorNames = ["Objeictive", "Theory", "Method", "Finding", "Highlight-Lit", "Highlight-Framing", "Highlight-Wording", "Highlight-Miscellaneous"];
+      for (let attachment of attachments) {
+        res += `<h1>${attachment.getFilename()}</h1>`;
+        for (let i in colors) {
+          const renderedAnnotations = (
+            await getAnnotationsByColor(
+              attachment,
+              (annot) => annot.annotationColor === colors[i]
+            )
+          );
+          if (renderedAnnotations) {
+            res += `<h2><p style="background-color:${colors[i]};">${colorNames[i]}</p></h2>\n${renderedAnnotations}`;
+          }
+        }
+        const renderedAnnotations = (
+          await getAnnotationsByColor(
+            attachment,
+            (annot) => !colors.includes(annot.annotationColor)
+          )
+        );
+        if (renderedAnnotations) {
+          res += `<h2><p>Other Annotations</p></h2>\n${renderedAnnotations}`;
+        }
+      }
+      return res;
+    }}$
+
+```
 
 ## Zotero + 坚果云 {#sec-nutstone}
 
@@ -157,8 +242,119 @@ Zotero截止至6.0版本仍然不具备同步软链接功能。
 ![](images/zotero_zotfileAttach.png)
 :::
 
-
 > 祝贺！你已经完成了设置，请奖励自己一只鸡腿！
+
+## Zotero 6.0 部署 {.appendix}
+
+Zotero的7.0版本更新对原有程序做了很多改变。
+我们推荐使用7.0，但如果在特殊情况下必须使用6.0，以下为实现上述功能的一些设置
+
+### Zotero 6.0（及插件）的安装和注册
+
+1. 官网[Zotero | Home](https://www.zotero.org/)进行下载并完成安装。（Chrome插件后期会自动安装）
+2. 回到[官网](https://www.zotero.org/)进行注册,记住注册信息。
+
+
+
+3. 下载插件
+    - [Better BibTeX](https://retorque.re/zotero-better-bibtex/), 将library导出为bib.格式与Markdown联动。
+    - [ZotFile](http://zotfile.com/), 用来管理PDF文件;
+    - [Jasminum](https://github.com/l0o0/jasminum), 让Zotero更好适配知网。
+
+下载完成后进入软件-工具-插件-设置（齿轮标识）-`Install Add-on From File`-安装已经下载的两个插件。
+
+![](images/zotero_plugin.png)
+
+
+### 主程序设置
+
+#### 常规 General
+
+![](images/zotero_general.png)
+
+#### 同步 Sync
+
+![](images/zotero_sync.png)
+
+
+选择自动同步，取消选择“同步全文”。
+Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。
+如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 @sec-nutstone。
+
+
+#### 搜索 Search
+
+保持默认即可。
+
+#### 导出 Export
+
+![](images/zotero_export.png)
+
+#### 引用 Cite
+
+针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。
+
+在"文字处理软件"(Word Processors)中安装MS Word加载项。
+
+![](images/zotero_cite.png)
+
+#### 高级 {#sec-zotero-advanced}
+
+文件储存位置：编辑&rarr; 首选项&rarr; 高级&rarr; 文件和文件夹(Files and Folders)
+
+- 设置根目录(Based directory)和数据存储位置。
+  根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。
+  如决定用此种方式存储文献，可酌情放在较空的硬盘中。
+  如果之前选择了在`WebDAV`方式，这里可以选择不设置。
+- 数据储存位置（Data directory location）仅包含Zotero中的引录信息。
+  如果之前选择了在`WebDAV`方式，这个文件夹可以不用同步，保留在本地即可。
+
+
+![](images/zotero_advanced.png)
+
+### 插件
+
+### ZotFile 设置
+
+工具&rarr; ZotFile preference
+
+![](images/zotero_zotfile.png)
+
+在这里，我们定义了两条路径。 
+第一个是浏览器下载的文件的默认位置。 
+第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。
+
+下面的“use subfolder defined by...” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。
+本组通常**不勾选**。
+
+
+设置附件的重命名格式, 推荐以下设置`{%a}{%y_}{%t}`。
+
+![](images/zotero_rename.png)
+
+## 批量修改
+
+Zotero的批量修改功能还在开发中，但能够通过JavaScript进行一些灵活操作。
+比如在以下的例子中，就对选定条目的"language"进行了批量替换（`zh` &rarr; `zh-CN`）:
+
+
+```java
+zoteroPane = Zotero.getActiveZoteroPane();
+items = zoteroPane.getSelectedItems();
+var rn=0; //计数替换条目个数
+var lan="zh-CN"; //替换的语言
+for (item of items) {
+var la = item.getField("language");
+if (la=="zh")  //如果为zh则替换
+ {item.setField("language", lan);
+rn+=1;
+ await item.saveTx();
+}
+
+}
+return rn+"个条目语言被替换为"+lan+"。"
+```
+
 
 
 

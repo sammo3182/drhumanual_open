@@ -73,9 +73,10 @@
 ```{r projectDir}
 #| eval: false
 
-ls_dir <- c("codes", "data", "output", "paper", "paper/images", "paper/submission", "document")
+if(!require(drhutools)) remotes::install_github("sammo3182/drhutools")
 
-purrr::walk(ls_dir, ~if(!dir.exists(.)) dir.create(file.path(.), recursive = TRUE))
+library(drhutools)
+folderSystem()
 ```
 
 ## 变量命名

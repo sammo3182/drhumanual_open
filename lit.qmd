@@ -1,4 +1,4 @@
-# 文献梳理 {#sec-lit}
+# 读书笔记 {#sec-lit}
 
 本章主要讨论如何结合Zotero对文献进行搜集、梳理、笔记和归类的组内规范。
 
@@ -59,8 +59,6 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
 1. 文献发表时间必须有，不能缺失。
 1. 文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。
 
-
-
 :::
 
 - 中文文献。
@@ -69,7 +67,7 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
   - 由于国内外各高校图书馆网络代理不同，有时即使安装了`jasminum`也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：
     1. 基于`jasminum`从中文数据库下载文章信息
     1. 通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下
-    1. 右键点击录入条目，选择“Attach New file” ![](images/lit_attach.png), Zotero会自动识别文件并加载为附件
+    1. 右键点击录入条目，选择“Attach New file”, ![](images/lit_attach.png) Zotero会自动识别文件并加载为附件(要[预先安装Attanger](#sec-attanger))
 
 - 文献分类。
     Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个collection文件夹中，但搜索时又只会出现一条。
@@ -78,6 +76,23 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
     文章中所有出现文献均要求收集在此文件夹中，方便更新和导出。
     对于只针对报告的文献collection则以`pre_`为前缀，之后采用camel case命名法。
     对于平时搜集文献，可根据内容自行建立collections。
+
+## 文献追踪
+
+Zotero支持通过RSS对文献进行追踪。
+建议本组成员订阅本专业常见期刊，并定期阅读，养成习惯。
+以下以订阅《中国社会科学》为例，说明订阅过程。
+
+1. 通过图书馆数据库进入知网；
+1. 通过文献来源找到《中国社会科学》首页；
+1. 在期刊首页，找到“RSS订阅”    
+  ![](images/lit_cnki.png)
+1. 右键点击“RSS订阅”复制链接，或点击“RSS订阅”，之后复制地址栏链接；
+1. 打开Zotero，选择“New Library” &rarr; "New Feed" &rarr; "From URL...",将RSS地址复制在“URL：”窗口    
+  ![](images/lit_rss.png)
+1. 点击“Advanced Options”，设置更新时间和频率，如下图所示：   
+  ![](images/lit_feedSetting.png)
+
 
 
 ## 文献笔记
@@ -104,20 +119,16 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
 1. Findings：文章的主要发现或结论。
 1. Highlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：
     - Lits: 文中提及的可能以后会用到的一些文献综述
-    - Theory：文章一些理论观点或者未来理论可以生发之处
-    - Method： 文中提到的一些方法方面的综述或者讨论
-    - Empirics：文中提及的其他文章中的实证发现
-    - Wording：高效、地道的中英文词汇
+    - Framing：文章一些好的论点或者阐述方法、角度
+    - Wording：地道的中英文词汇
+    - Miscellaneous: 其他值得记录的地方
 
 ### 书籍笔记
 
 这里“书籍”包含一切有章节划分的读物。
-
-1. Objective：章和节的标题和本章核心概念。
-1. Theory: 本章（每节）主要论点。
-1. Method：基本与文章相同。
-1. Findings：基本与文章相同。
-1. Highlights：“兜底”部分，今后可能会用到的点，基本与文章相同。
+对于章节相对独立书籍，建议以章为单位记录笔记，将每一章作为一篇文章看待。
+笔记方法参见“文章笔记”。
+对于连结性比较强的章节，可将各章节放在同一个笔记中，但笔记内容还是建议贯彻格式化
 
 
 ### Annotation
@@ -125,26 +136,40 @@ Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会�
 在记录这些内容的过程中，请尽量使用短语配合箭头等形式，*最大限度减少句子使用*。
 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。
 本组采取统一的color coding系统。
-目前Zotero提供7种颜色标注，我们只使用其中的五种，分别对应读书笔记的五种内容：
+目前Zotero提供7种颜色标注，我们对其赋予不同的含义：
 
 - 黄色: Objective
 - 红色: Theory
 - 绿色: Method
 - 蓝色: Findings
-- 紫色: Highlights
+- 紫色: Highlights-Lits
+- 洋红色：Highlights-framing
+- 橘色：Highlights-wording
+- 灰色：Highlights-miscellaneous
 
-![](images/lit_color.png)
 
-在阅读过程中要对对应部分进行标注，并进行相关注释。
+在阅读过程中要对对应部分进行标注，并进行相关注释。![](images/lit_color.gif) 
 在这个环节中，注释是很重要的。
-尤其是在Zotero中注释可以通过右键(`Add Note from Annotations`)直接提取为笔记。
+尤其是在Zotero中注释可以通过`Better Notes`直接提取为笔记。
 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。
 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。
 这里要求组内成员采用`markdown`语法记录笔记，即用`-`表示bullet points，用`1.`表示数字列表。
+以下是在高效的color coding和annotations后，生成笔记的方法。
+在使用前务必保证，已根据 @sec-zotero 正确安装了插件并进行了设置。
 
-![](images/lit_annotation.gif)
+![](images/lit_annotationAuto.gif)
 
 
+更多`Better Notes`的应用方法可参考以下视频和[软件说明文档](https://zotero.yuque.com/staff-gkhviy/better-notes)。
+
+<iframe src="//player.bilibili.com/player.html?aid=555265521&bvid=BV1Cv4y1M7BY&cid=756880055&p=1&t=3624&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+### Tag
+
+Zotero有非常强大的tag系统。
+每篇文章都可以设置一个或几个tags。
+设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。
 
 ## 笔记共享
 
@@ -160,3 +185,17 @@ Zotero能很好支持线上和线下文献共享。
 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。
 
 ![](images/lit_export_set.png)
+
+
+## Obsidian联动 (Optional)
+
+[Obsidian](https://obsidian.md)是一款多窗口支持，高效笔记软件。
+虽然不是必须，但通过`Citations` 插件能够实现和Zotero的紧密联动。
+之后通过Obsidian强大的搜索和双链功能，能够很好地将关联文献连接起来，最终形成文献综述。
+具体的使用方法，请参见以下这个视频：
+
+<iframe src="//player.bilibili.com/player.html?aid=763217753&bvid=BV1E64y187er&cid=413748386&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+:::{.callout-note}
+关于Obsidian的其他设置和功能，也可以参考这位UP主的一些其他讲解视频。
+:::

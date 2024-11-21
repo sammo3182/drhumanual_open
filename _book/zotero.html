@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Open Manual for Dr.&nbsp;Hu’s Amazing Team - 1&nbsp; 文献管理</title>
+<title>1&nbsp; 文献管理 – Open Manual for Dr. Hu's Amazing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,8 +17,42 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,11 +71,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc6d358c97f25a8ea829b86655043430.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5c6c0ad7bdfb89369003da8042cd4f02.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6835f53ee17229c0bb438d9270e5102e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -49,7 +83,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,8 +98,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -71,11 +113,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./zotero.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -83,69 +130,75 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Open Manual for Dr.&nbsp;Hu’s Amazing Team</a> 
         <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">前言</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">前言</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./zotero.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></a>
+  <a href="./zotero.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lit.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献梳理</span></a>
+  <a href="./lit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">读书笔记</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./naming.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">文件命名</span></a>
+  <a href="./naming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">文件命名</span></span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#zotero-6.0及插件的安装和注册" id="toc-zotero-6.0及插件的安装和注册" class="nav-link active" data-scroll-target="#zotero-6.0及插件的安装和注册"><span class="toc-section-number">1.1</span>  Zotero 6.0（及插件）的安装和注册</a></li>
-  <li><a href="#主程序设置" id="toc-主程序设置" class="nav-link" data-scroll-target="#主程序设置"><span class="toc-section-number">1.2</span>  主程序设置</a>
+  <li><a href="#安装" id="toc-安装" class="nav-link active" data-scroll-target="#安装"><span class="header-section-number">1.1</span> 安装</a></li>
+  <li><a href="#主程序设置" id="toc-主程序设置" class="nav-link" data-scroll-target="#主程序设置"><span class="header-section-number">1.2</span> 主程序设置</a></li>
+  <li><a href="#插件设置" id="toc-插件设置" class="nav-link" data-scroll-target="#插件设置"><span class="header-section-number">1.3</span> 插件设置</a>
   <ul class="collapse">
-  <li><a href="#常规-general" id="toc-常规-general" class="nav-link" data-scroll-target="#常规-general"><span class="toc-section-number">1.2.1</span>  常规 General</a></li>
-  <li><a href="#同步-sync" id="toc-同步-sync" class="nav-link" data-scroll-target="#同步-sync"><span class="toc-section-number">1.2.2</span>  同步 Sync</a></li>
-  <li><a href="#搜索-search" id="toc-搜索-search" class="nav-link" data-scroll-target="#搜索-search"><span class="toc-section-number">1.2.3</span>  搜索 Search</a></li>
-  <li><a href="#导出-export" id="toc-导出-export" class="nav-link" data-scroll-target="#导出-export"><span class="toc-section-number">1.2.4</span>  导出 Export</a></li>
-  <li><a href="#引用-cite" id="toc-引用-cite" class="nav-link" data-scroll-target="#引用-cite"><span class="toc-section-number">1.2.5</span>  引用 Cite</a></li>
-  <li><a href="#sec-zotero-advanced" id="toc-sec-zotero-advanced" class="nav-link" data-scroll-target="#sec-zotero-advanced"><span class="toc-section-number">1.2.6</span>  高级</a></li>
+  <li><a href="#sec-zotero-jasminum" id="toc-sec-zotero-jasminum" class="nav-link" data-scroll-target="#sec-zotero-jasminum"><span class="header-section-number">1.3.1</span> Jasminum 设置</a></li>
+  <li><a href="#sec-attanger" id="toc-sec-attanger" class="nav-link" data-scroll-target="#sec-attanger"><span class="header-section-number">1.3.2</span> Attanger</a></li>
+  <li><a href="#better-bibtex" id="toc-better-bibtex" class="nav-link" data-scroll-target="#better-bibtex"><span class="header-section-number">1.3.3</span> Better BibTeX</a></li>
+  <li><a href="#better-notes" id="toc-better-notes" class="nav-link" data-scroll-target="#better-notes"><span class="header-section-number">1.3.4</span> Better Notes</a></li>
   </ul></li>
-  <li><a href="#插件设置" id="toc-插件设置" class="nav-link" data-scroll-target="#插件设置"><span class="toc-section-number">1.3</span>  插件设置</a>
+  <li><a href="#sec-nutstone" id="toc-sec-nutstone" class="nav-link" data-scroll-target="#sec-nutstone"><span class="header-section-number">1.4</span> Zotero + 坚果云</a></li>
+  <li><a href="#zotero-ipad" id="toc-zotero-ipad" class="nav-link" data-scroll-target="#zotero-ipad"><span class="header-section-number">1.5</span> Zotero + Ipad</a></li>
+  <li><a href="#zotero-6.0-部署" id="toc-zotero-6.0-部署" class="nav-link" data-scroll-target="#zotero-6.0-部署"><span class="header-section-number">1.6</span> Zotero 6.0 部署</a>
   <ul class="collapse">
-  <li><a href="#better-bibtex" id="toc-better-bibtex" class="nav-link" data-scroll-target="#better-bibtex"><span class="toc-section-number">1.3.1</span>  Better BibTeX</a></li>
-  <li><a href="#sec-zotero-jasminum" id="toc-sec-zotero-jasminum" class="nav-link" data-scroll-target="#sec-zotero-jasminum"><span class="toc-section-number">1.3.2</span>  Jasminum 设置</a></li>
-  <li><a href="#zotfile-设置" id="toc-zotfile-设置" class="nav-link" data-scroll-target="#zotfile-设置"><span class="toc-section-number">1.3.3</span>  ZotFile 设置</a></li>
+  <li><a href="#zotero-6.0及插件的安装和注册" id="toc-zotero-6.0及插件的安装和注册" class="nav-link" data-scroll-target="#zotero-6.0及插件的安装和注册"><span class="header-section-number">1.6.1</span> Zotero 6.0（及插件）的安装和注册</a></li>
+  <li><a href="#主程序设置-1" id="toc-主程序设置-1" class="nav-link" data-scroll-target="#主程序设置-1"><span class="header-section-number">1.6.2</span> 主程序设置</a></li>
+  <li><a href="#插件" id="toc-插件" class="nav-link" data-scroll-target="#插件"><span class="header-section-number">1.6.3</span> 插件</a></li>
+  <li><a href="#zotfile-设置" id="toc-zotfile-设置" class="nav-link" data-scroll-target="#zotfile-设置"><span class="header-section-number">1.6.4</span> ZotFile 设置</a></li>
   </ul></li>
-  <li><a href="#sec-nutstone" id="toc-sec-nutstone" class="nav-link" data-scroll-target="#sec-nutstone"><span class="toc-section-number">1.4</span>  Zotero + 坚果云</a></li>
-  <li><a href="#zotero-ipad" id="toc-zotero-ipad" class="nav-link" data-scroll-target="#zotero-ipad"><span class="toc-section-number">1.5</span>  Zotero + Ipad</a></li>
+  <li><a href="#批量修改" id="toc-批量修改" class="nav-link" data-scroll-target="#批量修改"><span class="header-section-number">1.7</span> 批量修改</a></li>
   </ul>
 </nav>
     </div>
@@ -154,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-zotero" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></span></h1>
+<h1 class="title"><span id="sec-zotero" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">文献管理</span></span></h1>
 </div>
 
 
@@ -167,81 +220,140 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<p>Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<section id="zotero-6.0及插件的安装和注册" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="zotero-6.0及插件的安装和注册"><span class="header-section-number">1.1</span> Zotero 6.0（及插件）的安装和注册</h2>
+
+<p>Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。 本章编写时，Zotero稳定版本为6.0版，但7.0已经公测，功能基本完备。 因此本章主要基于7.0进行部署讲解。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="安装" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="安装"><span class="header-section-number">1.1</span> 安装</h2>
 <ol type="1">
-<li>官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装）</li>
+<li>官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装）
+<ul>
+<li>本章写作时，安装7.0版本仍需要通过<a href="https://www.zotero.org/support/beta_builds">beta渠道</a>下载。</li>
+</ul></li>
 <li>回到<a href="https://www.zotero.org/">官网</a>进行注册,记住注册信息。</li>
 </ol>
-<div class="callout-importance callout callout-style-default no-icon callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Importance
+<div class="callout-title-container flex-fill">
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。</p>
 </div>
 </div>
-<ol start="3" type="1">
-<li>下载插件
-<ul>
-<li><a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, 将library导出为bib.格式与Markdown联动。</li>
-<li><a href="http://zotfile.com/">ZotFile</a>, 用来管理PDF文件;</li>
-<li><a href="https://github.com/l0o0/jasminum">Jasminum</a>, 让Zotero更好适配知网。</li>
-</ul></li>
-</ol>
-<p>下载完成后进入软件-工具-插件-设置（齿轮标识）-<code>Install Add-on From File</code>-安装已经下载的两个插件。</p>
-<p><img src="images/zotero_plugin.png" class="img-fluid"></p>
 </section>
 <section id="主程序设置" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="主程序设置"><span class="header-section-number">1.2</span> 主程序设置</h2>
-<section id="常规-general" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="常规-general"><span class="header-section-number">1.2.1</span> 常规 General</h3>
-<p><img src="images/zotero_general.png" class="img-fluid"></p>
-</section>
-<section id="同步-sync" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="同步-sync"><span class="header-section-number">1.2.2</span> 同步 Sync</h3>
-<p><img src="images/zotero_sync.png" class="img-fluid"></p>
-<p>选择自动同步，取消选择“同步全文”。 Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。 如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 <a href="#sec-nutstone"><span>Section&nbsp;1.4</span></a>。</p>
-</section>
-<section id="搜索-search" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="搜索-search"><span class="header-section-number">1.2.3</span> 搜索 Search</h3>
-<p>保持默认即可。</p>
-</section>
-<section id="导出-export" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="导出-export"><span class="header-section-number">1.2.4</span> 导出 Export</h3>
-<p><img src="images/zotero_export.png" class="img-fluid"></p>
-</section>
-<section id="引用-cite" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="引用-cite"><span class="header-section-number">1.2.5</span> 引用 Cite</h3>
-<p>针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。</p>
-<p>在”文字处理软件”(Word Processors)中安装MS Word加载项。</p>
-<p><img src="images/zotero_cite.png" class="img-fluid"></p>
-</section>
-<section id="sec-zotero-advanced" class="level3" data-number="1.2.6">
-<h3 data-number="1.2.6" class="anchored" data-anchor-id="sec-zotero-advanced"><span class="header-section-number">1.2.6</span> 高级</h3>
-<p>文件储存位置：编辑→ 首选项→ 高级→ 文件和文件夹(Files and Folders)</p>
-<ul>
-<li>设置根目录(Based directory)和数据存储位置。 根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。 如决定用此种方式存储文献，可酌情放在较空的硬盘中。 如果之前选择了在<code>WebDAV</code>方式，这里可以选择不设置。</li>
-<li>数据储存位置（Data directory location）仅包含Zotero中的引录信息。 如果之前选择了在<code>WebDAV</code>方式，这个文件夹可以不用同步，保留在本地即可。</li>
-</ul>
-<p><img src="images/zotero_advanced.png" class="img-fluid"></p>
-</section>
+<p>主程序的设置窗口在<code>编辑</code> → <code>设置</code>中。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/zotero_settings.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>设置中包含不同的选项卡，里面的选项可根据需要和使用习惯自行调整，这里只对重点项目和组内需统一的项目进行说明：</p>
+<p>首先，“常规”选项卡下，请勾选“重命名链接的文件”，然后点击“Customize Filename Format…”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/zotero_settings_general.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>在弹出的“Filename Format”选项框中，将以下代码复制到“Filename Template”部分：</p>
+<pre><code>{{ if creators == {{creators max="2"}} }} {{ creators join=""}}{{ else }} {{ creators join = "" max = "1" suffix="EtAl" }} {{ endif }}{{ year suffix="_" }}{{ title truncate="100" }}</code></pre>
+<p>以下的“Preview”部分显示对输入的文件名进行统一格式重命名后效果。</p>
+<div id="fig-set" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/zotero_settings_fileName.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1
+</figcaption>
+</figure>
+</div>
+<p>其次，在“同步”选项卡中要进行几部分的设置：</p>
+<ol type="1">
+<li>登录注册的Zotero账户。</li>
+<li>保持勾选“自动同步”，但去掉“同步全文内容”的勾选。</li>
+<li>如需要使用WebDAV同步文献，在“文件同步”中附件同步方式选择“WebDAV”，并参考 <a href="#sec-nutstone" class="quarto-xref"><span>Section 1.4</span></a> 部分进行设置。</li>
+</ol>
+<div id="fig-set" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/zotero_settings_sync.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="插件设置" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="插件设置"><span class="header-section-number">1.3</span> 插件设置</h2>
-<section id="better-bibtex" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="better-bibtex"><span class="header-section-number">1.3.1</span> Better BibTeX</h3>
-<p>在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或某些部分）导出为纯.bib文本文件。 在使用LaTex 或rmarkdown撰写学术论文时，需要这类文件。</p>
-<p>Citation key 格式统一采用 <code>authEtAl.capitalize+year</code>。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p><img src="images/zotero_bibtex1.png" class="img-fluid"></p>
+<section id="sec-zotero-jasminum" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="sec-zotero-jasminum"><span class="header-section-number">1.3.1</span> Jasminum 设置</h3>
+<p>用于处理知网文章及其他中文文章</p>
+<ol type="1">
+<li>务必通过Github repo 安装<a href="https://github.com/l0o0/jasminum/releases">最新版插件</a>，否则可能与Zotero 7.0不兼容</li>
+<li>按照提示，安装PDFtk Server。</li>
+<li>通过设置进入插件设置界面，进行以下设置：
+<ul>
+<li>去掉拉去指望元数据后调用Zotfile选项</li>
+<li>正确设置PDFtk Server</li>
+<li>如有需要改动设置语言</li>
+</ul></li>
+</ol>
+<div id="fig-set" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/zotero_settings_jasimium.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-attanger" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-attanger"><span class="header-section-number">1.3.2</span> Attanger</h3>
+<p>是Zotfile插件在Zotero 7.0上的兼容版本，用于更好地管理文献附件。</p>
+<ol type="1">
+<li>通过Github repo 安装<a href="https://github.com/MuiseDestiny/zotero-attanger/releases">最新版插件</a></li>
+<li>通过设置进入插件设置界面，进行以下设置：
+<ol type="1">
+<li>设置源路径根目录为系统浏览器下载的默认目录</li>
+<li>如使用WebDAV，则将附加类型选为“副本”</li>
+<li>推荐在其他设置中三个选项都勾选上</li>
+</ol></li>
+</ol>
+<div id="fig-set" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/zotero_settings_attanger.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-set-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="better-bibtex" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="better-bibtex"><span class="header-section-number">1.3.3</span> Better BibTeX</h3>
+<p>将Zotero与Quarto写作（<span class="quarto-unresolved-ref">?sec-quarto</span>) 的重要桥梁，用于生成<code>.bib</code>文档。</p>
+<ol type="1">
+<li>通过Github repo 安装<a href="https://github.com/retorquere/zotero-better-bibtex/releases">最新版插件</a></li>
+<li>通过设置进入插件设置界面，进行以下设置：
+<ol type="1">
+<li>将应用格式统一为<code>authEtAl.capitalize+year</code></li>
+<li>将“快速复制”设置为“Pandoc引用”</li>
+</ol></li>
+</ol>
+<p><img src="images/zotero_settings_betterBibTex1.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored"> <img src="images/zotero_settings_betterBibTex2.png" id="fig-set" class="img-fluid quarto-figure quarto-figure-center anchored"></p>
 <p>Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。</p>
 <p><img src="images/zotero_bbt.png" class="img-fluid"></p>
 <p>对于需要长期更新的bib文档可采用自动输出方法。 自动输出（Automatic export）设置：</p>
@@ -250,21 +362,97 @@ Importance
 <p><img src="images/zotero_menu.png" class="img-fluid"></p>
 <p>输出的.bib文件应放置在我们要编译的.tex, .rmd, 或者.qmd文件的同一目录中。 .bib的名称在YAML标头中指定。 示例如图：</p>
 <p><img src="images/zotero_yaml.png" class="img-fluid"></p>
-<p>本组通常将Zotero与Rmarkdown或quarto联动。 关于这部分可参考<a href="https://posit.co/blog/rstudio-1-4-preview-citations/">官方链接说明</a>。</p>
+<p>本组通常将Zotero与Quarto联动。 关于这部分可参考<a href="https://posit.co/blog/rstudio-1-4-preview-citations/">官方链接说明</a>。</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+定制文献输出内容
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>在某些特殊情况下，可能会要求输出一些特殊内容。 比如，某次申请中要求中文发表都需要添加英文标题。 此时可通过Zotero + Better Bibtex共同实现。 以上述要求为例，首先在Zotero中文发表词条的<code>Extra</code>下添加以下内容：</p>
+<pre><code>titleaddon={&lt;The English translation of the article title&gt;}</code></pre>
+<p>之后在Edit → Settings → Better Bibtex中找到<code>postscrpit</code>项，在其中键入以下JavaScript代码：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (Translator<span class="op">.</span><span class="at">BetterBibLaTeX</span> <span class="op">&amp;&amp;</span> item<span class="op">.</span><span class="at">extra</span>) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> extra <span class="op">=</span> item<span class="op">.</span><span class="at">extra</span><span class="op">.</span><span class="fu">split</span>(<span class="st">'</span><span class="sc">\n</span><span class="st">'</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> line <span class="kw">of</span> extra) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> match <span class="op">=</span> line<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">titleaddon={</span><span class="sc">(</span><span class="ss">.</span><span class="sc">*)</span><span class="ss">}</span><span class="sc">$</span><span class="ss">/</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (match) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">this</span><span class="op">.</span><span class="fu">add</span>({ <span class="dt">name</span><span class="op">:</span> <span class="st">'titleaddon'</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> match[<span class="dv">1</span>] })<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>重启Zotero，这时输出的.bib就会包含英文标题。 但美中不足，Zotero会同时将<code>titleaddon=...</code>内容添加进<code>annotation</code>项加入到词条。 因此在Zotero输出.bib文件后，需要打开文本编辑器，使用正则表达式（<code>^\s*annotation\s*=\s*.*\n?</code>）手动删除这部分多余部分。</p>
+<p>之后，在Quarto中确保输出的LaTex文件的header部分加入以下内容：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[style=authoryear, backend=biber]{<span class="ex">biblatex</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">% Define a macro to print the title and titleaddon</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\DeclareFieldFormat</span>{titleaddon}{<span class="fu">\addcolon\space</span>#1}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewbibmacro*</span>{title}{<span class="co">%</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\printfield</span>{title}<span class="co">%</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\ifboolexpr</span>{ test {<span class="fu">\ifentrytype</span>{article}} }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    {<span class="fu">\setunit</span>{<span class="fu">\subtitlepunct</span>}<span class="fu">\printfield</span>{titleaddon}}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    {<span class="fu">\setunit</span>{<span class="fu">\subtitlepunct</span>}<span class="fu">\printfield</span>{titleaddon}}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>之后编译pdf即可获得所需结果。</p>
+</div>
+</div>
 </section>
-<section id="sec-zotero-jasminum" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-zotero-jasminum"><span class="header-section-number">1.3.2</span> Jasminum 设置</h3>
-<p>之前请按照提示，先安装PDFtk Server。</p>
-<p><img src="images/zotero_jasminum.png" class="img-fluid"></p>
-</section>
-<section id="zotfile-设置" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="zotfile-设置"><span class="header-section-number">1.3.3</span> ZotFile 设置</h3>
-<p>工具→ ZotFile preference</p>
-<p><img src="images/zotero_zotfile.png" class="img-fluid"></p>
-<p>在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。</p>
-<p>下面的“use subfolder defined by…” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。 本组通常<strong>不勾选</strong>。</p>
-<p>设置附件的重命名格式, 推荐以下设置<code>{%a}{%y_}{%t}</code>。</p>
-<p><img src="images/zotero_rename.png" class="img-fluid"></p>
+<section id="better-notes" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="better-notes"><span class="header-section-number">1.3.4</span> Better Notes</h3>
+<p>用于完善Zotero的笔记功能。</p>
+<ol type="1">
+<li>通过Github repo 安装<a href="https://github.com/windingwind/zotero-better-notes/releases">最新版插件</a>，注意选择最新的Beta版本，防止出现插件兼容性差的情况。</li>
+<li>安装笔记模板：
+<ol type="1">
+<li>复制下面的的模板代码<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li><code>编辑</code> → <code>从剪切板导入模板</code> 导入模板 <img src="images/zotero_BNotes.png" class="img-fluid quarto-figure quarto-figure-center"></li>
+</ol></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>name<span class="op">:</span> <span class="st">"[item] collect annotations by color(sort by color) "</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>content<span class="op">:</span> <span class="op">|-</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// @author windingwind</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// @link https://github.com/windingwind/zotero-better-notes/discussions/227</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    ${{</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">async</span> <span class="kw">function</span> <span class="fu">getAnnotationsByColor</span>(item<span class="op">,</span> colorFilter) {</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> annots <span class="op">=</span> item<span class="op">.</span><span class="fu">getAnnotations</span>()<span class="op">.</span><span class="fu">filter</span>(colorFilter)<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="cf">await</span> Zotero<span class="op">.</span><span class="at">BetterNotes</span><span class="op">.</span><span class="at">api</span><span class="op">.</span><span class="at">convert</span><span class="op">.</span><span class="fu">annotations2html</span>(annots<span class="op">,</span> { <span class="dt">noteItem</span><span class="op">:</span> targetNoteItem })<span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> attachments <span class="op">=</span> Zotero<span class="op">.</span><span class="at">Items</span><span class="op">.</span><span class="fu">get</span>(topItem<span class="op">.</span><span class="fu">getAttachments</span>())<span class="op">.</span><span class="fu">filter</span>((i) <span class="kw">=&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        i<span class="op">.</span><span class="fu">isPDFAttachment</span>() <span class="op">||</span> i<span class="op">.</span><span class="fu">isSnapshotAttachment</span>() <span class="op">||</span> i<span class="op">.</span><span class="fu">isEPUBAttachment</span>()</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      )<span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> res <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> colors <span class="op">=</span> [<span class="st">"#ffd400"</span><span class="op">,</span> <span class="st">"#ff6666"</span><span class="op">,</span> <span class="st">"#5fb236"</span><span class="op">,</span> <span class="st">"#2ea8e5"</span><span class="op">,</span> <span class="st">"#a28ae5"</span><span class="op">,</span> <span class="st">"#e56eee"</span><span class="op">,</span> <span class="st">"#f19837"</span><span class="op">,</span> <span class="st">"#aaaaaa"</span>]<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> colorNames <span class="op">=</span> [<span class="st">"Objeictive"</span><span class="op">,</span> <span class="st">"Theory"</span><span class="op">,</span> <span class="st">"Method"</span><span class="op">,</span> <span class="st">"Finding"</span><span class="op">,</span> <span class="st">"Highlight-Lit"</span><span class="op">,</span> <span class="st">"Highlight-Framing"</span><span class="op">,</span> <span class="st">"Highlight-Wording"</span><span class="op">,</span> <span class="st">"Highlight-Miscellaneous"</span>]<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (<span class="kw">let</span> attachment <span class="kw">of</span> attachments) {</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        res <span class="op">+=</span> <span class="vs">`&lt;h1&gt;</span><span class="sc">${</span>attachment<span class="op">.</span><span class="fu">getFilename</span>()<span class="sc">}</span><span class="vs">&lt;/h1&gt;`</span><span class="op">;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (<span class="kw">let</span> i <span class="kw">in</span> colors) {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>          <span class="kw">const</span> renderedAnnotations <span class="op">=</span> (</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">await</span> <span class="fu">getAnnotationsByColor</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>              attachment<span class="op">,</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>              (annot) <span class="kw">=&gt;</span> annot<span class="op">.</span><span class="at">annotationColor</span> <span class="op">===</span> colors[i]</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>          )<span class="op">;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>          <span class="cf">if</span> (renderedAnnotations) {</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            res <span class="op">+=</span> <span class="vs">`&lt;h2&gt;&lt;p style="background-color:</span><span class="sc">${</span>colors[i]<span class="sc">}</span><span class="vs">;"&gt;</span><span class="sc">${</span>colorNames[i]<span class="sc">}</span><span class="vs">&lt;/p&gt;&lt;/h2&gt;</span><span class="sc">\n${</span>renderedAnnotations<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> renderedAnnotations <span class="op">=</span> (</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>          <span class="cf">await</span> <span class="fu">getAnnotationsByColor</span>(</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            attachment<span class="op">,</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>            (annot) <span class="kw">=&gt;</span> <span class="op">!</span>colors<span class="op">.</span><span class="fu">includes</span>(annot<span class="op">.</span><span class="at">annotationColor</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (renderedAnnotations) {</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>          res <span class="op">+=</span> <span class="vs">`&lt;h2&gt;&lt;p&gt;Other Annotations&lt;/p&gt;&lt;/h2&gt;</span><span class="sc">\n${</span>renderedAnnotations<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> res<span class="op">;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    }}$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="sec-nutstone" class="level2" data-number="1.4">
@@ -291,12 +479,12 @@ Importance
 <li>Settings → File syncing → 输入与@sec-nutstone相同的设置</li>
 </ul></li>
 </ol>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Important
 </div>
 </div>
@@ -308,14 +496,98 @@ Important
 <blockquote class="blockquote">
 <p>祝贺！你已经完成了设置，请奖励自己一只鸡腿！</p>
 </blockquote>
+</section>
+<section id="zotero-6.0-部署" class="level2 appendix" data-number="1.6">
+<h2 class="appendix anchored" data-number="1.6" data-anchor-id="zotero-6.0-部署"><span class="header-section-number">1.6</span> Zotero 6.0 部署</h2>
+<p>Zotero的7.0版本更新对原有程序做了很多改变。 我们推荐使用7.0，但如果在特殊情况下必须使用6.0，以下为实现上述功能的一些设置</p>
+<section id="zotero-6.0及插件的安装和注册" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="zotero-6.0及插件的安装和注册"><span class="header-section-number">1.6.1</span> Zotero 6.0（及插件）的安装和注册</h3>
+<ol type="1">
+<li><p>官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装）</p></li>
+<li><p>回到<a href="https://www.zotero.org/">官网</a>进行注册,记住注册信息。</p></li>
+<li><p>下载插件</p>
+<ul>
+<li><a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, 将library导出为bib.格式与Markdown联动。</li>
+<li><a href="http://zotfile.com/">ZotFile</a>, 用来管理PDF文件;</li>
+<li><a href="https://github.com/l0o0/jasminum">Jasminum</a>, 让Zotero更好适配知网。</li>
+</ul></li>
+</ol>
+<p>下载完成后进入软件-工具-插件-设置（齿轮标识）-<code>Install Add-on From File</code>-安装已经下载的两个插件。</p>
+<p><img src="images/zotero_plugin.png" class="img-fluid"></p>
+</section>
+<section id="主程序设置-1" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="主程序设置-1"><span class="header-section-number">1.6.2</span> 主程序设置</h3>
+<section id="常规-general" class="level4" data-number="1.6.2.1">
+<h4 data-number="1.6.2.1" class="anchored" data-anchor-id="常规-general"><span class="header-section-number">1.6.2.1</span> 常规 General</h4>
+<p><img src="images/zotero_general.png" class="img-fluid"></p>
+</section>
+<section id="同步-sync" class="level4" data-number="1.6.2.2">
+<h4 data-number="1.6.2.2" class="anchored" data-anchor-id="同步-sync"><span class="header-section-number">1.6.2.2</span> 同步 Sync</h4>
+<p><img src="images/zotero_sync.png" class="img-fluid"></p>
+<p>选择自动同步，取消选择“同步全文”。 Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。 如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 <a href="#sec-nutstone" class="quarto-xref"><span>Section 1.4</span></a>。</p>
+</section>
+<section id="搜索-search" class="level4" data-number="1.6.2.3">
+<h4 data-number="1.6.2.3" class="anchored" data-anchor-id="搜索-search"><span class="header-section-number">1.6.2.3</span> 搜索 Search</h4>
+<p>保持默认即可。</p>
+</section>
+<section id="导出-export" class="level4" data-number="1.6.2.4">
+<h4 data-number="1.6.2.4" class="anchored" data-anchor-id="导出-export"><span class="header-section-number">1.6.2.4</span> 导出 Export</h4>
+<p><img src="images/zotero_export.png" class="img-fluid"></p>
+</section>
+<section id="引用-cite" class="level4" data-number="1.6.2.5">
+<h4 data-number="1.6.2.5" class="anchored" data-anchor-id="引用-cite"><span class="header-section-number">1.6.2.5</span> 引用 Cite</h4>
+<p>针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。</p>
+<p>在”文字处理软件”(Word Processors)中安装MS Word加载项。</p>
+<p><img src="images/zotero_cite.png" class="img-fluid"></p>
+</section>
+<section id="sec-zotero-advanced" class="level4" data-number="1.6.2.6">
+<h4 data-number="1.6.2.6" class="anchored" data-anchor-id="sec-zotero-advanced"><span class="header-section-number">1.6.2.6</span> 高级</h4>
+<p>文件储存位置：编辑→ 首选项→ 高级→ 文件和文件夹(Files and Folders)</p>
+<ul>
+<li>设置根目录(Based directory)和数据存储位置。 根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。 如决定用此种方式存储文献，可酌情放在较空的硬盘中。 如果之前选择了在<code>WebDAV</code>方式，这里可以选择不设置。</li>
+<li>数据储存位置（Data directory location）仅包含Zotero中的引录信息。 如果之前选择了在<code>WebDAV</code>方式，这个文件夹可以不用同步，保留在本地即可。</li>
+</ul>
+<p><img src="images/zotero_advanced.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="插件" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="插件"><span class="header-section-number">1.6.3</span> 插件</h3>
+</section>
+<section id="zotfile-设置" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="zotfile-设置"><span class="header-section-number">1.6.4</span> ZotFile 设置</h3>
+<p>工具→ ZotFile preference</p>
+<p><img src="images/zotero_zotfile.png" class="img-fluid"></p>
+<p>在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。</p>
+<p>下面的“use subfolder defined by…” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。 本组通常<strong>不勾选</strong>。</p>
+<p>设置附件的重命名格式, 推荐以下设置<code>{%a}{%y_}{%t}</code>。</p>
+<p><img src="images/zotero_rename.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="批量修改" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="批量修改"><span class="header-section-number">1.7</span> 批量修改</h2>
+<p>Zotero的批量修改功能还在开发中，但能够通过JavaScript进行一些灵活操作。 比如在以下的例子中，就对选定条目的”language”进行了批量替换（<code>zh</code> → <code>zh-CN</code>）:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zoteroPane <span class="op">=</span> Zotero<span class="op">.</span><span class="fu">getActiveZoteroPane</span><span class="op">();</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> zoteroPane<span class="op">.</span><span class="fu">getSelectedItems</span><span class="op">();</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> rn<span class="op">=</span><span class="dv">0</span><span class="op">;</span> <span class="co">//计数替换条目个数</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> lan<span class="op">=</span><span class="st">"zh-CN"</span><span class="op">;</span> <span class="co">//替换的语言</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span>item of items<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">var</span> la <span class="op">=</span> item<span class="op">.</span><span class="fu">getField</span><span class="op">(</span><span class="st">"language"</span><span class="op">);</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>la<span class="op">==</span><span class="st">"zh"</span><span class="op">)</span>  <span class="co">//如果为zh则替换</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a> <span class="op">{</span>item<span class="op">.</span><span class="fu">setField</span><span class="op">(</span><span class="st">"language"</span><span class="op">,</span> lan<span class="op">);</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>rn<span class="op">+=</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a> await item<span class="op">.</span><span class="fu">saveTx</span><span class="op">();</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> rn<span class="op">+</span><span class="st">"个条目语言被替换为"</span><span class="op">+</span>lan<span class="op">+</span><span class="st">"。"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p> 本章编写时Zotero主版本为6.0。 参考了这一<a href="https://ikashnitsky.github.io/2019/zotero/">英文教程</a>和三篇中文文章（<a href="https://help.jianguoyun.com/?p=3168">1</a>， <a href="https://zhuanlan.zhihu.com/p/483147745">2</a>， <a href="https://zhuanlan.zhihu.com/p/133421096">3</a>）。 本章编写获得石宇洋同学的帮助，特表示感谢。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>更多设置详见<a href="https://retorque.re/zotero-better-bibtex/citation-keys/">cite key 设置查阅手册</a>。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p> 本章内容参考了这一<a href="https://ikashnitsky.github.io/2019/zotero/">英文教程</a>和三篇中文文章（<a href="https://help.jianguoyun.com/?p=3168">1</a>， <a href="https://zhuanlan.zhihu.com/p/483147745">2</a>， <a href="https://zhuanlan.zhihu.com/p/133421096">3</a>）, 并获得石宇洋同学大力帮助，特此感谢！<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>这个代码是根据插件作者的<a href="https://github.com/windingwind/zotero-better-notes/discussions/227">“collect annotations by color(sort by color)”</a>基础上发展而成。以下是调整的一些演示：<img src="images/zotero_colorRename.gif" id="fig-bn" class="img-fluid quarto-figure quarto-figure-center anchored"><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -361,6 +633,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -429,13 +728,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -462,12 +763,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -499,11 +803,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -513,8 +856,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -526,9 +878,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -570,17 +1158,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+      <a href="./index.html" class="pagination-link" aria-label="前言">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">前言</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lit.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文献梳理</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./lit.html" class="pagination-link" aria-label="读书笔记">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">读书笔记</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
