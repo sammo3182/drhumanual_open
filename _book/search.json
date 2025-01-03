@@ -41,7 +41,7 @@
     "href": "zotero.html#zotero-ipad",
     "title": "1  文献管理",
     "section": "1.5 Zotero + Ipad",
-    "text": "1.5 Zotero + Ipad\n\n电脑端设置参见@sec-nutstone；\nIpad端登陆同一个Zotero账户\n\nSettings → File syncing → 输入与@sec-nutstone相同的设置\n\n\n\n\n\n\n\n\nImportant\n\n\n\nZotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。\n\n\n\n\n祝贺！你已经完成了设置，请奖励自己一只鸡腿！",
+    "text": "1.5 Zotero + Ipad\n\n电脑端设置参见@sec-nutstone；\nIpad端登陆同一个Zotero账户\n\nSettings → File syncing → 输入与@sec-nutstone相同的设置\n\n\n\n\n\n\n\n\nImportant\n\n\n\nZotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
     ]
@@ -51,9 +51,9 @@
     "href": "index.html",
     "title": "Open Manual for Dr. Hu’s Amazing Team",
     "section": "",
-    "text": "前言\n亲爱的朋友：\n如果你获得了这本Open Manual，那你可能正逢一个与一只非常有趣团队的合作机会。 这只队伍成员来自五湖四海，但都出于对基于大众政治（mass politics）的兴趣，来到一起。 大家秉承“立场坚定、个性自由”的共识和以科学为桥追寻真理的精神，而进行政治科学研究。\n为了方便你与组内成员有效交流、高效合作，我悉心编纂了这本小册子。 希望新加入的你能通过学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成与团队的共同成长。 有一点有必要说明，这本小册子不会囊括太多的技术信息，更多地是结合本组研究特性的一些专门特点和设置介绍。 一些基础设置知识可能会加以省略。 所以，如果你要想掌握其中涉及知识的更深层次原理和使用技巧，可能需要和常任组员们咨询和交流。\n\n\n\n\n\n\nImportant\n\n\n\n未经作者允许，不得传播、转载本书内容！\n\n\n\n\n\n\n\n\n胡悦\nr Sys.Date()\n清华园",
+    "text": "欢迎加入\n如果你看到这本小册子，那么说明你已经加入了Dr. Hu’s Amazing Team。 祝贺！\n这本书的目的是帮助你更好融入队伍，和大家在一致的框架中布局研究资源，方便共同开展研究。 遵照本书介绍规范开展你的研究，整理你的学术储备，一方面将使你成为社会科学研究中最有条例、最有效率的一群人（我称为“cool kids”)中的一员，另一方面也是协助你坚定科学家信仰，构建Dr Hu’s team的身份认同。\n在这种意义上，开个玩笑,可以将这本小册子类比于之前走江湖人的“海底”。 这些特殊设置既代表了我们团体内部的一致性，也对外彰显了特殊性，不必为外人道也。\n\n\n\n\n\n\n请注意\n\n\n\n因此本书仅限内部使用，请勿传播给任何组外人！\n\n\n\nDr. Hu\n清华园",
     "crumbs": [
-      "前言"
+      "欢迎加入"
     ]
   },
   {
@@ -61,7 +61,7 @@
     "href": "lit.html#文献导入",
     "title": "2  读书笔记",
     "section": "",
-    "text": "Zotero 浏览器插件自动导入。\n通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；\n通过ISBN、DOI、arXiv ID等标识码单条导入；\n拖拽PDF文件，通过Zotero读取metadata导入；\n手动录入。\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：Zotero插件需要在Zotero本地软件打开情况下才能较好运行。\n\n\n\n\n\n\n及时修订。 Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会出现信息错漏的地方，比如原文作者可能都是用英文大写或者中文名称依旧采用姓名分开方式。 有时也会丢失一些信息。 这就要求使用者及时对输入信息进行检查添改，保证信息正确。\n\n\n\n\n\n\n\nWarning\n\n\n\n“及时”二字尤为紧要。 当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走马：\n\n你怎么伺候它，它怎么伺候你。\n\n就是说，你对你想摆弄赏玩的动物或物件越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：\n\n文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 \n文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。\n文献发表时间必须有，不能缺失。\n文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。\n\n\n\n\n中文文献。 实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。 这一问题很大程度上可以通过jasminum插件解决，请无比安装且做好设置。1安装成功后，jasminum选项也会出现在右键菜单中，请妥善使用。\n\n由于国内外各高校图书馆网络代理不同，有时即使安装了jasminum也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：\n\n基于jasminum从中文数据库下载文章信息\n通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下\n右键点击录入条目，选择“Attach New file”,  Zotero会自动识别文件并加载为附件(要预先安装Attanger)\n\n\n文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个collection文件夹中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 本组中对于每篇论文都要求建立以p_为前缀的单独collection，比如p_patroticBases，之后采用camel case命名法。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出。 对于只针对报告的文献collection则以pre_为前缀，之后采用camel case命名法。 对于平时搜集文献，可根据内容自行建立collections。",
+    "text": "Zotero 浏览器插件自动导入。\n通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；\n通过ISBN、DOI、arXiv ID等标识码单条导入；\n拖拽PDF文件，通过Zotero读取metadata导入；\n复制bibtex到剪切板导入；\n手动录入。\n\n\n\n\n\n\n\n\n注意\n\n\n\nZotero插件需要在Zotero本地软件打开情况下才能较好运行。\n\n\n\n\n\n\n及时修订。 Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会出现信息错漏的地方，比如原文作者可能都是用英文大写或者中文名称依旧采用姓名分开方式。 有时也会丢失一些信息。 这就要求使用者及时对输入信息进行检查添改，保证信息正确。\n\n\n\n\n\n\n\n你怎么伺候它，它怎么伺候你\n\n\n\n当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走狗：\n\n你怎么伺候它，它怎么伺候你。\n\n就是说，你对你想摆弄赏玩的玩意儿越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：\n\n文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 \n文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。\n文献发表时间必须有，不能缺失。\n文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。\n\n\n\n\n中文文献。 实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。 这一问题很大程度上可以通过jasminum插件解决，请无比安装且做好设置。1安装成功后，jasminum选项也会出现在右键菜单中，请妥善使用。\n\n由于国内外各高校图书馆网络代理不同，有时即使安装了jasminum也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：\n\n基于jasminum从中文数据库下载文章信息\n通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下\n右键点击录入条目，选择“Attach New file”,  Zotero会自动识别文件并加载为附件(要预先安装Attanger)\n\n\n文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个文件夹（collection）中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 对于平时搜集文献，可根据内容自行建立collections。 本组中对于每篇论文都要求建立系统文献命名方式： - 以p_为前缀的单独collection，比如p_patroticBases，之后采用camel case命名法。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出； - 对于口头报告以pre_为前缀； - 对于软件采用s_为前缀； - 对于书或博士论文采用b_为前缀； - 对于报告和政策建议采用r_为前缀。",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]
@@ -171,7 +171,7 @@
     "href": "lit.html",
     "title": "2  读书笔记",
     "section": "",
-    "text": "2.1 文献导入\n本章主要讨论如何结合Zotero对文献进行搜集、梳理、笔记和归类的组内规范。\n文献导入有五种方法：\n五种方法中第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n通过Zotero导入笔记有几点注意事项：",
+    "text": "2.1 文献导入\n本章主要讨论如何结合Zotero（7.0）对文献进行搜集、梳理、笔记和归类的组内规范。\n文献导入有以下几种方法：\n第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n通过Zotero导入笔记有几点注意事项：",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]
@@ -232,6 +232,16 @@
     "title": "2  读书笔记",
     "section": "2.5 Obsidian联动 (Optional)",
     "text": "2.5 Obsidian联动 (Optional)\nObsidian是一款多窗口支持，高效笔记软件。 虽然不是必须，但通过Citations 插件能够实现和Zotero的紧密联动。 之后通过Obsidian强大的搜索和双链功能，能够很好地将关联文献连接起来，最终形成文献综述。 具体的使用方法，请参见以下这个视频：\n\n\n\n\n\n\n\n\nNote\n\n\n\n关于Obsidian的其他设置和功能，也可以参考这位UP主的一些其他讲解视频。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
+    ]
+  },
+  {
+    "objectID": "lit.html#结构化笔记",
+    "href": "lit.html#结构化笔记",
+    "title": "2  读书笔记",
+    "section": "2.3 结构化笔记",
+    "text": "2.3 结构化笔记\n文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，最大程度缩小笔记整理时间。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词，实现全面、精准定位文献。\n\n2.3.1 Annotation\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 Chapter 1 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n2.3.2 Tag\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。\n\n\n2.3.3 文章笔记\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究议题、对象，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 兜底类型，其他值得记录的地方\n\n\n\n\n2.3.4 书籍笔记\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：\n\n以小标题为纲组织笔记；\n以记录逻辑和复查点为主；\n对每章可能与其他文献关联部分创建tag。",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]

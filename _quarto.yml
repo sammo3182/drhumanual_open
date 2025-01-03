@@ -11,8 +11,9 @@ book:
     - zotero.qmd
     - lit.qmd
     - naming.qmd
+    - reference.qmd
 
-bibliography: references.bib
+bibliography: b_teamManual.bib
 highlight-style: github
 number-sections: true
 toc: true

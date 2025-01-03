@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">前言</span></a>
+ <span class="menu-text">欢迎加入</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -136,6 +136,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">文件命名</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">参考文献</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -148,15 +154,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#文献导入" id="toc-文献导入" class="nav-link active" data-scroll-target="#文献导入"><span class="header-section-number">2.1</span> 文献导入</a></li>
   <li><a href="#文献追踪" id="toc-文献追踪" class="nav-link" data-scroll-target="#文献追踪"><span class="header-section-number">2.2</span> 文献追踪</a></li>
-  <li><a href="#文献笔记" id="toc-文献笔记" class="nav-link" data-scroll-target="#文献笔记"><span class="header-section-number">2.3</span> 文献笔记</a>
+  <li><a href="#结构化笔记" id="toc-结构化笔记" class="nav-link" data-scroll-target="#结构化笔记"><span class="header-section-number">2.3</span> 结构化笔记</a>
   <ul class="collapse">
-  <li><a href="#文章笔记" id="toc-文章笔记" class="nav-link" data-scroll-target="#文章笔记"><span class="header-section-number">2.3.1</span> 文章笔记</a></li>
-  <li><a href="#书籍笔记" id="toc-书籍笔记" class="nav-link" data-scroll-target="#书籍笔记"><span class="header-section-number">2.3.2</span> 书籍笔记</a></li>
-  <li><a href="#annotation" id="toc-annotation" class="nav-link" data-scroll-target="#annotation"><span class="header-section-number">2.3.3</span> Annotation</a></li>
-  <li><a href="#tag" id="toc-tag" class="nav-link" data-scroll-target="#tag"><span class="header-section-number">2.3.4</span> Tag</a></li>
+  <li><a href="#annotation" id="toc-annotation" class="nav-link" data-scroll-target="#annotation"><span class="header-section-number">2.3.1</span> Annotation</a></li>
+  <li><a href="#tag" id="toc-tag" class="nav-link" data-scroll-target="#tag"><span class="header-section-number">2.3.2</span> Tag</a></li>
+  <li><a href="#文章笔记" id="toc-文章笔记" class="nav-link" data-scroll-target="#文章笔记"><span class="header-section-number">2.3.3</span> 文章笔记</a></li>
+  <li><a href="#书籍笔记" id="toc-书籍笔记" class="nav-link" data-scroll-target="#书籍笔记"><span class="header-section-number">2.3.4</span> 书籍笔记</a></li>
   </ul></li>
   <li><a href="#笔记共享" id="toc-笔记共享" class="nav-link" data-scroll-target="#笔记共享"><span class="header-section-number">2.4</span> 笔记共享</a></li>
-  <li><a href="#obsidian联动-optional" id="toc-obsidian联动-optional" class="nav-link" data-scroll-target="#obsidian联动-optional"><span class="header-section-number">2.5</span> Obsidian联动 (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -182,14 +187,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>本章主要讨论如何结合Zotero对文献进行搜集、梳理、笔记和归类的组内规范。</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>本章主要讨论如何结合Zotero（7.0）对文献进行搜集、梳理、笔记和归类的组内规范。</p>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -198,26 +203,27 @@ Note
 </div>
 <section id="文献导入" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="文献导入"><span class="header-section-number">2.1</span> 文献导入</h2>
-<p>文献导入有五种方法：</p>
+<p>文献导入有以下几种方法：</p>
 <ol type="1">
 <li>Zotero 浏览器插件自动导入。</li>
 <li>通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；</li>
 <li>通过ISBN、DOI、arXiv ID等标识码单条导入；</li>
 <li>拖拽PDF文件，通过Zotero读取metadata导入；</li>
+<li>复制bibtex到剪切板导入；</li>
 <li>手动录入。</li>
 </ol>
-<p>五种方法中第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。</p>
+<p>第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+注意
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>注意：Zotero插件需要在Zotero本地软件打开情况下才能较好运行。</p>
+<p>Zotero插件需要在Zotero本地软件打开情况下才能较好运行。</p>
 </div>
 </div>
 <p>如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（<em>是插件，不是Zotero本地软件</em>）代理设置尝试手动添加。 如下图所示</p>
@@ -232,15 +238,15 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+你怎么伺候它，它怎么伺候你
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>“及时”二字尤为紧要。 当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走马：</p>
+<p>当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走狗：</p>
 <blockquote class="blockquote">
 <p>你怎么伺候它，它怎么伺候你。</p>
 </blockquote>
-<p>就是说，你对你想摆弄赏玩的动物或物件越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：</p>
+<p>就是说，你对你想摆弄赏玩的玩意儿越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：</p>
 <ol type="1">
 <li>文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 <img src="images/lit_titleFormat.png" class="img-fluid"></li>
 <li>文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。</li>
@@ -259,7 +265,7 @@ Warning
 <li>右键点击录入条目，选择“Attach New file”, <img src="images/lit_attach.png" class="img-fluid"> Zotero会自动识别文件并加载为附件(要<a href="zotero.html#sec-attanger">预先安装Attanger</a>)</li>
 </ol></li>
 </ul></li>
-<li>文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个collection文件夹中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 本组中对于每篇论文都要求建立以<code>p_</code>为前缀的单独collection，比如<code>p_patroticBases</code>，之后采用<a href="https://en.wikipedia.org/wiki/Camel_case">camel case命名法</a>。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出。 对于只针对报告的文献collection则以<code>pre_</code>为前缀，之后采用camel case命名法。 对于平时搜集文献，可根据内容自行建立collections。</li>
+<li>文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个文件夹（collection）中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 对于平时搜集文献，可根据内容自行建立collections。 本组中对于每篇论文都要求建立系统文献命名方式： - 以<code>p_</code>为前缀的单独collection，比如<code>p_patroticBases</code>，之后采用<a href="https://en.wikipedia.org/wiki/Camel_case">camel case命名法</a>。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出； - 对于口头报告以<code>pre_</code>为前缀； - 对于软件采用<code>s_</code>为前缀； - 对于书或博士论文采用<code>b_</code>为前缀； - 对于报告和政策建议采用<code>r_</code>为前缀。</li>
 </ul>
 </section>
 <section id="文献追踪" class="level2" data-number="2.2">
@@ -277,37 +283,11 @@ Warning
 <img src="images/lit_feedSetting.png" class="img-fluid"></li>
 </ol>
 </section>
-<section id="文献笔记" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="文献笔记"><span class="header-section-number">2.3</span> 文献笔记</h2>
-<p>文献笔记有多种类型。 本组采用高效笔记原则，即将文献笔记的核心目的只设定为两个：好记和好搜。 所谓“好记”是指能够快速的将文章内容和重点理清，当回看笔记的时候也能快速定位到需要的部分。 随看随记，<em>最大程度缩小笔记整理时间</em>。 所谓“好搜”是指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 <em>使用最少关键词全面、精准定位文献。</em></p>
-<p>基于以上原则，本组采用具有统一规范和格式的使用结构化笔记方式来记录文献。 其中内容设置部分借鉴了<em>Social Science Quarterly</em>的摘要写作方式，共包含五部分，以下按照文章和书籍分别进行说明：</p>
-<section id="文章笔记" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="文章笔记"><span class="header-section-number">2.3.1</span> 文章笔记</h3>
-<p>这里的“文章”包含非书籍类的一切读物。</p>
-<ol type="1">
-<li>Objective：文章主要研究对象或概念，包括定义、概念分支等。</li>
-<li>Theory: 文章的主要观点、理论逻辑等。</li>
-<li>Method：采用的研究方法，包含两部分：
-<ol type="1">
-<li>Data：数据来源、体量、搜集过程等信息</li>
-<li>Method：数据分析方法、重要方法决定、稳健性检验等</li>
-</ol></li>
-<li>Findings：文章的主要发现或结论。</li>
-<li>Highlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：
-<ul>
-<li>Lits: 文中提及的可能以后会用到的一些文献综述</li>
-<li>Framing：文章一些好的论点或者阐述方法、角度</li>
-<li>Wording：地道的中英文词汇</li>
-<li>Miscellaneous: 其他值得记录的地方</li>
-</ul></li>
-</ol>
-</section>
-<section id="书籍笔记" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="书籍笔记"><span class="header-section-number">2.3.2</span> 书籍笔记</h3>
-<p>这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记，将每一章作为一篇文章看待。 笔记方法参见“文章笔记”。 对于连结性比较强的章节，可将各章节放在同一个笔记中，但笔记内容还是建议贯彻格式化</p>
-</section>
-<section id="annotation" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="annotation"><span class="header-section-number">2.3.3</span> Annotation</h3>
+<section id="结构化笔记" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="结构化笔记"><span class="header-section-number">2.3</span> 结构化笔记</h2>
+<p>文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，<em>最大程度缩小笔记整理时间</em>。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 <em>使用最少关键词，实现全面、精准定位文献。</em></p>
+<section id="annotation" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="annotation"><span class="header-section-number">2.3.1</span> Annotation</h3>
 <p>在记录这些内容的过程中，请尽量使用短语配合箭头等形式，<em>最大限度减少句子使用</em>。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：</p>
 <ul>
 <li>黄色: Objective</li>
@@ -325,9 +305,39 @@ Warning
 <iframe src="//player.bilibili.com/player.html?aid=555265521&amp;bvid=BV1Cv4y1M7BY&amp;cid=756880055&amp;p=1&amp;t=3624&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
 </iframe>
 </section>
-<section id="tag" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="tag"><span class="header-section-number">2.3.4</span> Tag</h3>
+<section id="tag" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="tag"><span class="header-section-number">2.3.2</span> Tag</h3>
 <p>Zotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。</p>
+</section>
+<section id="文章笔记" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="文章笔记"><span class="header-section-number">2.3.3</span> 文章笔记</h3>
+<p>这里的“文章”包含非书籍类的一切读物。</p>
+<ol type="1">
+<li>Objective：文章主要研究议题、对象，包括定义、概念分支等。</li>
+<li>Theory: 文章的主要观点、理论逻辑等。</li>
+<li>Method：采用的研究方法，包含两部分：
+<ol type="1">
+<li>Data：数据来源、体量、搜集过程等信息</li>
+<li>Method：数据分析方法、重要方法决定、稳健性检验等</li>
+</ol></li>
+<li>Findings：文章的主要发现或结论。</li>
+<li>Highlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：
+<ul>
+<li>Lits: 文中提及的可能以后会用到的一些文献综述</li>
+<li>Framing：文章一些好的论点或者阐述方法、角度</li>
+<li>Wording：地道的中英文词汇</li>
+<li>Miscellaneous: 兜底类型，其他值得记录的地方</li>
+</ul></li>
+</ol>
+</section>
+<section id="书籍笔记" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="书籍笔记"><span class="header-section-number">2.3.4</span> 书籍笔记</h3>
+<p>这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：</p>
+<ul>
+<li>以小标题为纲组织笔记；</li>
+<li>以记录逻辑和复查点为主；</li>
+<li>对每章可能与其他文献关联部分创建tag。</li>
+</ul>
 </section>
 </section>
 <section id="笔记共享" class="level2" data-number="2.4">
@@ -336,25 +346,6 @@ Warning
 <p><img src="images/lit_export.png" class="img-fluid"></p>
 <p>之后在导出项中选择<code>Zotero RDF</code>格式，然后勾选导出笔记、文件和标注。 生成文件将是一个包含了文献文本和<code>.rdf</code>的文件夹，压缩后分享给同伴即可。 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。</p>
 <p><img src="images/lit_export_set.png" class="img-fluid"></p>
-</section>
-<section id="obsidian联动-optional" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="obsidian联动-optional"><span class="header-section-number">2.5</span> Obsidian联动 (Optional)</h2>
-<p><a href="https://obsidian.md">Obsidian</a>是一款多窗口支持，高效笔记软件。 虽然不是必须，但通过<code>Citations</code> 插件能够实现和Zotero的紧密联动。 之后通过Obsidian强大的搜索和双链功能，能够很好地将关联文献连接起来，最终形成文献综述。 具体的使用方法，请参见以下这个视频：</p>
-<iframe src="//player.bilibili.com/player.html?aid=763217753&amp;bvid=BV1E64y187er&amp;cid=413748386&amp;page=1&amp;autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
-</iframe>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>关于Obsidian的其他设置和功能，也可以参考这位UP主的一些其他讲解视频。</p>
-</div>
-</div>
 
 
 </section>
