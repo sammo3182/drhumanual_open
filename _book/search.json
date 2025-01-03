@@ -1,10 +1,33 @@
 [
   {
-    "objectID": "zotero.html#zotero-6.0及插件的安装和注册",
-    "href": "zotero.html#zotero-6.0及插件的安装和注册",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Open Manual for Dr. Hu’s Amazing Team",
+    "section": "",
+    "text": "前言\n亲爱的朋友：\n如果你获得了这本Open Manual，那说明你正在与一只非常有趣团队合作。 这只队伍成员来自五湖四海，但都出于对基于政治心理和比较政治的兴趣聚到到一起。 大家秉承“立场坚定、个性自由”的信念和以科学为桥追寻真理的精神，进行科学研究。\n这个小册子是为了方便你与组内成员进行有效交流、高效合作而编纂。 希望你能通过学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成与团队的共同成长。 有一点有必要说明，这本小册子不会囊括太多的技术信息，更多地是结合本组研究特性的一些专门特点和设置介绍。 所以，如果你要想掌握其中涉及知识的更深层次原理和使用技巧，可能需要和常任组员们咨询和交流。\n\n\n\n\n\n\nImportant\n\n\n\n未经作者允许，不得传播、转载本书内容！\n\n\n\n\n\n\n\n\n胡悦\n清华园",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "zotero.html",
+    "href": "zotero.html",
     "title": "1  文献管理",
-    "section": "1.1 Zotero 6.0（及插件）的安装和注册",
-    "text": "1.1 Zotero 6.0（及插件）的安装和注册\n\n官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportance\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。\n\n\n\n下载插件\n\nBetter BibTeX, 将library导出为bib.格式与Markdown联动。\nZotFile, 用来管理PDF文件;\nJasminum, 让Zotero更好适配知网。\n\n\n下载完成后进入软件-工具-插件-设置（齿轮标识）-Install Add-on From File-安装已经下载的两个插件。"
+    "section": "",
+    "text": "1.1 安装\nZotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。 本章编写时，Zotero稳定版本为6.0版，但7.0已经公测，功能基本完备。 因此本章主要基于7.0进行部署讲解。1",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
+    ]
+  },
+  {
+    "objectID": "zotero.html#安装",
+    "href": "zotero.html#安装",
+    "title": "1  文献管理",
+    "section": "",
+    "text": "官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n\n本章写作时，安装7.0版本仍需要通过beta渠道下载。\n\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportant\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
+    ]
   },
   {
     "objectID": "zotero.html#主程序设置",
@@ -47,13 +70,23 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Open Manual for Dr. Hu’s Amazing Team",
+    "objectID": "zotero.html#footnotes",
+    "href": "zotero.html#footnotes",
+    "title": "1  文献管理",
     "section": "",
-    "text": "前言\n亲爱的朋友：\n如果你获得了这本Open Manual，那说明你正在与一只非常有趣团队合作。 这只队伍成员来自五湖四海，但都出于对基于政治心理和比较政治的兴趣聚到到一起。 大家秉承“立场坚定、个性自由”的信念和以科学为桥追寻真理的精神，进行科学研究。\n这个小册子是为了方便你与组内成员进行有效交流、高效合作而编纂。 希望你能通过学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成与团队的共同成长。 有一点有必要说明，这本小册子不会囊括太多的技术信息，更多地是结合本组研究特性的一些专门特点和设置介绍。 所以，如果你要想掌握其中涉及知识的更深层次原理和使用技巧，可能需要和常任组员们咨询和交流。\n\n\n\n\n\n\nImportant\n\n\n\n未经作者允许，不得传播、转载本书内容！\n\n\n\n\n\n\n\n\n胡悦\n清华园",
+    "text": "本章内容参考了这一英文教程和三篇中文文章（1， 2， 3）, 并获得石宇洋同学大力帮助，特此感谢！↩︎\n这个代码是根据插件作者的“collect annotations by color(sort by color)”基础上发展而成。以下是调整的一些演示：↩︎",
     "crumbs": [
-      "前言"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
+    ]
+  },
+  {
+    "objectID": "lit.html",
+    "href": "lit.html",
+    "title": "2  读书笔记",
+    "section": "",
+    "text": "2.1 文献导入\n本章主要讨论如何结合Zotero（7.0）对文献进行搜集、梳理、笔记和归类的组内规范。\n文献导入有以下几种方法：\n第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n通过Zotero导入笔记有几点注意事项：",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]
   },
   {
@@ -67,11 +100,21 @@
     ]
   },
   {
-    "objectID": "lit.html#文献笔记",
-    "href": "lit.html#文献笔记",
+    "objectID": "lit.html#文献追踪",
+    "href": "lit.html#文献追踪",
     "title": "2  读书笔记",
-    "section": "2.3 文献笔记",
-    "text": "2.3 文献笔记\n文献笔记有多种类型。 本组采用高效笔记原则，即将文献笔记的核心目的只设定为两个：好记和好搜。 所谓“好记”是指能够快速的将文章内容和重点理清，当回看笔记的时候也能快速定位到需要的部分。 随看随记，最大程度缩小笔记整理时间。 所谓“好搜”是指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词全面、精准定位文献。\n基于以上原则，本组采用具有统一规范和格式的使用结构化笔记方式来记录文献。 其中内容设置部分借鉴了Social Science Quarterly的摘要写作方式，共包含五部分，以下按照文章和书籍分别进行说明：\n\n2.3.1 文章笔记\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究对象或概念，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 其他值得记录的地方\n\n\n\n\n2.3.2 书籍笔记\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记，将每一章作为一篇文章看待。 笔记方法参见“文章笔记”。 对于连结性比较强的章节，可将各章节放在同一个笔记中，但笔记内容还是建议贯彻格式化\n\n\n2.3.3 Annotation\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 Chapter 1 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n2.3.4 Tag\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。",
+    "section": "2.2 文献追踪",
+    "text": "2.2 文献追踪\nZotero支持通过RSS对文献进行追踪。 建议本组成员订阅本专业常见期刊，并定期阅读，养成习惯。 以下以订阅《中国社会科学》为例，说明订阅过程。\n\n通过图书馆数据库进入知网；\n通过文献来源找到《中国社会科学》首页；\n在期刊首页，找到“RSS订阅”\n\n右键点击“RSS订阅”复制链接，或点击“RSS订阅”，之后复制地址栏链接；\n打开Zotero，选择“New Library” → “New Feed” → “From URL…”,将RSS地址复制在“URL：”窗口\n\n点击“Advanced Options”，设置更新时间和频率，如下图所示：",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
+    ]
+  },
+  {
+    "objectID": "lit.html#结构化笔记",
+    "href": "lit.html#结构化笔记",
+    "title": "2  读书笔记",
+    "section": "2.3 结构化笔记",
+    "text": "2.3 结构化笔记\n文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，最大程度缩小笔记整理时间。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词，实现全面、精准定位文献。\n\n2.3.1 Annotation\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 Chapter 1 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n2.3.2 Tag\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。\n\n\n2.3.3 文章笔记\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究议题、对象，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 兜底类型，其他值得记录的地方\n\n\n\n\n2.3.4 书籍笔记\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：\n\n以小标题为纲组织笔记；\n以记录逻辑和复查点为主；\n对每章可能与其他文献关联部分创建tag。",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]
@@ -84,6 +127,26 @@
     "text": "2.4 笔记共享\nZotero能很好支持线上和线下文献共享。 如果共享对方都设置了足够的网络空间，可尝试直接线上共享。 如因为一些原因没法实现，也可采用线下分享方式，即导出共享。 导出方式非常简单，只需选中需要文本，右键选择导出。\n\n之后在导出项中选择Zotero RDF格式，然后勾选导出笔记、文件和标注。 生成文件将是一个包含了文献文本和.rdf的文件夹，压缩后分享给同伴即可。 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
+    ]
+  },
+  {
+    "objectID": "lit.html#footnotes",
+    "href": "lit.html#footnotes",
+    "title": "2  读书笔记",
+    "section": "",
+    "text": "参见 Section 1.3.1。↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
+    ]
+  },
+  {
+    "objectID": "naming.html",
+    "href": "naming.html",
+    "title": "3  文件命名",
+    "section": "",
+    "text": "3.1 一般命名\n文件命名是建立文件搜索系统的关键。1 为了实现与组员间无间合作，加入我们共同课题的同志也要求采用同样的命名系统。 本组的文件命名系统分一般命名、项目命名、变量命名三个系统：\n本组一般命名规则基本遵循Jenny Bryan创建的命名系统.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>文件命名</span>"
     ]
   },
   {
@@ -117,106 +180,6 @@
     ]
   },
   {
-    "objectID": "zotero.html",
-    "href": "zotero.html",
-    "title": "1  文献管理",
-    "section": "",
-    "text": "1.1 安装\nZotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。 本章编写时，Zotero稳定版本为6.0版，但7.0已经公测，功能基本完备。 因此本章主要基于7.0进行部署讲解。1",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
-    ]
-  },
-  {
-    "objectID": "zotero.html#安装",
-    "href": "zotero.html#安装",
-    "title": "1  文献管理",
-    "section": "",
-    "text": "官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n\n本章写作时，安装7.0版本仍需要通过beta渠道下载。\n\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportant\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
-    ]
-  },
-  {
-    "objectID": "zotero.html#zotero-6.0-部署",
-    "href": "zotero.html#zotero-6.0-部署",
-    "title": "1  文献管理",
-    "section": "1.6 Zotero 6.0 部署",
-    "text": "1.6 Zotero 6.0 部署\nZotero的7.0版本更新对原有程序做了很多改变。 我们推荐使用7.0，但如果在特殊情况下必须使用6.0，以下为实现上述功能的一些设置\n\n1.6.1 Zotero 6.0（及插件）的安装和注册\n\n官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n回到官网进行注册,记住注册信息。\n下载插件\n\nBetter BibTeX, 将library导出为bib.格式与Markdown联动。\nZotFile, 用来管理PDF文件;\nJasminum, 让Zotero更好适配知网。\n\n\n下载完成后进入软件-工具-插件-设置（齿轮标识）-Install Add-on From File-安装已经下载的两个插件。\n\n\n\n1.6.2 主程序设置\n\n1.6.2.1 常规 General\n\n\n\n1.6.2.2 同步 Sync\n\n选择自动同步，取消选择“同步全文”。 Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。 如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 Section 1.4。\n\n\n1.6.2.3 搜索 Search\n保持默认即可。\n\n\n1.6.2.4 导出 Export\n\n\n\n1.6.2.5 引用 Cite\n针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。\n在”文字处理软件”(Word Processors)中安装MS Word加载项。\n\n\n\n1.6.2.6 高级\n文件储存位置：编辑→ 首选项→ 高级→ 文件和文件夹(Files and Folders)\n\n设置根目录(Based directory)和数据存储位置。 根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。 如决定用此种方式存储文献，可酌情放在较空的硬盘中。 如果之前选择了在WebDAV方式，这里可以选择不设置。\n数据储存位置（Data directory location）仅包含Zotero中的引录信息。 如果之前选择了在WebDAV方式，这个文件夹可以不用同步，保留在本地即可。\n\n\n\n\n\n1.6.3 插件\n\n\n1.6.4 ZotFile 设置\n工具→ ZotFile preference\n\n在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。\n下面的“use subfolder defined by…” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。 本组通常不勾选。\n设置附件的重命名格式, 推荐以下设置{%a}{%y_}{%t}。",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
-    ]
-  },
-  {
-    "objectID": "zotero.html#批量修改",
-    "href": "zotero.html#批量修改",
-    "title": "1  文献管理",
-    "section": "1.7 批量修改",
-    "text": "1.7 批量修改\nZotero的批量修改功能还在开发中，但能够通过JavaScript进行一些灵活操作。 比如在以下的例子中，就对选定条目的”language”进行了批量替换（zh → zh-CN）:\nzoteroPane = Zotero.getActiveZoteroPane();\nitems = zoteroPane.getSelectedItems();\nvar rn=0; //计数替换条目个数\nvar lan=\"zh-CN\"; //替换的语言\nfor (item of items) {\nvar la = item.getField(\"language\");\nif (la==\"zh\")  //如果为zh则替换\n {item.setField(\"language\", lan);\nrn+=1;\n await item.saveTx();\n}\n\n}\nreturn rn+\"个条目语言被替换为\"+lan+\"。\"",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
-    ]
-  },
-  {
-    "objectID": "zotero.html#footnotes",
-    "href": "zotero.html#footnotes",
-    "title": "1  文献管理",
-    "section": "",
-    "text": "本章内容参考了这一英文教程和三篇中文文章（1， 2， 3）, 并获得石宇洋同学大力帮助，特此感谢！↩︎\n这个代码是根据插件作者的“collect annotations by color(sort by color)”基础上发展而成。以下是调整的一些演示：↩︎",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>文献管理</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html",
-    "href": "lit.html",
-    "title": "2  读书笔记",
-    "section": "",
-    "text": "2.1 文献导入\n本章主要讨论如何结合Zotero（7.0）对文献进行搜集、梳理、笔记和归类的组内规范。\n文献导入有以下几种方法：\n第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n通过Zotero导入笔记有几点注意事项：",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html#文献追踪",
-    "href": "lit.html#文献追踪",
-    "title": "2  读书笔记",
-    "section": "2.2 文献追踪",
-    "text": "2.2 文献追踪\nZotero支持通过RSS对文献进行追踪。 建议本组成员订阅本专业常见期刊，并定期阅读，养成习惯。 以下以订阅《中国社会科学》为例，说明订阅过程。\n\n通过图书馆数据库进入知网；\n通过文献来源找到《中国社会科学》首页；\n在期刊首页，找到“RSS订阅”\n\n右键点击“RSS订阅”复制链接，或点击“RSS订阅”，之后复制地址栏链接；\n打开Zotero，选择“New Library” → “New Feed” → “From URL…”,将RSS地址复制在“URL：”窗口\n\n点击“Advanced Options”，设置更新时间和频率，如下图所示：",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html#obsidian联动",
-    "href": "lit.html#obsidian联动",
-    "title": "2  读书笔记",
-    "section": "2.5 Obsidian联动",
-    "text": "2.5 Obsidian联动\nObsidian是一款多窗口支持，高效笔记软件。 虽然不是必须，但通过Citations 插件能够实现和Zotero的紧密联动。 之后通过Obsidian强大的搜索和双链功能，能够很好地将关联文献连接起来，最终形成文献综述。 具体的使用方法，请参见以下这个视频：\n\n\n\n\n\n\n\n\nNote\n\n\n\n关于Obsidian的其他设置和功能，也可以参考这位UP主的一些其他讲解视频。",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html#footnotes",
-    "href": "lit.html#footnotes",
-    "title": "2  读书笔记",
-    "section": "",
-    "text": "参见 Section 1.3.1。↩︎",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
-    ]
-  },
-  {
-    "objectID": "naming.html",
-    "href": "naming.html",
-    "title": "3  文件命名",
-    "section": "",
-    "text": "3.1 一般命名\n文件命名是建立文件搜索系统的关键。1 为了实现与组员间无间合作，加入我们共同课题的同志也要求采用同样的命名系统。 本组的文件命名系统分一般命名、项目命名、变量命名三个系统：\n本组一般命名规则基本遵循Jenny Bryan创建的命名系统.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>文件命名</span>"
-    ]
-  },
-  {
     "objectID": "naming.html#footnotes",
     "href": "naming.html#footnotes",
     "title": "3  文件命名",
@@ -224,26 +187,6 @@
     "text": "对于Windows用户，请下载Listary, 增强搜索功能。↩︎",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>文件命名</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html#obsidian联动-optional",
-    "href": "lit.html#obsidian联动-optional",
-    "title": "2  读书笔记",
-    "section": "2.5 Obsidian联动 (Optional)",
-    "text": "2.5 Obsidian联动 (Optional)\nObsidian是一款多窗口支持，高效笔记软件。 虽然不是必须，但通过Citations 插件能够实现和Zotero的紧密联动。 之后通过Obsidian强大的搜索和双链功能，能够很好地将关联文献连接起来，最终形成文献综述。 具体的使用方法，请参见以下这个视频：\n\n\n\n\n\n\n\n\nNote\n\n\n\n关于Obsidian的其他设置和功能，也可以参考这位UP主的一些其他讲解视频。",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
-    ]
-  },
-  {
-    "objectID": "lit.html#结构化笔记",
-    "href": "lit.html#结构化笔记",
-    "title": "2  读书笔记",
-    "section": "2.3 结构化笔记",
-    "text": "2.3 结构化笔记\n文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，最大程度缩小笔记整理时间。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词，实现全面、精准定位文献。\n\n2.3.1 Annotation\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 Chapter 1 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n2.3.2 Tag\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。\n\n\n2.3.3 文章笔记\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究议题、对象，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 兜底类型，其他值得记录的地方\n\n\n\n\n2.3.4 书籍笔记\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：\n\n以小标题为纲组织笔记；\n以记录逻辑和复查点为主；\n对每章可能与其他文献关联部分创建tag。",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>读书笔记</span>"
     ]
   }
 ]
