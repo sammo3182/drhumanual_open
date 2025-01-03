@@ -1,86 +1,142 @@
 [
   {
-    "objectID": "zotero.html#zotero-6.0及插件的安装和注册",
-    "href": "zotero.html#zotero-6.0及插件的安装和注册",
-    "title": "1  文献管理",
-    "section": "1.1 Zotero 6.0（及插件）的安装和注册",
-    "text": "1.1 Zotero 6.0（及插件）的安装和注册\n\n官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportance\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。\n\n\n\n下载插件\n\nBetter BibTeX, 将library导出为bib.格式与Markdown联动。\nZotFile, 用来管理PDF文件;\nJasminum, 让Zotero更好适配知网。\n\n\n下载完成后进入软件-工具-插件-设置（齿轮标识）-Install Add-on From File-安装已经下载的两个插件。"
+    "objectID": "zotero.html",
+    "href": "zotero.html",
+    "title": "1 文献管理",
+    "section": "",
+    "text": "Zotero是在我尝试过Endnotes和Jabref后长期使用的文献管理软件。 功能过于强大，且免费。 以下结合本组文献整理规范，对Zotero一些功能和设置进行说明。 如果你已经安装好Zotero，也请仔细对照设置部分，保证与团队一致。 本章编写时，Zotero稳定版本为6.0版，但7.0已经公测，功能基本完备。 因此本章主要基于7.0进行部署讲解。1\n\n\n\n官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n\n本章写作时，安装7.0版本仍需要通过beta渠道下载。\n\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportant\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。\n\n\n\n\n\n主程序的设置窗口在编辑 → 设置中。\n\n\n\n\n\n设置中包含不同的选项卡，里面的选项可根据需要和使用习惯自行调整，这里只对重点项目和组内需统一的项目进行说明：\n首先，“常规”选项卡下，请勾选“重命名链接的文件”，然后点击“Customize Filename Format…”\n\n\n\n\n\n在弹出的“Filename Format”选项框中，将以下代码复制到“Filename Template”部分：\n{{ if creators == {{creators max=\"2\"}} }} {{ creators join=\"\"}}{{ else }} {{ creators join = \"\" max = \"1\" suffix=\"EtAl\" }} {{ endif }}{{ year suffix=\"_\" }}{{ title truncate=\"100\" }}\n以下的“Preview”部分显示对输入的文件名进行统一格式重命名后效果。\n\n\n\n\n\n\nFigure 1\n\n\n\n其次，在“同步”选项卡中要进行几部分的设置：\n\n登录注册的Zotero账户。\n保持勾选“自动同步”，但去掉“同步全文内容”的勾选。\n如需要使用WebDAV同步文献，在“文件同步”中附件同步方式选择“WebDAV”，并参考 Section 1.4 部分进行设置。\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n\n\n用于处理知网文章及其他中文文章\n\n务必通过Github repo 安装最新版插件，否则可能与Zotero 7.0不兼容\n按照提示，安装PDFtk Server。\n通过设置进入插件设置界面，进行以下设置：\n\n去掉拉去指望元数据后调用Zotfile选项\n正确设置PDFtk Server\n如有需要改动设置语言\n\n\n\n\n\n\n\n\nFigure 3\n\n\n\n\n\n\n是Zotfile插件在Zotero 7.0上的兼容版本，用于更好地管理文献附件。\n\n通过Github repo 安装最新版插件\n通过设置进入插件设置界面，进行以下设置：\n\n设置源路径根目录为系统浏览器下载的默认目录\n如使用WebDAV，则将附加类型选为“副本”\n推荐在其他设置中三个选项都勾选上\n\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n将Zotero与Quarto写作（?@sec-quarto) 的重要桥梁，用于生成.bib文档。\n\n通过Github repo 安装最新版插件\n通过设置进入插件设置界面，进行以下设置：\n\n将应用格式统一为authEtAl.capitalize+year\n将“快速复制”设置为“Pandoc引用”\n\n\n \nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n对于需要长期更新的bib文档可采用自动输出方法。 自动输出（Automatic export）设置：\n\n选择持续更新。\n\n输出的.bib文件应放置在我们要编译的.tex, .rmd, 或者.qmd文件的同一目录中。 .bib的名称在YAML标头中指定。 示例如图：\n\n本组通常将Zotero与Quarto联动。 关于这部分可参考官方链接说明。\n\n\n\n\n\n\n定制文献输出内容\n\n\n\n在某些特殊情况下，可能会要求输出一些特殊内容。 比如，某次申请中要求中文发表都需要添加英文标题。 此时可通过Zotero + Better Bibtex共同实现。 以上述要求为例，首先在Zotero中文发表词条的Extra下添加以下内容：\ntitleaddon={&lt;The English translation of the article title&gt;}\n之后在Edit → Settings → Better Bibtex中找到postscrpit项，在其中键入以下JavaScript代码：\n\nif (Translator.BetterBibLaTeX && item.extra) {\n  const extra = item.extra.split('\\n');\n  for (const line of extra) {\n    const match = line.match(/^titleaddon={(.*)}$/);\n    if (match) {\n      this.add({ name: 'titleaddon', value: match[1] });\n    }\n  }\n}\n重启Zotero，这时输出的.bib就会包含英文标题。 但美中不足，Zotero会同时将titleaddon=...内容添加进annotation项加入到词条。 因此在Zotero输出.bib文件后，需要打开文本编辑器，使用正则表达式（^\\s*annotation\\s*=\\s*.*\\n?）手动删除这部分多余部分。\n之后，在Quarto中确保输出的LaTex文件的header部分加入以下内容：\n\\usepackage[style=authoryear, backend=biber]{biblatex}\n\n% Define a macro to print the title and titleaddon\n\\DeclareFieldFormat{titleaddon}{\\addcolon\\space#1}\n\\renewbibmacro*{title}{%\n  \\printfield{title}%\n  \\ifboolexpr{ test {\\ifentrytype{article}} }\n    {\\setunit{\\subtitlepunct}\\printfield{titleaddon}}\n    {\\setunit{\\subtitlepunct}\\printfield{titleaddon}}}\n之后编译pdf即可获得所需结果。\n\n\n\n\n\n用于完善Zotero的笔记功能。\n\n通过Github repo 安装最新版插件，注意选择最新的Beta版本，防止出现插件兼容性差的情况。\n安装笔记模板：\n\n复制下面的的模板代码2\n编辑 → 从剪切板导入模板 导入模板 \n\n\nname: \"[item] collect annotations by color(sort by color) \"\ncontent: |-\n  // @author windingwind\n  // @link https://github.com/windingwind/zotero-better-notes/discussions/227\n    ${{\n      async function getAnnotationsByColor(item, colorFilter) {\n        const annots = item.getAnnotations().filter(colorFilter);\n        return await Zotero.BetterNotes.api.convert.annotations2html(annots, { noteItem: targetNoteItem });\n      }\n\n      const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =&gt;\n        i.isPDFAttachment() || i.isSnapshotAttachment() || i.isEPUBAttachment()\n      );\n      let res = \"\";\n      const colors = [\"#ffd400\", \"#ff6666\", \"#5fb236\", \"#2ea8e5\", \"#a28ae5\", \"#e56eee\", \"#f19837\", \"#aaaaaa\"];\n      const colorNames = [\"Objeictive\", \"Theory\", \"Method\", \"Finding\", \"Highlight-Lit\", \"Highlight-Framing\", \"Highlight-Wording\", \"Highlight-Miscellaneous\"];\n      for (let attachment of attachments) {\n        res += `&lt;h1&gt;${attachment.getFilename()}&lt;/h1&gt;`;\n        for (let i in colors) {\n          const renderedAnnotations = (\n            await getAnnotationsByColor(\n              attachment,\n              (annot) =&gt; annot.annotationColor === colors[i]\n            )\n          );\n          if (renderedAnnotations) {\n            res += `&lt;h2&gt;&lt;p style=\"background-color:${colors[i]};\"&gt;${colorNames[i]}&lt;/p&gt;&lt;/h2&gt;\\n${renderedAnnotations}`;\n          }\n        }\n        const renderedAnnotations = (\n          await getAnnotationsByColor(\n            attachment,\n            (annot) =&gt; !colors.includes(annot.annotationColor)\n          )\n        );\n        if (renderedAnnotations) {\n          res += `&lt;h2&gt;&lt;p&gt;Other Annotations&lt;/p&gt;&lt;/h2&gt;\\n${renderedAnnotations}`;\n        }\n      }\n      return res;\n    }}$\n\n\n\n\n\n首先注册坚果云账号，开启坚果云的第三方应用管理。具体步骤如下：\n\n登录网页端坚果云账号，点击右上角的账号名称→ 账户信息→ 安全选项→ 第三方应用管理→ 添加应用密码。 应用名称可写zotero，之后会自己生成一个应用密码。\n\n\n打开Zotero：编辑→ 首选项→ 同步→ 设置，输入用户名和密码进行登陆,然后点击Verify Server\n\n在文件同步部分建议采用WebDAV方式，以获得更大的存储空间，同时又为多设备协同提供便利。 国内支持这种方式的最常见服务商是坚果云，对于坚果云如何联结Zotero可参照下图以及其官方帮助文档。\n\n\n\n\n\n\n\n电脑端设置参见@sec-nutstone；\nIpad端登陆同一个Zotero账户\n\nSettings → File syncing → 输入与@sec-nutstone相同的设置\n\n\n\n\n\n\n\n\nImportant\n\n\n\nZotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。"
+  },
+  {
+    "objectID": "zotero.html#安装",
+    "href": "zotero.html#安装",
+    "title": "1 文献管理",
+    "section": "",
+    "text": "官网Zotero | Home进行下载并完成安装。（Chrome插件后期会自动安装）\n\n本章写作时，安装7.0版本仍需要通过beta渠道下载。\n\n回到官网进行注册,记住注册信息。\n\n\n\n\n\n\n\nImportant\n\n\n\n注册非常重要，是保证文献信息永不丢失的重要步骤，请务必进行。"
   },
   {
     "objectID": "zotero.html#主程序设置",
     "href": "zotero.html#主程序设置",
-    "title": "1  文献管理",
-    "section": "1.2 主程序设置",
-    "text": "1.2 主程序设置\n\n1.2.1 常规 General\n\n\n\n1.2.2 同步 Sync\n\n选择自动同步，取消选择“同步全文”。 Zotero只有300MB文件储存空间，之后的空间使用均需按月或按年的维护费用。 如果你家资颇丰，自可购买；否则我们可以采用搭配坚果云的办法，用更节省的方式进行解决，具体参见 Section 1.4。\n\n\n1.2.3 搜索 Search\n保持默认即可。\n\n\n1.2.4 导出 Export\n\n\n\n1.2.5 引用 Cite\n针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。\n在”文字处理软件”(Word Processors)中安装MS Word加载项。\n\n\n\n1.2.6 高级\n文件储存位置：编辑→ 首选项→ 高级→ 文件和文件夹(Files and Folders)\n\n设置根目录(Based directory)和数据存储位置。 根目录用于存储文献的pdf文件，设置后将在Zotero中生成软链接。 如决定用此种方式存储文献，可酌情放在较空的硬盘中。 如果之前选择了在WebDAV方式，这里可以选择不设置。\n数据储存位置（Data directory location）仅包含Zotero中的引录信息。 如果之前选择了在WebDAV方式，这个文件夹可以不用同步，保留在本地即可。"
+    "title": "1 文献管理",
+    "section": "",
+    "text": "主程序的设置窗口在编辑 → 设置中。\n\n\n\n\n\n设置中包含不同的选项卡，里面的选项可根据需要和使用习惯自行调整，这里只对重点项目和组内需统一的项目进行说明：\n首先，“常规”选项卡下，请勾选“重命名链接的文件”，然后点击“Customize Filename Format…”\n\n\n\n\n\n在弹出的“Filename Format”选项框中，将以下代码复制到“Filename Template”部分：\n{{ if creators == {{creators max=\"2\"}} }} {{ creators join=\"\"}}{{ else }} {{ creators join = \"\" max = \"1\" suffix=\"EtAl\" }} {{ endif }}{{ year suffix=\"_\" }}{{ title truncate=\"100\" }}\n以下的“Preview”部分显示对输入的文件名进行统一格式重命名后效果。\n\n\n\n\n\n\nFigure 1\n\n\n\n其次，在“同步”选项卡中要进行几部分的设置：\n\n登录注册的Zotero账户。\n保持勾选“自动同步”，但去掉“同步全文内容”的勾选。\n如需要使用WebDAV同步文献，在“文件同步”中附件同步方式选择“WebDAV”，并参考 Section 1.4 部分进行设置。\n\n\n\n\n\n\n\nFigure 2"
   },
   {
     "objectID": "zotero.html#插件设置",
     "href": "zotero.html#插件设置",
-    "title": "1  文献管理",
-    "section": "1.3 插件设置",
-    "text": "1.3 插件设置\n\n1.3.1 Better BibTeX\n在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或某些部分）导出为纯.bib文本文件。 在使用LaTex 或rmarkdown撰写学术论文时，需要这类文件。\nCitation key 格式统一采用 authEtAl.capitalize+year。2\n\nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n对于需要长期更新的bib文档可采用自动输出方法。 自动输出（Automatic export）设置：\n\n选择持续更新。\n\n输出的.bib文件应放置在我们要编译的.tex, .rmd, 或者.qmd文件的同一目录中。 .bib的名称在YAML标头中指定。 示例如图：\n\n本组通常将Zotero与Rmarkdown或quarto联动。 关于这部分可参考官方链接说明。\n\n\n1.3.2 Jasminum 设置\n之前请按照提示，先安装PDFtk Server。\n\n\n\n1.3.3 ZotFile 设置\n工具→ ZotFile preference\n\n在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。\n下面的“use subfolder defined by…” 表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。 本组通常不勾选。\n设置附件的重命名格式, 推荐以下设置{%a}{%y_}{%t}。"
+    "title": "1 文献管理",
+    "section": "",
+    "text": "用于处理知网文章及其他中文文章\n\n务必通过Github repo 安装最新版插件，否则可能与Zotero 7.0不兼容\n按照提示，安装PDFtk Server。\n通过设置进入插件设置界面，进行以下设置：\n\n去掉拉去指望元数据后调用Zotfile选项\n正确设置PDFtk Server\n如有需要改动设置语言\n\n\n\n\n\n\n\n\nFigure 3\n\n\n\n\n\n\n是Zotfile插件在Zotero 7.0上的兼容版本，用于更好地管理文献附件。\n\n通过Github repo 安装最新版插件\n通过设置进入插件设置界面，进行以下设置：\n\n设置源路径根目录为系统浏览器下载的默认目录\n如使用WebDAV，则将附加类型选为“副本”\n推荐在其他设置中三个选项都勾选上\n\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n将Zotero与Quarto写作（?@sec-quarto) 的重要桥梁，用于生成.bib文档。\n\n通过Github repo 安装最新版插件\n通过设置进入插件设置界面，进行以下设置：\n\n将应用格式统一为authEtAl.capitalize+year\n将“快速复制”设置为“Pandoc引用”\n\n\n \nBetter BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。\n\n对于需要长期更新的bib文档可采用自动输出方法。 自动输出（Automatic export）设置：\n\n选择持续更新。\n\n输出的.bib文件应放置在我们要编译的.tex, .rmd, 或者.qmd文件的同一目录中。 .bib的名称在YAML标头中指定。 示例如图：\n\n本组通常将Zotero与Quarto联动。 关于这部分可参考官方链接说明。\n\n\n\n\n\n\n定制文献输出内容\n\n\n\n在某些特殊情况下，可能会要求输出一些特殊内容。 比如，某次申请中要求中文发表都需要添加英文标题。 此时可通过Zotero + Better Bibtex共同实现。 以上述要求为例，首先在Zotero中文发表词条的Extra下添加以下内容：\ntitleaddon={&lt;The English translation of the article title&gt;}\n之后在Edit → Settings → Better Bibtex中找到postscrpit项，在其中键入以下JavaScript代码：\n\nif (Translator.BetterBibLaTeX && item.extra) {\n  const extra = item.extra.split('\\n');\n  for (const line of extra) {\n    const match = line.match(/^titleaddon={(.*)}$/);\n    if (match) {\n      this.add({ name: 'titleaddon', value: match[1] });\n    }\n  }\n}\n重启Zotero，这时输出的.bib就会包含英文标题。 但美中不足，Zotero会同时将titleaddon=...内容添加进annotation项加入到词条。 因此在Zotero输出.bib文件后，需要打开文本编辑器，使用正则表达式（^\\s*annotation\\s*=\\s*.*\\n?）手动删除这部分多余部分。\n之后，在Quarto中确保输出的LaTex文件的header部分加入以下内容：\n\\usepackage[style=authoryear, backend=biber]{biblatex}\n\n% Define a macro to print the title and titleaddon\n\\DeclareFieldFormat{titleaddon}{\\addcolon\\space#1}\n\\renewbibmacro*{title}{%\n  \\printfield{title}%\n  \\ifboolexpr{ test {\\ifentrytype{article}} }\n    {\\setunit{\\subtitlepunct}\\printfield{titleaddon}}\n    {\\setunit{\\subtitlepunct}\\printfield{titleaddon}}}\n之后编译pdf即可获得所需结果。\n\n\n\n\n\n用于完善Zotero的笔记功能。\n\n通过Github repo 安装最新版插件，注意选择最新的Beta版本，防止出现插件兼容性差的情况。\n安装笔记模板：\n\n复制下面的的模板代码2\n编辑 → 从剪切板导入模板 导入模板 \n\n\nname: \"[item] collect annotations by color(sort by color) \"\ncontent: |-\n  // @author windingwind\n  // @link https://github.com/windingwind/zotero-better-notes/discussions/227\n    ${{\n      async function getAnnotationsByColor(item, colorFilter) {\n        const annots = item.getAnnotations().filter(colorFilter);\n        return await Zotero.BetterNotes.api.convert.annotations2html(annots, { noteItem: targetNoteItem });\n      }\n\n      const attachments = Zotero.Items.get(topItem.getAttachments()).filter((i) =&gt;\n        i.isPDFAttachment() || i.isSnapshotAttachment() || i.isEPUBAttachment()\n      );\n      let res = \"\";\n      const colors = [\"#ffd400\", \"#ff6666\", \"#5fb236\", \"#2ea8e5\", \"#a28ae5\", \"#e56eee\", \"#f19837\", \"#aaaaaa\"];\n      const colorNames = [\"Objeictive\", \"Theory\", \"Method\", \"Finding\", \"Highlight-Lit\", \"Highlight-Framing\", \"Highlight-Wording\", \"Highlight-Miscellaneous\"];\n      for (let attachment of attachments) {\n        res += `&lt;h1&gt;${attachment.getFilename()}&lt;/h1&gt;`;\n        for (let i in colors) {\n          const renderedAnnotations = (\n            await getAnnotationsByColor(\n              attachment,\n              (annot) =&gt; annot.annotationColor === colors[i]\n            )\n          );\n          if (renderedAnnotations) {\n            res += `&lt;h2&gt;&lt;p style=\"background-color:${colors[i]};\"&gt;${colorNames[i]}&lt;/p&gt;&lt;/h2&gt;\\n${renderedAnnotations}`;\n          }\n        }\n        const renderedAnnotations = (\n          await getAnnotationsByColor(\n            attachment,\n            (annot) =&gt; !colors.includes(annot.annotationColor)\n          )\n        );\n        if (renderedAnnotations) {\n          res += `&lt;h2&gt;&lt;p&gt;Other Annotations&lt;/p&gt;&lt;/h2&gt;\\n${renderedAnnotations}`;\n        }\n      }\n      return res;\n    }}$"
   },
   {
     "objectID": "zotero.html#sec-nutstone",
     "href": "zotero.html#sec-nutstone",
-    "title": "1  文献管理",
-    "section": "1.4 Zotero + 坚果云",
-    "text": "1.4 Zotero + 坚果云\n\n首先注册坚果云账号，开启坚果云的第三方应用管理。具体步骤如下：\n\n登录网页端坚果云账号，点击右上角的账号名称→ 账户信息→ 安全选项→ 第三方应用管理→ 添加应用密码。 应用名称可写zotero，之后会自己生成一个应用密码。\n\n\n打开Zotero：编辑→ 首选项→ 同步→ 设置，输入用户名和密码进行登陆,然后点击Verify Server\n\n在文件同步部分建议采用WebDAV方式，以获得更大的存储空间，同时又为多设备协同提供便利。 国内支持这种方式的最常见服务商是坚果云，对于坚果云如何联结Zotero可参照下图以及其官方帮助文档。"
+    "title": "1 文献管理",
+    "section": "",
+    "text": "首先注册坚果云账号，开启坚果云的第三方应用管理。具体步骤如下：\n\n登录网页端坚果云账号，点击右上角的账号名称→ 账户信息→ 安全选项→ 第三方应用管理→ 添加应用密码。 应用名称可写zotero，之后会自己生成一个应用密码。\n\n\n打开Zotero：编辑→ 首选项→ 同步→ 设置，输入用户名和密码进行登陆,然后点击Verify Server\n\n在文件同步部分建议采用WebDAV方式，以获得更大的存储空间，同时又为多设备协同提供便利。 国内支持这种方式的最常见服务商是坚果云，对于坚果云如何联结Zotero可参照下图以及其官方帮助文档。"
   },
   {
     "objectID": "zotero.html#zotero-ipad",
     "href": "zotero.html#zotero-ipad",
-    "title": "1  文献管理",
-    "section": "1.5 Zotero + Ipad",
-    "text": "1.5 Zotero + Ipad\n\n电脑端设置参见@sec-nutstone；\nIpad端登陆同一个Zotero账户\n\nSettings → File syncing → 输入与@sec-nutstone相同的设置\n\n\n\n\n\n\n\n\nImportant\n\n\n\nZotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。\n\n\n\n\n祝贺！你已经完成了设置，请奖励自己一只鸡腿！"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Open Manual for Dr. Hu’s Amazing Team",
+    "title": "1 文献管理",
     "section": "",
-    "text": "前言\n亲爱的朋友：\n如果你获得了这本Open Manual，那你可能正逢一个与一只非常有趣团队的合作机会。 这只队伍成员来自五湖四海，但都出于对基于大众政治（mass politics）的兴趣，来到一起。 大家秉承“立场坚定、个性自由”的共识和以科学为桥追寻真理的精神，而进行政治科学研究。\n为了方便你与组内成员有效交流、高效合作，我悉心编纂了这本小册子。 希望新加入的你能通过学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成与团队的共同成长。 有一点有必要说明，这本小册子不会囊括太多的技术信息，更多地是结合本组研究特性的一些专门特点和设置介绍。 一些基础设置知识可能会加以省略。 所以，如果你要想掌握其中涉及知识的更深层次原理和使用技巧，可能需要和常任组员们咨询和交流。\n\n\n\n\n\n\nImportant\n\n\n\n未经作者允许，不得传播、转载本书内容！\n\n\n\n\n\n\n\n\n胡悦\n2023-07-27\n清华园"
+    "text": "电脑端设置参见@sec-nutstone；\nIpad端登陆同一个Zotero账户\n\nSettings → File syncing → 输入与@sec-nutstone相同的设置\n\n\n\n\n\n\n\n\nImportant\n\n\n\nZotero截止至6.0版本仍然不具备同步软链接功能。 因此如有此需求（建议解锁这个功能；不管会不会真看，先解锁再说），需要在Zotfile 设置中选择General Settings下的“Attach stored copy of file(s)”。"
   },
   {
-    "objectID": "lit.html#文献导入",
-    "href": "lit.html#文献导入",
-    "title": "2  文献梳理",
-    "section": "2.1 文献导入",
-    "text": "2.1 文献导入\n文献导入有五种方法：\n\nZotero 浏览器插件自动导入。\n通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；\n通过ISBN、DOI、arXiv ID等标识码单条导入；\n拖拽PDF文件，通过Zotero读取metadata导入；\n手动录入。\n\n五种方法中第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n\n\n\n\n\n\nNote\n\n\n\n注意：Zotero插件需要在Zotero本地软件打开情况下才能较好运行。\n\n\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n\n通过Zotero导入笔记有几点注意事项：\n\n及时修订。 Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会出现信息错漏的地方，比如原文作者可能都是用英文大写或者中文名称依旧采用姓名分开方式。 有时也会丢失一些信息。 这就要求使用者及时对输入信息进行检查添改，保证信息正确。\n\n\n\n\n\n\n\nWarning\n\n\n\n“及时”二字尤为紧要。 当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走马：\n\n你怎么伺候它，它怎么伺候你。\n\n就是说，你对你想摆弄赏玩的动物或物件越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：\n\n文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 \n文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。\n文献发表时间必须有，不能缺失。\n文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。\n\n\n\n\n中文文献。 实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。 这一问题很大程度上可以通过jasminum插件解决，请无比安装且做好设置。1安装成功后，jasminum选项也会出现在右键菜单中，请妥善使用。\n\n由于国内外各高校图书馆网络代理不同，有时即使安装了jasminum也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：\n\n基于jasminum从中文数据库下载文章信息\n通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下\n右键点击录入条目，选择“Attach New file” , Zotero会自动识别文件并加载为附件\n\n\n文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个collection文件夹中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 本组中对于每篇论文都要求建立以p_为前缀的单独collection，比如p_patroticBases，之后采用camel case命名法。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出。 对于只针对报告的文献collection则以pre_为前缀，之后采用camel case命名法。 对于平时搜集文献，可根据内容自行建立collections。"
+    "objectID": "zotero.html#footnotes",
+    "href": "zotero.html#footnotes",
+    "title": "1 文献管理",
+    "section": "",
+    "text": "本章内容参考了这一英文教程和三篇中文文章（1， 2， 3）, 并获得石宇洋同学大力帮助，特此感谢！↩︎\n这个代码是根据插件作者的“collect annotations by color(sort by color)”基础上发展而成。以下是调整的一些演示：↩︎"
   },
   {
-    "objectID": "lit.html#文献笔记",
-    "href": "lit.html#文献笔记",
-    "title": "2  文献梳理",
-    "section": "2.2 文献笔记",
-    "text": "2.2 文献笔记\n文献笔记有多种类型。 本组采用高效笔记原则，即将文献笔记的核心目的只设定为两个：好记和好搜。 所谓“好记”是指能够快速的将文章内容和重点理清，当回看笔记的时候也能快速定位到需要的部分。 随看随记，最大程度缩小笔记整理时间。 所谓“好搜”是指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词全面、精准定位文献。\n基于以上原则，本组采用具有统一规范和格式的使用结构化笔记方式来记录文献。 其中内容设置部分借鉴了Social Science Quarterly的摘要写作方式，共包含五部分，以下按照文章和书籍分别进行说明：\n\n2.2.1 文章笔记\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究对象或概念，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nTheory：文章一些理论观点或者未来理论可以生发之处\nMethod： 文中提到的一些方法方面的综述或者讨论\nEmpirics：文中提及的其他文章中的实证发现\nWording：高效、地道的中英文词汇\n\n\n\n\n2.2.2 书籍笔记\n这里“书籍”包含一切有章节划分的读物。\n\nObjective：章和节的标题和本章核心概念。\nTheory: 本章（每节）主要论点。\nMethod：基本与文章相同。\nFindings：基本与文章相同。\nHighlights：“兜底”部分，今后可能会用到的点，基本与文章相同。\n\n\n\n2.2.3 Annotation\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们只使用其中的五种，分别对应读书笔记的五种内容：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights\n\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过右键(Add Note from Annotations)直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。"
-  },
-  {
-    "objectID": "lit.html#笔记共享",
-    "href": "lit.html#笔记共享",
-    "title": "2  文献梳理",
-    "section": "2.3 笔记共享",
-    "text": "2.3 笔记共享\nZotero能很好支持线上和线下文献共享。 如果共享对方都设置了足够的网络空间，可尝试直接线上共享。 如因为一些原因没法实现，也可采用线下分享方式，即导出共享。 导出方式非常简单，只需选中需要文本，右键选择导出。\n\n之后在导出项中选择Zotero RDF格式，然后勾选导出笔记、文件和标注。 生成文件将是一个包含了文献文本和.rdf的文件夹，压缩后分享给同伴即可。 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。"
+    "objectID": "naming.html",
+    "href": "naming.html",
+    "title": "1 文件命名",
+    "section": "",
+    "text": "文件命名是建立文件搜索系统的关键。1 为了实现与组员间无间合作，加入我们共同课题的同志也要求采用同样的命名系统。 本组的文件命名系统分一般命名、项目命名、变量命名三个系统：\n\n\n本组一般命名规则基本遵循Jenny Bryan创建的命名系统.\n\n\n\narandomfile.docx\na random file.docx\nfigure 1.png\ntab 2.xls\nalso@notthis@^complicated#23*.txt\n用中文命名.csv\n\n\n\n\n基本原则：\n\n方便（机器）搜索\n\n单名搜索\n正则表达式\n区分大小写，小写最先\n\n方便（人）认读\n自动排序（e.g, 01_a.txt, 02_aa.txt, 03_b.txt）\n\nISO 8601标准日期 (e.g., 2022-07-12_invoice.pdf)\n同名前缀（e.g., manuscript-anonymous.pdf, manuscript-named.pdf）\n\n不要使用空格，建议采用以下三种方式\n\nKebab case: a_random_file.txt\nCamel case: aRandomFile.txt\nSnake case: a-random-file.txt\n\n\n本组对于这三种命名方式的使用方式如下： 1. 对于日期或类型分类，使用Kebab。 1. 对于多词名称使用Camel。 1. 鉴于一些编程语言对于-有功能性赋值，在文件名种使用-可能会造成认读问题，通常不使用。 1. 尽量不使用非英文字符命名。\n\n\n\n\n对于研究项目请以下目录树创建文件夹：\n.     \n├── codes/     \n│   └── data_preparation.R      \n├── data/      \n│   ├── df_raw.rds      \n│   └── ......      \n├── output/      \n│   ├── codingCheck100.html     \n│   └── ......      \n├── paper/     \n│   ├── images/\n│   ├── submission/\n│       └── 2022-07-12_APSR\n│   ├── american-political-science-association.csl      \n│   ├── &lt;projectName&gt;.qmd     \n│   ├── multiple-bibliographies.lua     \n│   └── ......\n├── documents/     \n│   ├── codebook.txt      \n│   └── questionnaire.pdf     \n└── &lt;projectName&gt;.Rproj     \n你可以在R里面运行以下命令，生成上述结构：\n\nif(!require(drhutools)) remotes::install_github(\"sammo3182/drhutools\")\n\nlibrary(drhutools)\nfolderSystem()\n\n\n\n\n变量命名首要原则是不要使用中文命名任何变量。 操作规则基本遵循“类型前缀_内容_原题”方式：\n\n区分类型采用Kebab法，比如confidence_central、confidence_local、tab_aTable、plot_aResult；\n词组区分使用Camel法，比如socialCapital、politicalEfficacy;\n如果是survey数据，则要将对应的题号统一作为命名后缀，比如efficacy_int_q12、efficacy_ext_q13\n鉴于-在编程语言中为减号，因此不应使用Snake法\n\n\n\n\n\n\n\nNote\n\n\n\n除了像age、income、education、GDP等约定俗成的变量外，尽量采用具有指向性的变量名称。 比如 gender female, employment employed。"
   },
   {
     "objectID": "naming.html#一般命名",
     "href": "naming.html#一般命名",
-    "title": "3  文件命名",
-    "section": "3.1 一般命名",
-    "text": "3.1 一般命名\n本组一般命名规则基本遵循Jenny Bryan创建的命名系统.\n\n3.1.1 不可取的命名方式（举例）\n\narandomfile.docx\na random file.docx\nfigure 1.png\ntab 2.xls\nalso@notthis@^complicated#23*.txt\n用中文命名.csv\n\n\n\n3.1.2 推荐命名方式\n基本原则：\n\n方便（机器）搜索\n\n单名搜索\n正则表达式\n区分大小写，小写最先\n\n方便（人）认读\n自动排序（e.g, 01_a.txt, 02_aa.txt, 03_b.txt）\n\nISO 8601标准日期 (e.g., 2022-07-12_invoice.pdf)\n同名前缀（e.g., manuscript-anonymous.pdf, manuscript-named.pdf）\n\n不要使用空格，建议采用以下三种方式\n\nKebab case: a_random_file.txt\nCamel case: aRandomFile.txt\nSnake case: a-random-file.txt\n\n\n本组对于这三种命名方式的使用方式如下： 1. 对于日期或类型分类，使用Kebab。 1. 对于多词名称使用Camel。 1. 鉴于一些编程语言对于-有功能性赋值，在文件名种使用-可能会造成认读问题，通常不使用。 1. 尽量不使用非英文字符命名。"
+    "title": "1 文件命名",
+    "section": "",
+    "text": "本组一般命名规则基本遵循Jenny Bryan创建的命名系统.\n\n\n\narandomfile.docx\na random file.docx\nfigure 1.png\ntab 2.xls\nalso@notthis@^complicated#23*.txt\n用中文命名.csv\n\n\n\n\n基本原则：\n\n方便（机器）搜索\n\n单名搜索\n正则表达式\n区分大小写，小写最先\n\n方便（人）认读\n自动排序（e.g, 01_a.txt, 02_aa.txt, 03_b.txt）\n\nISO 8601标准日期 (e.g., 2022-07-12_invoice.pdf)\n同名前缀（e.g., manuscript-anonymous.pdf, manuscript-named.pdf）\n\n不要使用空格，建议采用以下三种方式\n\nKebab case: a_random_file.txt\nCamel case: aRandomFile.txt\nSnake case: a-random-file.txt\n\n\n本组对于这三种命名方式的使用方式如下： 1. 对于日期或类型分类，使用Kebab。 1. 对于多词名称使用Camel。 1. 鉴于一些编程语言对于-有功能性赋值，在文件名种使用-可能会造成认读问题，通常不使用。 1. 尽量不使用非英文字符命名。"
   },
   {
     "objectID": "naming.html#项目命名",
     "href": "naming.html#项目命名",
-    "title": "3  文件命名",
-    "section": "3.2 项目命名",
-    "text": "3.2 项目命名\n对于研究项目请以下目录树创建文件夹：\n.     \n├── codes/     \n│   └── data_preparation.R      \n├── data/      \n│   ├── df_raw.rds      \n│   └── ......      \n├── output/      \n│   ├── codingCheck100.html     \n│   └── ......      \n├── paper/     \n│   ├── images/\n│   ├── submission/\n│       └── 2022-07-12_APSR\n│   ├── american-political-science-association.csl      \n│   ├── <projectName>.qmd     \n│   ├── multiple-bibliographies.lua     \n│   └── ......\n├── documents/     \n│   ├── codebook.txt      \n│   └── questionnaire.pdf     \n└── <projectName>.Rproj     \n你可以在R里面运行以下命令，生成上述结构：\n\nls_dir <- c(\"codes\", \"data\", \"output\", \"paper\", \"paper/images\", \"paper/submission\", \"document\")\n\npurrr::walk(ls_dir, ~if(!dir.exists(.)) dir.create(file.path(.), recursive = TRUE))"
+    "title": "1 文件命名",
+    "section": "",
+    "text": "对于研究项目请以下目录树创建文件夹：\n.     \n├── codes/     \n│   └── data_preparation.R      \n├── data/      \n│   ├── df_raw.rds      \n│   └── ......      \n├── output/      \n│   ├── codingCheck100.html     \n│   └── ......      \n├── paper/     \n│   ├── images/\n│   ├── submission/\n│       └── 2022-07-12_APSR\n│   ├── american-political-science-association.csl      \n│   ├── &lt;projectName&gt;.qmd     \n│   ├── multiple-bibliographies.lua     \n│   └── ......\n├── documents/     \n│   ├── codebook.txt      \n│   └── questionnaire.pdf     \n└── &lt;projectName&gt;.Rproj     \n你可以在R里面运行以下命令，生成上述结构：\n\nif(!require(drhutools)) remotes::install_github(\"sammo3182/drhutools\")\n\nlibrary(drhutools)\nfolderSystem()"
   },
   {
     "objectID": "naming.html#变量命名",
     "href": "naming.html#变量命名",
-    "title": "3  文件命名",
-    "section": "3.3 变量命名",
-    "text": "3.3 变量命名\n变量命名首要原则是不要使用中文命名任何变量。 操作规则基本遵循“类型前缀_内容_原题”方式：\n\n区分类型采用Kebab法，比如confidence_central、confidence_local、tab_aTable、plot_aResult；\n词组区分使用Camel法，比如socialCapital、politicalEfficacy;\n如果是survey数据，则要将对应的题号统一作为命名后缀，比如efficacy_int_q12、efficacy_ext_q13\n鉴于-在编程语言中为减号，因此不应使用Snake法\n\n\n\n\n\n\n\nNote\n\n\n\n除了像age、income、education、GDP等约定俗成的变量外，尽量采用具有指向性的变量名称。 比如 gender female, employment employed。"
+    "title": "1 文件命名",
+    "section": "",
+    "text": "变量命名首要原则是不要使用中文命名任何变量。 操作规则基本遵循“类型前缀_内容_原题”方式：\n\n区分类型采用Kebab法，比如confidence_central、confidence_local、tab_aTable、plot_aResult；\n词组区分使用Camel法，比如socialCapital、politicalEfficacy;\n如果是survey数据，则要将对应的题号统一作为命名后缀，比如efficacy_int_q12、efficacy_ext_q13\n鉴于-在编程语言中为减号，因此不应使用Snake法\n\n\n\n\n\n\n\nNote\n\n\n\n除了像age、income、education、GDP等约定俗成的变量外，尽量采用具有指向性的变量名称。 比如 gender female, employment employed。"
+  },
+  {
+    "objectID": "naming.html#footnotes",
+    "href": "naming.html#footnotes",
+    "title": "1 文件命名",
+    "section": "",
+    "text": "对于Windows用户，请下载Listary, 增强搜索功能。↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "前言",
+    "section": "",
+    "text": "前言\n亲爱的朋友：\n如果你获得了这本Open Manual，那说明你正在与一只非常有趣团队合作。 这只队伍成员来自五湖四海，但都出于对基于政治心理和比较政治的兴趣聚到到一起。 大家秉承“立场坚定、个性自由”的信念和以科学为桥追寻真理的精神，进行科学研究。\n这个小册子是为了方便你与组内成员进行有效交流、高效合作而编纂。 希望你能通过学习，在操作层面更好融入我们的工作流程，实现顺畅合作，最终达成与团队的共同成长。 有一点有必要说明，这本小册子不会囊括太多的技术信息，更多地是结合本组研究特性的一些专门特点和设置介绍。 所以，如果你要想掌握其中涉及知识的更深层次原理和使用技巧，可能需要和常任组员们咨询和交流。\n\n\n\n\n\n\nImportant\n\n\n\n未经作者允许，不得传播、转载本书内容！\n\n\n\n\n\n\n\n\n胡悦\n清华园"
+  },
+  {
+    "objectID": "lit.html",
+    "href": "lit.html",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "本章主要讨论如何结合Zotero（7.0）对文献进行搜集、梳理、笔记和归类的组内规范。\n\n\n\n\n\n\nWarning\n\n\n\n在进行以下步骤前，请确保已经按照 ?@sec-zotero 对软件进行设置。\n\n\n\n\n文献导入有以下几种方法：\n\nZotero 浏览器插件自动导入。\n通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；\n通过ISBN、DOI、arXiv ID等标识码单条导入；\n拖拽PDF文件，通过Zotero读取metadata导入；\n复制bibtex到剪切板导入；\n手动录入。\n\n第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n\n\n\n\n\n\n注意\n\n\n\nZotero插件需要在Zotero本地软件打开情况下才能较好运行。\n\n\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n\n通过Zotero导入笔记有几点注意事项：\n\n及时修订。 Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会出现信息错漏的地方，比如原文作者可能都是用英文大写或者中文名称依旧采用姓名分开方式。 有时也会丢失一些信息。 这就要求使用者及时对输入信息进行检查添改，保证信息正确。\n\n\n\n\n\n\n\n你怎么伺候它，它怎么伺候你\n\n\n\n当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走狗：\n\n你怎么伺候它，它怎么伺候你。\n\n就是说，你对你想摆弄赏玩的玩意儿越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：\n\n文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 \n文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。\n文献发表时间必须有，不能缺失。\n文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。\n\n\n\n\n中文文献。 实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。 这一问题很大程度上可以通过jasminum插件解决，请无比安装且做好设置。1安装成功后，jasminum选项也会出现在右键菜单中，请妥善使用。\n\n由于国内外各高校图书馆网络代理不同，有时即使安装了jasminum也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：\n\n基于jasminum从中文数据库下载文章信息\n通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下\n右键点击录入条目，选择“Attach New file”,  Zotero会自动识别文件并加载为附件(要预先安装Attanger)\n\n\n文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个文件夹（collection）中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 对于平时搜集文献，可根据内容自行建立collections。 本组中对于每篇论文都要求建立系统文献命名方式： - 以p_为前缀的单独collection，比如p_patroticBases，之后采用camel case命名法。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出； - 对于口头报告以pre_为前缀； - 对于软件采用s_为前缀； - 对于书或博士论文采用b_为前缀； - 对于报告和政策建议采用r_为前缀。\n\n\n\n\nZotero支持通过RSS对文献进行追踪。 建议本组成员订阅本专业常见期刊，并定期阅读，养成习惯。 以下以订阅《中国社会科学》为例，说明订阅过程。\n\n通过图书馆数据库进入知网；\n通过文献来源找到《中国社会科学》首页；\n在期刊首页，找到“RSS订阅”\n\n右键点击“RSS订阅”复制链接，或点击“RSS订阅”，之后复制地址栏链接；\n打开Zotero，选择“New Library” → “New Feed” → “From URL…”,将RSS地址复制在“URL：”窗口\n\n点击“Advanced Options”，设置更新时间和频率，如下图所示：\n\n\n\n\n\n文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，最大程度缩小笔记整理时间。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词，实现全面、精准定位文献。\n\n\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 ?@sec-zotero 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。\n\n\n\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究议题、对象，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 兜底类型，其他值得记录的地方\n\n\n\n\n\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：\n\n以小标题为纲组织笔记；\n以记录逻辑和复查点为主；\n对每章可能与其他文献关联部分创建tag。\n\n\n\n\n\nZotero能很好支持线上和线下文献共享。 如果共享对方都设置了足够的网络空间，可尝试直接线上共享。 如因为一些原因没法实现，也可采用线下分享方式，即导出共享。 导出方式非常简单，只需选中需要文本，右键选择导出。\n\n之后在导出项中选择Zotero RDF格式，然后勾选导出笔记、文件和标注。 生成文件将是一个包含了文献文本和.rdf的文件夹，压缩后分享给同伴即可。 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。"
+  },
+  {
+    "objectID": "lit.html#文献导入",
+    "href": "lit.html#文献导入",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "文献导入有以下几种方法：\n\nZotero 浏览器插件自动导入。\n通过Zotero的（File →）Import功能将Bib、RIS、RDF或者从Mendeley、Endnote等其他管理软件导入；\n通过ISBN、DOI、arXiv ID等标识码单条导入；\n拖拽PDF文件，通过Zotero读取metadata导入；\n复制bibtex到剪切板导入；\n手动录入。\n\n第一种应该首选方式，基本可以覆盖80%以上文献导入工作。 基本操作方法如下：安装Zotero后，会自动提示安装浏览器插件。 安装好后，第一次使用需要在插件中登录你的Zotero账号。 之后，只要插件会对各种浏览网页内容进行分类，如果是文章或者书籍信息则会自动转换图标，提示可以导入。 你只需要点击一下，就能自动导入Zotero。\n\n\n\n\n\n\n注意\n\n\n\nZotero插件需要在Zotero本地软件打开情况下才能较好运行。\n\n\n如果你使用的是校园网或者校园VPN且你的图书馆购买了此资料，那么资料附件则会自动导入并存储到你之前设置的文件夹。 另外，如果Zotero也会自动识别校园图书馆代理，进而引导所有下载都通过代理下载。 如未自动识别，可能是校园代理类型不适合，或者其他原因没有正确识别。此时可以通过浏览器插件（是插件，不是Zotero本地软件）代理设置尝试手动添加。 如下图所示\n\n通过Zotero导入笔记有几点注意事项：\n\n及时修订。 Zotero随让能够帮你完成90%的文献信息输入工作，但有时也会出现信息错漏的地方，比如原文作者可能都是用英文大写或者中文名称依旧采用姓名分开方式。 有时也会丢失一些信息。 这就要求使用者及时对输入信息进行检查添改，保证信息正确。\n\n\n\n\n\n\n\n你怎么伺候它，它怎么伺候你\n\n\n\n当年老北京的把式匠有句俗话，说无论是养花鸟鱼虫，还是飞鹰走狗：\n\n你怎么伺候它，它怎么伺候你。\n\n就是说，你对你想摆弄赏玩的玩意儿越精心打理、仔细维护，它越能更好地为你服务。 我们对于文献的维护也是同样的道理。 对于录入后，至少要保证以下几方面信息准确：\n\n文件名统一采用BBT Sentence-case。如录入时不是这种格式，可如下图所示，通过右键条目选择单条或批量修改。 \n文献作者必须完整、正确，不能缺失：中文或机构在single field中标注全名，西文姓名采用Last，First names格式在两个空格中分别填入；贡献者角色是作者、编者、译者等也要正确标注。\n文献发表时间必须有，不能缺失。\n文献主要出版信息尽量写全，比如文章或章节就要有页数，网页就要有链接等。\n\n\n\n\n中文文献。 实践中，中文的文献平台，比如知网等对于Zotero并不十分友好。 这一问题很大程度上可以通过jasminum插件解决，请无比安装且做好设置。1安装成功后，jasminum选项也会出现在右键菜单中，请妥善使用。\n\n由于国内外各高校图书馆网络代理不同，有时即使安装了jasminum也难以直接从知网等数据库下载文章，只能使用手动加载方式。但即使这种方式Zotero也提供了很大便利。使用流程如下：\n\n基于jasminum从中文数据库下载文章信息\n通过图书馆代理下载文章PDF版本至ZotFile的“Source Folder for Attaching New Files”的文件夹下\n右键点击录入条目，选择“Attach New file”,  Zotero会自动识别文件并加载为附件(要预先安装Attanger)\n\n\n文献分类。 Zotero支持文献mixed membership, 也就是说同一条文献可以存在于多个文件夹（collection）中，但搜索时又只会出现一条。 这给文献分类提供了极大便利。 对于平时搜集文献，可根据内容自行建立collections。 本组中对于每篇论文都要求建立系统文献命名方式： - 以p_为前缀的单独collection，比如p_patroticBases，之后采用camel case命名法。 文章中所有出现文献均要求收集在此文件夹中，方便更新和导出； - 对于口头报告以pre_为前缀； - 对于软件采用s_为前缀； - 对于书或博士论文采用b_为前缀； - 对于报告和政策建议采用r_为前缀。"
+  },
+  {
+    "objectID": "lit.html#文献追踪",
+    "href": "lit.html#文献追踪",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "Zotero支持通过RSS对文献进行追踪。 建议本组成员订阅本专业常见期刊，并定期阅读，养成习惯。 以下以订阅《中国社会科学》为例，说明订阅过程。\n\n通过图书馆数据库进入知网；\n通过文献来源找到《中国社会科学》首页；\n在期刊首页，找到“RSS订阅”\n\n右键点击“RSS订阅”复制链接，或点击“RSS订阅”，之后复制地址栏链接；\n打开Zotero，选择“New Library” → “New Feed” → “From URL…”,将RSS地址复制在“URL：”窗口\n\n点击“Advanced Options”，设置更新时间和频率，如下图所示："
+  },
+  {
+    "objectID": "lit.html#结构化笔记",
+    "href": "lit.html#结构化笔记",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "文献笔记有多种类型。 本组采用结构化笔记原则，目的只有一个：maximizing searchability。 在记笔记上，需要随看随记，最大程度缩小笔记整理时间。 在确定记什么和怎么记上，指在记录笔记时即考虑到日后搜索的需要，重视关键字和短语的记录。 使用最少关键词，实现全面、精准定位文献。\n\n\n在记录这些内容的过程中，请尽量使用短语配合箭头等形式，最大限度减少句子使用。 笔记应该随阅读随记录，善用Zotero的Annotation功能，包括色彩标注和标注注释。 本组采取统一的color coding系统。 目前Zotero提供7种颜色标注，我们对其赋予不同的含义：\n\n黄色: Objective\n红色: Theory\n绿色: Method\n蓝色: Findings\n紫色: Highlights-Lits\n洋红色：Highlights-framing\n橘色：Highlights-wording\n灰色：Highlights-miscellaneous\n\n在阅读过程中要对对应部分进行标注，并进行相关注释。 在这个环节中，注释是很重要的。 尤其是在Zotero中注释可以通过Better Notes直接提取为笔记。 注释做得越规整，笔记生成后需要改动的地方越少，效率越高。 同时Zotero笔记抽取生成的笔记会自动带有页码标识，可搜索率很高。 这里要求组内成员采用markdown语法记录笔记，即用-表示bullet points，用1.表示数字列表。 以下是在高效的color coding和annotations后，生成笔记的方法。 在使用前务必保证，已根据 ?@sec-zotero 正确安装了插件并进行了设置。\n\n更多Better Notes的应用方法可参考以下视频和软件说明文档。\n\n\n\n\n\nZotero有非常强大的tag系统。 每篇文章都可以设置一个或几个tags。 设置Tag目的在于辅助归类文献和点名本文收入记录的主要原因，通常使用单独词或词组形式，不要使用句子。\n\n\n\n这里的“文章”包含非书籍类的一切读物。\n\nObjective：文章主要研究议题、对象，包括定义、概念分支等。\nTheory: 文章的主要观点、理论逻辑等。\nMethod：采用的研究方法，包含两部分：\n\nData：数据来源、体量、搜集过程等信息\nMethod：数据分析方法、重要方法决定、稳健性检验等\n\nFindings：文章的主要发现或结论。\nHighlights：“兜底”部分，文章中今后可能会用到的点。通常包括但不限于以下方面：\n\nLits: 文中提及的可能以后会用到的一些文献综述\nFraming：文章一些好的论点或者阐述方法、角度\nWording：地道的中英文词汇\nMiscellaneous: 兜底类型，其他值得记录的地方\n\n\n\n\n\n这里“书籍”包含一切有章节划分的读物。 对于章节相对独立书籍，建议以章为单位记录笔记。 书籍和文章有很大不同，难以实现对每段进行结构化笔记，故采取半结构化格式：\n\n以小标题为纲组织笔记；\n以记录逻辑和复查点为主；\n对每章可能与其他文献关联部分创建tag。"
+  },
+  {
+    "objectID": "lit.html#笔记共享",
+    "href": "lit.html#笔记共享",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "Zotero能很好支持线上和线下文献共享。 如果共享对方都设置了足够的网络空间，可尝试直接线上共享。 如因为一些原因没法实现，也可采用线下分享方式，即导出共享。 导出方式非常简单，只需选中需要文本，右键选择导出。\n\n之后在导出项中选择Zotero RDF格式，然后勾选导出笔记、文件和标注。 生成文件将是一个包含了文献文本和.rdf的文件夹，压缩后分享给同伴即可。 我们推荐对多个文献采用多选分享方式，而不是一篇文章一个rdf。"
+  },
+  {
+    "objectID": "lit.html#footnotes",
+    "href": "lit.html#footnotes",
+    "title": "1 读书笔记",
+    "section": "",
+    "text": "参见 ?@sec-zotero-jasminum。↩︎"
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "参考文献",
+    "section": "",
+    "text": "参考文献"
   }
 ]

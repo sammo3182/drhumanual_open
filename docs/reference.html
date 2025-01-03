@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>naming</title>
+<title>reference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -118,18 +103,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-naming" id="toc-sec-naming" class="nav-link active" data-scroll-target="#sec-naming"><span class="header-section-number">1</span> 文件命名</a>
-  <ul class="collapse">
-  <li><a href="#一般命名" id="toc-一般命名" class="nav-link" data-scroll-target="#一般命名"><span class="header-section-number">1.1</span> 一般命名</a>
-  <ul class="collapse">
-  <li><a href="#不可取的命名方式举例" id="toc-不可取的命名方式举例" class="nav-link" data-scroll-target="#不可取的命名方式举例"><span class="header-section-number">1.1.1</span> 不可取的命名方式（举例）</a></li>
-  <li><a href="#推荐命名方式" id="toc-推荐命名方式" class="nav-link" data-scroll-target="#推荐命名方式"><span class="header-section-number">1.1.2</span> 推荐命名方式</a></li>
-  </ul></li>
-  <li><a href="#项目命名" id="toc-项目命名" class="nav-link" data-scroll-target="#项目命名"><span class="header-section-number">1.2</span> 项目命名</a></li>
-  <li><a href="#变量命名" id="toc-变量命名" class="nav-link" data-scroll-target="#变量命名"><span class="header-section-number">1.3</span> 变量命名</a></li>
-  </ul></li>
+  <li><a href="#参考文献" id="toc-参考文献" class="nav-link active" data-scroll-target="#参考文献">参考文献</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="naming.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="reference.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -137,112 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="sec-naming" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 文件命名</h1>
-<p>文件命名是建立文件搜索系统的关键。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 为了实现与组员间无间合作，加入我们共同课题的同志也要求采用同样的命名系统。 本组的文件命名系统分一般命名、项目命名、变量命名三个系统：</p>
-<section id="一般命名" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="一般命名"><span class="header-section-number">1.1</span> 一般命名</h2>
-<p>本组一般命名规则基本遵循<a href="https://jennybryan.org">Jenny Bryan</a>创建的<a href="https://github.com/jennybc/organization-and-naming">命名系统</a>.</p>
-<section id="不可取的命名方式举例" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="不可取的命名方式举例"><span class="header-section-number">1.1.1</span> 不可取的命名方式（举例）</h3>
-<ul>
-<li><code>arandomfile.docx</code></li>
-<li><code>a random file.docx</code></li>
-<li><code>figure 1.png</code></li>
-<li><code>tab 2.xls</code></li>
-<li><code>also@notthis@^complicated#23*.txt</code></li>
-<li><code>用中文命名.csv</code></li>
-</ul>
-</section>
-<section id="推荐命名方式" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="推荐命名方式"><span class="header-section-number">1.1.2</span> 推荐命名方式</h3>
-<p>基本原则：</p>
-<ul>
-<li>方便（机器）搜索
-<ul>
-<li>单名搜索</li>
-<li>正则表达式</li>
-<li>区分大小写，小写最先</li>
-</ul></li>
-<li>方便（人）认读</li>
-<li>自动排序（e.g, <code>01_a.txt</code>, <code>02_aa.txt</code>, <code>03_b.txt</code>）
-<ul>
-<li>ISO 8601标准日期 (e.g., <code>2022-07-12_invoice.pdf</code>)</li>
-<li>同名前缀（e.g., <code>manuscript-anonymous.pdf</code>, <code>manuscript-named.pdf</code>）</li>
-</ul></li>
-<li>不要使用空格，建议采用以下三种方式
-<ul>
-<li><a href="https://www.theserverside.com/definition/Kebab-case">Kebab case</a>: <code>a_random_file.txt</code></li>
-<li><a href="https://www.techtarget.com/whatis/definition/CamelCase">Camel case</a>: <code>aRandomFile.txt</code></li>
-<li><a href="https://www.theserverside.com/definition/Snake-case">Snake case</a>: <code>a-random-file.txt</code></li>
-</ul></li>
-</ul>
-<p>本组对于这三种命名方式的使用方式如下： 1. 对于日期或类型分类，使用Kebab。 1. 对于多词名称使用Camel。 1. 鉴于一些编程语言对于<code>-</code>有功能性赋值，在文件名种使用<code>-</code>可能会造成认读问题，通常不使用。 1. 尽量不使用非英文字符命名。</p>
-</section>
-</section>
-<section id="项目命名" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="项目命名"><span class="header-section-number">1.2</span> 项目命名</h2>
-<p>对于研究项目请以下目录树创建文件夹：</p>
-<pre><code>.     
-├── codes/     
-│   └── data_preparation.R      
-├── data/      
-│   ├── df_raw.rds      
-│   └── ......      
-├── output/      
-│   ├── codingCheck100.html     
-│   └── ......      
-├── paper/     
-│   ├── images/
-│   ├── submission/
-│       └── 2022-07-12_APSR
-│   ├── american-political-science-association.csl      
-│   ├── &lt;projectName&gt;.qmd     
-│   ├── multiple-bibliographies.lua     
-│   └── ......
-├── documents/     
-│   ├── codebook.txt      
-│   └── questionnaire.pdf     
-└── &lt;projectName&gt;.Rproj     </code></pre>
-<p>你可以在R里面运行以下命令，生成上述结构：</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(drhutools)) remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"sammo3182/drhutools"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(drhutools)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">folderSystem</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="变量命名" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="变量命名"><span class="header-section-number">1.3</span> 变量命名</h2>
-<p>变量命名首要原则是不要使用中文命名任何变量。 操作规则基本遵循“类型前缀_内容_原题”方式：</p>
-<ul>
-<li>区分类型采用Kebab法，比如<code>confidence_central</code>、<code>confidence_local</code>、<code>tab_aTable</code>、<code>plot_aResult</code>；</li>
-<li>词组区分使用Camel法，比如<code>socialCapital</code>、<code>politicalEfficacy</code>;</li>
-<li>如果是survey数据，则要将对应的题号统一作为命名后缀，比如<code>efficacy_int_q12</code>、<code>efficacy_ext_q13</code></li>
-<li>鉴于<code>-</code>在编程语言中为减号，因此不应使用Snake法</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>除了像age、income、education、GDP等约定俗成的变量外，尽量采用具有指向性的变量名称。 比如 <del>gender</del> female, <del>employment</del> employed。</p>
-</div>
+<section id="参考文献" class="level1 unnumbered">
+<h1 class="unnumbered">参考文献</h1>
+<div id="refs" role="list">
+
 </div>
 
 
-</section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>对于Windows用户，请下载<a href="https://www.listary.com/">Listary</a>, 增强搜索功能。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
